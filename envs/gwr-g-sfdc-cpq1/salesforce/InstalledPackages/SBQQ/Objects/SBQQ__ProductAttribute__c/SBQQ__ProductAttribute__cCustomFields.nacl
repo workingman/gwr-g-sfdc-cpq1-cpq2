@@ -1,0 +1,238 @@
+type salesforce.SBQQ__ProductAttribute__c {
+  salesforce.MasterDetail SBQQ__Attribute__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__Attribute__c"
+    label = "Configuration Attribute"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__ConfigurationAttribute__c,
+    ]
+    inlineHelpText = "Configuration Attribute this product attribute inherits."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "ProductAttributes"
+    queryable = true
+    deprecated = false
+    description = "Configuration Attribute this product attribute inherits."
+    externalId = false
+    lookupFilter = {
+      active = true
+      errorMessage = "The related configuration attribute must be global"
+      filterItems = [
+        {
+          field = "SBQQ__ConfigurationAttribute__c.SBQQ__Product__c"
+          operation = "equals"
+          value = ""
+        },
+      ]
+      isOptional = false
+    }
+    relationshipLabel = "Attribute Items"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__AppliedImmediately__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__AppliedImmediately__c"
+    label = "Apply Immediately"
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Unsupported Field"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that indicates changes to this configuration attribute should apply immediately."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ApplyToProductOptions__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__ApplyToProductOptions__c"
+    label = "Apply To Product Options"
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Unsupported Field"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Apply configuration attribute selection to product options."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__AttributeSet__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__AttributeSet__c"
+    label = "Attribute Set"
+    referenceTo = [
+      salesforce.SBQQ__AttributeSet__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Product_Attributes"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Attribute Items"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__AutoSelect__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__AutoSelect__c"
+    label = "Auto-Select"
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Unsupported Field"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Set the value of this attribute when adding a product from a Dynamic Feature using the value of the added product's matching field."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.LongTextArea SBQQ__HiddenValues__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__HiddenValues__c"
+    label = "Hidden Values"
+    inlineHelpText = "Unsupported Field"
+    createable = true
+    updateable = true
+    length = 5000
+    queryable = true
+    deprecated = false
+    description = "Values from the backing picklist field that should be hidden on this bundle."
+    externalId = false
+    trackTrending = false
+    visibleLines = 3
+  }
+  salesforce.Picklist SBQQ__Hidden__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__Hidden__c"
+    label = "Hidden"
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Unsupported Field"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "If flagged as hidden, the Configuration Attribute will not appear on the Product Configurator Page."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__Required__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__Required__c"
+    label = "Required"
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Unsupported Field"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates whether the attributes requires a value."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__Sequence__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__Sequence__c"
+    label = "Sequence"
+    precision = 3
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Order in which this attribute is displayed"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__ShownValues__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__ShownValues__c"
+    label = "Shown Values"
+    inlineHelpText = "Unsupported Field"
+    createable = true
+    updateable = true
+    length = 5000
+    queryable = true
+    deprecated = false
+    description = "Values from the backing picklist field that should be shown on this bundle."
+    externalId = false
+    trackTrending = false
+    visibleLines = 3
+  }
+  salesforce.FormulaText SBQQ__TargetField__c {
+    apiName = "SBQQ__ProductAttribute__c.SBQQ__TargetField__c"
+    label = "Target Field"
+    formula = "TEXT(SBQQ__Attribute__r.SBQQ__TargetField__c)"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+}

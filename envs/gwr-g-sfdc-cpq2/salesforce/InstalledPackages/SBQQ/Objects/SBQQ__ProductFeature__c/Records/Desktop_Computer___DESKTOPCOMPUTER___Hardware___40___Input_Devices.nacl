@@ -1,0 +1,9 @@
+salesforce.SBQQ__ProductFeature__c Desktop_Computer___DESKTOPCOMPUTER___Hardware___40___Input_Devices@suuuuuuuuuuuus {
+  Name = "Input Devices"
+  SBQQ__ConfiguredSKU__c = salesforce.Product2.instance.Desktop_Computer___DESKTOPCOMPUTER___Hardware@suuuuuu
+  SBQQ__MinOptionCount__c = 0
+  SBQQ__Number__c = 40
+  _parent = [
+    salesforce.Product2.instance.Desktop_Computer___DESKTOPCOMPUTER___Hardware@suuuuuu,
+  ]
+}

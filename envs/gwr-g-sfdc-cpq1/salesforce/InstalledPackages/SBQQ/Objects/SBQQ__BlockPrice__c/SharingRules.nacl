@@ -1,0 +1,6 @@
+salesforce.SharingRules SBQQ__BlockPrice__c {
+  fullName = "SBQQ__BlockPrice__c"
+  _parent = [
+    salesforce.SBQQ__BlockPrice__c,
+  ]
+}

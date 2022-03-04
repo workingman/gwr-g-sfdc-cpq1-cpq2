@@ -1,0 +1,251 @@
+type salesforce.SBQQ__PriceAction__c {
+  salesforce.MasterDetail SBQQ__Rule__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__Rule__c"
+    label = "Rule"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__PriceRule__c,
+    ]
+    inlineHelpText = "Price rule running this action."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "PriceActions"
+    queryable = true
+    deprecated = false
+    description = "Price rule running this action."
+    externalId = false
+    relationshipLabel = "Price Actions"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Field__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__Field__c"
+    label = "Target Field"
+    valueSet = [
+      {
+        fullName = "Unit Price"
+        default = false
+        label = "Unit Price"
+      },
+      {
+        fullName = "Discount (%)"
+        default = false
+        label = "Discount (%)"
+      },
+      {
+        fullName = "Discount (Amt)"
+        default = false
+        label = "Discount (Amt)"
+      },
+      {
+        fullName = "Markup (%)"
+        default = false
+        label = "Markup (%)"
+      },
+      {
+        fullName = "Markup (Amt)"
+        default = false
+        label = "Markup (Amt)"
+      },
+      {
+        fullName = "SBQQ__ListPrice__c"
+        default = false
+        label = "SBQQ__ListPrice__c"
+      },
+      {
+        fullName = "SBQQ__SpecialPrice__c"
+        default = false
+        label = "SBQQ__SpecialPrice__c"
+      },
+      {
+        fullName = "SBQQ__SpecialPriceType__c"
+        default = false
+        label = "SBQQ__SpecialPriceType__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the field you want updated when the conditions are met."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.LongTextArea SBQQ__Formula__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__Formula__c"
+    label = "Formula"
+    inlineHelpText = "Enter a formula with operators, functions, and available fields on quote and target object. Not supported on legacy calculator."
+    createable = true
+    updateable = true
+    length = 131072
+    queryable = true
+    deprecated = false
+    description = "You can construct a formula using many of Salesforce's available operators and functions. Refer to Salesforce CPQ documentation for the full list. You can also add in information from the quote or the target object field (i.e., SBQQ__QuoteLine__c.SBQQ__ListPrice__c)."
+    externalId = false
+    trackTrending = false
+    visibleLines = 3
+  }
+  salesforce.Number SBQQ__Order__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__Order__c"
+    label = "Order"
+    precision = 18
+    scale = 0
+    inlineHelpText = "Number which determines the order in which multiple actions on a rule are executed."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Number which determines the order in which multiple actions on a rule are executed."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.FormulaCheckbox SBQQ__ParentRuleIsActive__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__ParentRuleIsActive__c"
+    label = "ParentRuleIsActive"
+    formula = "SBQQ__Rule__r.SBQQ__Active__c"
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaText SBQQ__RuleLookupObject__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__RuleLookupObject__c"
+    label = "Rule Lookup Object"
+    formula = "TEXT(SBQQ__Rule__r.SBQQ__LookupObject__c)"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaCheckbox SBQQ__RuleTargetsCalculator__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__RuleTargetsCalculator__c"
+    label = "RuleTargetsCalculator"
+    formula = "ISPICKVAL(SBQQ__Rule__r.SBQQ__TargetObject__c, 'Calculator') || ISPICKVAL(SBQQ__Rule__r.SBQQ__TargetObject__c, 'Quote Line')"
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Picklist SBQQ__SourceLookupField__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__SourceLookupField__c"
+    label = "Source Lookup Field"
+    valueSet = [
+      {
+        fullName = "SBQQ__Value__c"
+        default = false
+        label = "SBQQ__Value__c"
+      },
+      {
+        fullName = "IPPrice__c"
+        default = false
+        label = "IPPrice__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "API Name of the field to return from the row matching the condition."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "API Name of the field to return from the row matching the condition."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__SourceVariable__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__SourceVariable__c"
+    label = "Source Variable"
+    referenceTo = [
+      salesforce.SBQQ__SummaryVariable__c,
+    ]
+    inlineHelpText = "Summary variable that sources value for this action."
+    createable = true
+    updateable = true
+    relationshipName = "SourcePriceActions"
+    queryable = true
+    deleteConstraint = "Restrict"
+    deprecated = false
+    description = "Summary variable that sources value for this action."
+    externalId = false
+    relationshipLabel = "Price Actions (Source)"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TargetObject__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__TargetObject__c"
+    label = "Target Object"
+    valueSet = [
+      {
+        fullName = "Quote"
+        default = false
+        label = "Quote"
+      },
+      {
+        fullName = "Quote Line"
+        default = false
+        label = "Quote Line"
+      },
+      {
+        fullName = "Product Option"
+        default = false
+        label = "Product Option"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Use Quote or Quote Line where Price Rule Evaluation Scope = Calculation, Use Product Option where Price Rule Evaluation Scope = Configuration"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__ValueField__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__ValueField__c"
+    label = "Source Field"
+    inlineHelpText = "If the value you want inserted is calculated in another Quote Line field, select the field here."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    deprecated = false
+    description = "Name of the field that sources value for this action."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__Value__c {
+    apiName = "SBQQ__PriceAction__c.SBQQ__Value__c"
+    label = "Value"
+    inlineHelpText = "Enter the value you want inserted into the Target Field when conditions are met."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The value that will be inserted into the Target Field when conditions are met."
+    externalId = false
+    trackTrending = false
+  }
+}

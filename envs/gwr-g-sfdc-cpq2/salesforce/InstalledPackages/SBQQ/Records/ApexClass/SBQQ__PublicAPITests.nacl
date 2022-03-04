@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__PublicAPITests {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__PublicAPITests"
+  content = "(hidden)"
+}

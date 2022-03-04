@@ -1,0 +1,34 @@
+type salesforce.SBQQ__FieldMetadata__c {
+  salesforce.Text SBQQ__FieldName__c {
+    apiName = "SBQQ__FieldMetadata__c.SBQQ__FieldName__c"
+    label = "Field Name"
+    _required = true
+    inlineHelpText = "Enter API name of the field."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    deprecated = false
+    description = "API name of the field described by this record."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ObjectName__c {
+    apiName = "SBQQ__FieldMetadata__c.SBQQ__ObjectName__c"
+    label = "Object Name"
+    _required = true
+    inlineHelpText = "Enter API name of the object that contains the field."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    deprecated = false
+    description = "API name of the object that contains the field described by this record."
+    externalId = false
+    trackTrending = false
+  }
+}

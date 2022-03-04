@@ -1,0 +1,6 @@
+salesforce.SharingRules SBQQ__WebQuote__c {
+  fullName = "SBQQ__WebQuote__c"
+  _parent = [
+    salesforce.SBQQ__WebQuote__c,
+  ]
+}

@@ -1,0 +1,7 @@
+salesforce.StaticResource SBQQ__IconFonts {
+  cacheControl = "Public"
+  contentType = "application/zip"
+  description = "IconFonts"
+  fullName = "SBQQ__IconFonts"
+  content = file("salesforce/InstalledPackages/SBQQ/Records/StaticResource/SBQQ__IconFonts.zip")
+}

@@ -1,0 +1,6 @@
+salesforce.RemoteSiteSetting SBQQ__ContractingNA {
+  fullName = "SBQQ__ContractingNA"
+  disableProtocolSecurity = false
+  isActive = true
+  url = "https://contracting-na.steelbrick.com"
+}

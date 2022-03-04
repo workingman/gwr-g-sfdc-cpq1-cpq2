@@ -1,0 +1,7 @@
+salesforce.StaticResource SBQQ__sb_app_js {
+  cacheControl = "Public"
+  contentType = "application/javascript"
+  description = "Salesforce CPQ Javascript"
+  fullName = "SBQQ__sb_app_js"
+  content = file("salesforce/InstalledPackages/SBQQ/Records/StaticResource/SBQQ__sb_app_js.js")
+}

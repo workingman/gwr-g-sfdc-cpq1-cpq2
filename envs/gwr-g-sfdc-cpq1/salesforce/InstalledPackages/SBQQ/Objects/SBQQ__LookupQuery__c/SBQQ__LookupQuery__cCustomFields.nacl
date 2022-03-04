@@ -1,0 +1,302 @@
+type salesforce.SBQQ__LookupQuery__c {
+  salesforce.Picklist SBQQ__LookupField__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__LookupField__c"
+    label = "Lookup Field"
+    valueSet = [
+      {
+        fullName = "SBQQ__Category__c"
+        default = false
+        label = "SBQQ__Category__c"
+      },
+      {
+        fullName = "OLCountry__c"
+        default = false
+        label = "OLCountry__c"
+      },
+      {
+        fullName = "IPIndustry__c"
+        default = false
+        label = "IPIndustry__c"
+      },
+      {
+        fullName = "IPProduct__c"
+        default = false
+        label = "IPProduct__c"
+      },
+      {
+        fullName = "IPSLA__c"
+        default = false
+        label = "IPSLA__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "API Name of the custom field used in the query."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "API Name of the custom field used in the query."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__MatchType__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__MatchType__c"
+    label = "Match Type"
+    valueSet = [
+      {
+        fullName = "Field Value"
+        default = false
+        label = "Field Value"
+      },
+      {
+        fullName = "Static Value"
+        default = false
+        label = "Static Value"
+      },
+      {
+        fullName = "Configuration Attribute Value"
+        default = false
+        label = "Configuration Attribute Value"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "If Match Type = Field Value, select a Tested Object and Tested Field. If Match Type = Static Value, enter the value into Tested Value. If Match Type = Configuration Attribute, specify a Configuration Attribute."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "If Match Type = Field Value, select a Tested Object and Tested Field. If Match Type = Static Value, enter the value into Tested Value. If Match Type = Configuration Attribute, specify a Configuration Attribute."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__Operator__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__Operator__c"
+    label = "Operator"
+    valueSet = [
+      {
+        fullName = "equals"
+        default = false
+        label = "equals"
+      },
+      {
+        fullName = "not equals"
+        default = false
+        label = "not equals"
+      },
+      {
+        fullName = "less than"
+        default = false
+        label = "less than"
+      },
+      {
+        fullName = "less or equals"
+        default = false
+        label = "less or equals"
+      },
+      {
+        fullName = "greater than"
+        default = false
+        label = "greater than"
+      },
+      {
+        fullName = "greater or equals"
+        default = false
+        label = "greater or equals"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "The operator that is applied when comparing the Field with the Value."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The operator that is applied when comparing the Field with the Value."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.FormulaCheckbox SBQQ__ParentRuleIsActive__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__ParentRuleIsActive__c"
+    label = "ParentRuleIsActive"
+    formula = "SBQQ__PriceRule2__r.SBQQ__Active__c || SBQQ__ProductRule__r.SBQQ__Active__c"
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Lookup SBQQ__PriceRule2__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__PriceRule2__c"
+    label = "Price Rule"
+    referenceTo = [
+      salesforce.SBQQ__PriceRule__c,
+    ]
+    inlineHelpText = "Price Rule associated with this Lookup Query. Replaces the legacy master-detail field."
+    createable = true
+    updateable = true
+    relationshipName = "PriceRuleLookupQueries"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Price Rule associated with this Lookup Query. Replaces the legacy master-detail field."
+    externalId = false
+    relationshipLabel = "Lookup Queries (Price Rule)"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__ProductRule__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__ProductRule__c"
+    label = "Product Rule"
+    referenceTo = [
+      salesforce.SBQQ__ProductRule__c,
+    ]
+    inlineHelpText = "Product Rule associated with this Lookup Query"
+    createable = true
+    updateable = true
+    relationshipName = "ProductRuleLookupQueries"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Product Rule associated with this Lookup Query"
+    externalId = false
+    relationshipLabel = "Lookup Queries (Product Rule)"
+    trackTrending = false
+  }
+  salesforce.FormulaText SBQQ__RuleLookupObject__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__RuleLookupObject__c"
+    label = "Parent Rule Lookup Object"
+    formula = "TEXT(SBQQ__PriceRule2__r.SBQQ__LookupObject__c)"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaCheckbox SBQQ__RuleTargetsCalculator__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__RuleTargetsCalculator__c"
+    label = "RuleTargetsCalculator"
+    formula = "ISPICKVAL(SBQQ__PriceRule2__r.SBQQ__TargetObject__c, 'Calculator') || ISPICKVAL(SBQQ__PriceRule2__r.SBQQ__TargetObject__c, 'Quote Line')"
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Lookup SBQQ__TestedConfigurationAttribute__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__TestedConfigurationAttribute__c"
+    label = "Tested Configuration Attribute"
+    referenceTo = [
+      salesforce.SBQQ__ConfigurationAttribute__c,
+    ]
+    inlineHelpText = "Configuration Attribute that is evaluated by this query. Required if Match Type = Configuration Attribute and only if this Query is associated with a Product Rule."
+    createable = true
+    updateable = true
+    relationshipName = "LookupQueries"
+    queryable = true
+    deleteConstraint = "Restrict"
+    deprecated = false
+    description = "Configuration Attribute that is evaluated by this query. Required if Match Type = Configuration Attribute and only if this Query is associated with a Product Rule."
+    externalId = false
+    relationshipLabel = "Lookup Queries"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TestedField__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__TestedField__c"
+    label = "Tested Field"
+    valueSet = [
+      {
+        fullName = "Product Code"
+        default = false
+        label = "Product Code"
+      },
+      {
+        fullName = "SBQQ__ShippingCountry__c"
+        default = false
+        label = "SBQQ__ShippingCountry__c"
+      },
+      {
+        fullName = "AccountIndustry__c"
+        default = false
+        label = "AccountIndustry__c"
+      },
+      {
+        fullName = "AccountSLA__c"
+        default = false
+        label = "AccountSLA__c"
+      },
+      {
+        fullName = "SBQQ__Product__c"
+        default = false
+        label = "SBQQ__Product__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Field on Quote, Quote Line or Product Option object that is evaluated by this query. Required if Match Type = Field Value."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field on Quote, Quote Line or Product Option object that is evaluated by this query. Required if Match Type = Field Value."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__TestedObject__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__TestedObject__c"
+    label = "Tested Object"
+    valueSet = [
+      {
+        fullName = salesforce.SBQQ__Quote__c
+        default = false
+        label = "Quote"
+      },
+      {
+        fullName = salesforce.SBQQ__QuoteLine__c
+        default = false
+        label = "Quote Line"
+      },
+      {
+        fullName = salesforce.SBQQ__ProductOption__c
+        default = false
+        label = "Product Option"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Object against which the query is evaluated. Required if Match Type = Field Value."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Object against which the query is evaluated. Required if Match Type = Field Value."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TestedValue__c {
+    apiName = "SBQQ__LookupQuery__c.SBQQ__TestedValue__c"
+    label = "Tested Value"
+    inlineHelpText = "The value you want to match in the field you selected using the operator chosen. Required if Match Type = Static Value."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The value you want to match in the field you selected using the operator chosen. Required if Match Type = Static Value."
+    externalId = false
+    trackTrending = false
+  }
+}

@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__ServiceReader {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__ServiceReader"
+  content = "(hidden)"
+}

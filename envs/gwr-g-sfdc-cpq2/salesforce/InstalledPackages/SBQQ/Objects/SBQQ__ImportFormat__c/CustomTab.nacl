@@ -1,0 +1,8 @@
+salesforce.CustomTab SBQQ__ImportFormat__c {
+  fullName = "SBQQ__ImportFormat__c"
+  customObject = true
+  motif = "Custom33: Desk"
+  _parent = [
+    salesforce.SBQQ__ImportFormat__c,
+  ]
+}

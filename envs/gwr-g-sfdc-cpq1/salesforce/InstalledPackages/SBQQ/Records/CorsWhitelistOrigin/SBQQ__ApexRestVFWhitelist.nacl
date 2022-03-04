@@ -1,0 +1,4 @@
+salesforce.CorsWhitelistOrigin SBQQ__ApexRestVFWhitelist {
+  fullName = "SBQQ__ApexRestVFWhitelist"
+  urlPattern = "https://*.visualforce.com"
+}

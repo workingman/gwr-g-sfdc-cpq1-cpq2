@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__QuoteRestEndpointTests {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__QuoteRestEndpointTests"
+  content = "(hidden)"
+}

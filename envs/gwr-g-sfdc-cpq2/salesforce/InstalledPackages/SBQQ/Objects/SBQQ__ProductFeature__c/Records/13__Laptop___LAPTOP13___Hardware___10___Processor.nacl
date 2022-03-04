@@ -1,0 +1,11 @@
+salesforce.SBQQ__ProductFeature__c "13__Laptop___LAPTOP13___Hardware___10___Processor@rsuuuuuuuuuuuu" {
+  Name = "Processor"
+  SBQQ__ConfiguredSKU__c = salesforce.Product2.instance.13__Laptop___LAPTOP13___Hardware@rsuuuuuu
+  SBQQ__MaxOptionCount__c = 1
+  SBQQ__MinOptionCount__c = 1
+  SBQQ__Number__c = 10
+  External_ID__c = "FE0004"
+  _parent = [
+    salesforce.Product2.instance.13__Laptop___LAPTOP13___Hardware@rsuuuuuu,
+  ]
+}

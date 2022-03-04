@@ -1,0 +1,438 @@
+type salesforce.SBQQ__DiscountSchedule__c {
+  salesforce.Lookup SBQQ__Account__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__Account__c"
+    label = "Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    inlineHelpText = "Account that this discount schedule applies to. Only used in combination with Discount Schedule Override on Quote Line Editor UI."
+    createable = true
+    updateable = true
+    relationshipName = "Discount_Schedules"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Account that this discount schedule applies to. Only used in combination with Discount Schedule Override on Quote Line Editor UI."
+    externalId = false
+    relationshipLabel = "Discount Schedules"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__AggregationScope__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__AggregationScope__c"
+    label = "Aggregation Scope"
+    valueSet = [
+      {
+        fullName = "Quote"
+        default = false
+        label = "Quote"
+      },
+      {
+        fullName = "Group"
+        default = false
+        label = "Group"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify how to aggregate quantities of quote lines for products using this schedule. By default quantity of each line (even for the same product) is considered independently."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates whether quote lines referencing this schedule should be aggregated within quote, group or not at all for the purposes of volume discount calculation."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ConstraintField__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__ConstraintField__c"
+    label = "Constraint Field"
+    valueSet = [
+      {
+        fullName = salesforce.SBQQ__Quote__c.field.SBQQ__Account__c
+        default = false
+        label = "Account__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the field that you want to match against the same field on the quote."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "For cross-order schedules, if you want to limit which subscriptions and assets are used to calculate your volume discounts, select the field that you want to match against the same field on the quote."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Checkbox SBQQ__CrossOrders__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__CrossOrders__c"
+    label = "Cross Orders"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if you want to extend volume discounts on total volume owned by customer (i.e. quantity quoted plus prior purchases)."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Specifies whether volume discount should be applied on combined quantities across prior orders."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__CrossProducts__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__CrossProducts__c"
+    label = "Cross Products"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox to aggregate quantities of all products using this schedule for the purpose of volume discount calculation. Slab discounts cannot be used for Cross Product discounts."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that indicates whether volume discount calculations should aggregate quantities of all products using this schedule."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__Description__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__Description__c"
+    label = "Description"
+    inlineHelpText = "Description for this Discount Schedule."
+    createable = true
+    updateable = true
+    length = 5000
+    queryable = true
+    deprecated = false
+    description = "Description for this Discount Schedule."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    visibleLines = 4
+  }
+  salesforce.Picklist SBQQ__DiscountUnit__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__DiscountUnit__c"
+    label = "Discount Unit"
+    valueSet = [
+      {
+        fullName = "Percent"
+        default = true
+        label = "Percent"
+      },
+      {
+        fullName = "Amount"
+        default = false
+        label = "Amount"
+      },
+      {
+        fullName = "Price"
+        default = false
+        label = "Price"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify the Discount Unit: Amount or Percent."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "This is the Discount Unit for the Discount Schedule."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.TextArea SBQQ__ExcludedPricebookIds__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__ExcludedPricebookIds__c"
+    label = "Excluded Pricebook IDs"
+    inlineHelpText = "Enter a list of price book IDs separated by commas that should not be applied to this discount schedule."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Comma-seperated list of price book IDs for which this discount schedule should not apply."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__IncludeBundledProducts__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__IncludeBundledProducts__c"
+    label = "Include Bundled Quantities"
+    defaultValue = false
+    inlineHelpText = "If checked, the Quantities of Bundled Product Options will be included in the Aggregation Scope"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "If checked, the Quantities of Bundled Product Options will be included in the Aggregation Scope"
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__OrderProduct__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__OrderProduct__c"
+    label = "Order Product"
+    referenceTo = [
+      salesforce.OrderItem,
+    ]
+    inlineHelpText = "Order product that this discount schedule applies to."
+    createable = true
+    updateable = true
+    relationshipName = "DiscountSchedules"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Order product that this discount schedule applies to."
+    externalId = false
+    lookupFilter = {
+      active = true
+      errorMessage = "Please select Order Products of the associated order."
+      filterItems = [
+        {
+          field = "OrderItem.OrderId"
+          operation = "equals"
+          valueField = "$Source.SBQQ__Order__c"
+        },
+      ]
+      isOptional = false
+    }
+    relationshipLabel = "Discount Schedules"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Order__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__Order__c"
+    label = "Order"
+    referenceTo = [
+      salesforce.Order,
+    ]
+    inlineHelpText = "Order that this discount schedule applies to."
+    createable = true
+    updateable = true
+    relationshipName = "DiscountSchedules"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Order that this discount schedule applies to."
+    externalId = false
+    relationshipLabel = "Discount Schedules"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__OriginalDiscountSchedule__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__OriginalDiscountSchedule__c"
+    label = "Original Discount Schedule"
+    referenceTo = [
+      salesforce.SBQQ__DiscountSchedule__c,
+    ]
+    inlineHelpText = "The original Discount Schedule that was overridden to create this Discount Schedule."
+    createable = true
+    updateable = true
+    relationshipName = "DiscountSchedules"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The original Discount Schedule that was overridden to create this Discount Schedule."
+    externalId = false
+    relationshipLabel = "Discount Schedules"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__OverrideBehavior__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__OverrideBehavior__c"
+    label = "Override Behavior"
+    valueSet = [
+      {
+        fullName = "All"
+        default = false
+        label = "All"
+      },
+      {
+        fullName = "Current Tier Only"
+        default = false
+        label = "Current Tier Only"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Determines if the current Discount Tier that the product falls within is editable, if all Discount Tiers are editable, or none."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines if the current Discount Tier that the product falls within is editable, if all Discount Tiers are editable, or none."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__PriceScale__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__PriceScale__c"
+    label = "Price Scale"
+    defaultValueFormula = "2"
+    precision = 8
+    scale = 0
+    inlineHelpText = "Decimal places for prices produced by this discount schedule."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Decimal places for prices produced by this discount schedule."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Pricebook__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__Pricebook__c"
+    label = "Price Book"
+    referenceTo = [
+      salesforce.Pricebook2,
+    ]
+    inlineHelpText = "Price book that this discount schedule applies to. Only used in combination with Product lookup to assign product/price book specific schedule."
+    createable = true
+    updateable = true
+    relationshipName = "DiscountSchedules"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Price book that this discount schedule applies to. Only used in combination with Product lookup to assign product/price book specific schedule."
+    externalId = false
+    relationshipLabel = "Discount Schedules"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Product__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__Product__c"
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "Product that this discount schedule applies to. Only used in combination with Price Book lookup to assign product/price book specific schedule."
+    createable = true
+    updateable = true
+    relationshipName = "DiscountSchedules"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Product that this discount schedule applies to. Only used in combination with Price Book lookup to assign product/price book specific schedule."
+    externalId = false
+    relationshipLabel = "Discount Schedules"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__QuoteLineQuantityField__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__QuoteLineQuantityField__c"
+    label = "Quote Line Quantity Field"
+    valueSet = [
+      {
+        fullName = "Quantity"
+        default = true
+        label = "Quantity"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Field used to calculate discount schedule pricing."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field used to calculate discount schedule pricing."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__QuoteLine__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__QuoteLine__c"
+    label = "Quote Line"
+    referenceTo = [
+      salesforce.SBQQ__QuoteLine__c,
+    ]
+    inlineHelpText = "Quote Line that this discount schedule applies to. Only used in combination with Discount Schedule Override on Quote Line Editor UI."
+    createable = true
+    updateable = true
+    relationshipName = "Discount_Schedules"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Quote Line that this discount schedule applies to. Only used in combination with Discount Schedule Override on Quote Line Editor UI."
+    externalId = false
+    relationshipLabel = "Discount Schedules"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Quote__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__Quote__c"
+    label = "Quote"
+    referenceTo = [
+      salesforce.SBQQ__Quote__c,
+    ]
+    inlineHelpText = "Quote that this discount schedule applies to. Only used in combination with Discount Schedule Override on Quote Line Editor UI."
+    createable = true
+    updateable = true
+    relationshipName = "Discount_Schedules"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Quote that this discount schedule applies to. Only used in combination with Discount Schedule Override on Quote Line Editor UI."
+    externalId = false
+    relationshipLabel = "Discount Schedules"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Type__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__Type__c"
+    label = "Type"
+    valueSet = [
+      {
+        fullName = "Range"
+        default = true
+        label = "Range"
+      },
+      {
+        fullName = "Slab"
+        default = false
+        label = "Slab"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Choose the type of discount that determines how the amount or percentages will be subtracted from price."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The type of discount schedule determines how the discount is calculated."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Checkbox SBQQ__UsePriceForAmount__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__UsePriceForAmount__c"
+    label = "Use Price For Amount"
+    defaultValue = false
+    inlineHelpText = "If checked, the user defined Discount Schedule's Discount Unit will be set to Price."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "If checked, the user defined Discount Schedule's Discount Unit will be set to Price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__UserDefined__c {
+    apiName = "SBQQ__DiscountSchedule__c.SBQQ__UserDefined__c"
+    label = "User Defined"
+    defaultValue = false
+    inlineHelpText = "Identifies whether this schedule was created by an end user or an admin."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Identifies whether this schedule was created by an end user or an admin."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+}

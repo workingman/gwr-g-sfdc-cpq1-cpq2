@@ -1,0 +1,199 @@
+type salesforce.SBQQ__TaxExemptionCertificate__c {
+  salesforce.MasterDetail SBQQ__Account__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__Account__c"
+    label = "Account"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "Tax_Exemption_Certificates"
+    queryable = true
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Tax Exemption Certificates"
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Active__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__Active__c"
+    label = "Active"
+    defaultValue = true
+    inlineHelpText = "An Active Certificate will make set the ‘Tax Exempt?’ field on the Active to true"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "An Active Certificate will make set the ‘Tax Exempt?’ field on the Active to true"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CertificateNumber__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__CertificateNumber__c"
+    label = "Certificate Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 50
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__Country__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__Country__c"
+    label = "Country"
+    inlineHelpText = "ptional - to track the company address associated to the certificate"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 25
+    queryable = true
+    deprecated = false
+    description = "Optional - to track the company address associated to the certificate"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__County__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__County__c"
+    label = "County"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 25
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Date SBQQ__DateIssued__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__DateIssued__c"
+    label = "Date Issued"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Default__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__Default__c"
+    label = "Default"
+    defaultValue = false
+    inlineHelpText = "A certificate can be marked as default only if it is active"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "A certificate can be marked as default only if it is active"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ExemptCompanyName__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__ExemptCompanyName__c"
+    label = "Exempt Company Name"
+    inlineHelpText = "The company name or DBA name associated to the certificate"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    deprecated = false
+    description = "The company name or DBA name associated to the certificate"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Date SBQQ__ExpirationDate__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__ExpirationDate__c"
+    label = "Expiration Date"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IssuingAuthority__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__IssuingAuthority__c"
+    label = "Issuing Authority"
+    inlineHelpText = "The authority, such as a government agency or country (for European organizations), that issued the certificate"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 50
+    queryable = true
+    deprecated = false
+    description = "The authority, such as a government agency or country (for European organizations), that issued the certificate"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.TextArea SBQQ__Notes__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__Notes__c"
+    label = "Notes"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__PostalCode__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__PostalCode__c"
+    label = "Postal Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 25
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__State__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__State__c"
+    label = "State"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 25
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__StreetAddress_2__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__StreetAddress_2__c"
+    label = "Street Address_2"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__StreetAddress__c {
+    apiName = "SBQQ__TaxExemptionCertificate__c.SBQQ__StreetAddress__c"
+    label = "Street Address"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+}

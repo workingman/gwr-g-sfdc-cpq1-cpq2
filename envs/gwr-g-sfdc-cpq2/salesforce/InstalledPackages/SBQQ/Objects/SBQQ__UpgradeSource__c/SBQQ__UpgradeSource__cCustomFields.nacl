@@ -1,0 +1,53 @@
+type salesforce.SBQQ__UpgradeSource__c {
+  salesforce.Lookup SBQQ__SourceProduct__c {
+    apiName = "SBQQ__UpgradeSource__c.SBQQ__SourceProduct__c"
+    label = "Source Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "Specify product to upgrade from."
+    createable = true
+    updateable = true
+    relationshipName = "AvailableUpgradeSources"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Product being upgraded."
+    externalId = false
+    relationshipLabel = "Available Upgrade Sources"
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__UpgradeConversionRate__c {
+    apiName = "SBQQ__UpgradeSource__c.SBQQ__UpgradeConversionRate__c"
+    label = "Upgrade Conversion Rate"
+    inlineHelpText = "Specify a ratio for quantity conversion from Upgrade Source to Upgrade Product. e.g. \"5:1\" indicates that 5 units of Upgrade Source convert to 1 unit of Upgrade Product. If blank, no Upgrade Conversion Rate is enforced."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    deprecated = false
+    description = "The conversion rate between the upgrade product and the source product."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__UpgradeProduct__c {
+    apiName = "SBQQ__UpgradeSource__c.SBQQ__UpgradeProduct__c"
+    label = "Upgrade Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "Specify the product to upgrade to."
+    createable = true
+    updateable = true
+    relationshipName = "UpgradeSources"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Upgrade product."
+    externalId = false
+    relationshipLabel = "Upgrade Sources"
+    trackTrending = false
+  }
+}

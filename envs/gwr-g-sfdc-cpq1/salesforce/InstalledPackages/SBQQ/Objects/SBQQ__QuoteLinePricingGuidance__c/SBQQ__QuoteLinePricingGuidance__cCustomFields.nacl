@@ -1,0 +1,130 @@
+type salesforce.SBQQ__QuoteLinePricingGuidance__c {
+  salesforce.MasterDetail SBQQ__QuoteLine__c {
+    apiName = "SBQQ__QuoteLinePricingGuidance__c.SBQQ__QuoteLine__c"
+    label = "Quote Line"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__QuoteLine__c,
+    ]
+    inlineHelpText = "The quote line related to this pricing guidance."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "QuoteLinePricingGuidance"
+    queryable = true
+    deprecated = false
+    description = "The quote line related to this pricing guidance."
+    externalId = false
+    relationshipLabel = "Quote Line Pricing Guidance"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__Explanation__c {
+    apiName = "SBQQ__QuoteLinePricingGuidance__c.SBQQ__Explanation__c"
+    label = "Explanation"
+    inlineHelpText = "An explanation of this pricing guidance and recommendations for discounts to provide. Sales reps can view this explanation with the pricing guidance in the quote line editor."
+    createable = true
+    updateable = true
+    length = 131072
+    queryable = true
+    deprecated = false
+    description = "An explanation of this pricing guidance and recommendations for discounts to provide. Sales reps can view this explanation with the pricing guidance in the quote line editor."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    visibleLines = 3
+  }
+  salesforce.Percent SBQQ__Floor__c {
+    apiName = "SBQQ__QuoteLinePricingGuidance__c.SBQQ__Floor__c"
+    label = "Floor"
+    inlineHelpText = "High discount for exception pricing based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org's approval settings."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "High discount for exception pricing based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org's approval settings."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__Norm__c {
+    apiName = "SBQQ__QuoteLinePricingGuidance__c.SBQQ__Norm__c"
+    label = "Norm"
+    inlineHelpText = "Middle-range discount based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org's approval settings."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Middle-range discount based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org's approval settings."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Quote__c {
+    apiName = "SBQQ__QuoteLinePricingGuidance__c.SBQQ__Quote__c"
+    label = "Quote"
+    referenceTo = [
+      salesforce.SBQQ__Quote__c,
+    ]
+    inlineHelpText = "The quote containing the quote line related to this pricing guidance."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLinePricingGuidance"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The quote containing the quote line related to this pricing guidance."
+    externalId = false
+    relationshipLabel = "Quote Line Pricing Guidance"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__Target__c {
+    apiName = "SBQQ__QuoteLinePricingGuidance__c.SBQQ__Target__c"
+    label = "Target"
+    inlineHelpText = "Ideal low-range discount based on past sales. If sales reps accept this pricing guidance, Salesforce CPQ applies a discount to reach this price."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Ideal low-range discount based on past sales. If sales reps accept this pricing guidance, Salesforce CPQ applies a discount to reach this price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCheckbox SBQQ__GuidanceUsed__c {
+    apiName = "SBQQ__QuoteLinePricingGuidance__c.SBQQ__GuidanceUsed__c"
+    label = "Guidance Used"
+    formula = "IF(SBQQ__QuoteLine__r.SBQQ__Discount__c == SBQQ__QuoteLine__r.SBQQ__Guidance__c, true, false)"
+    inlineHelpText = "A sales rep has accepted the target discount from this pricing guidance in the quote line editor."
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox SBQQ__IsViewed__c {
+    apiName = "SBQQ__QuoteLinePricingGuidance__c.SBQQ__IsViewed__c"
+    label = "Viewed"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "A sales rep has viewed this pricing guidance in the quote line editor."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+}

@@ -1,0 +1,7 @@
+salesforce.StaticResource SBQQ__QuoteTermEditorUI {
+  cacheControl = "Private"
+  contentType = "application/javascript"
+  description = "ext/javascript"
+  fullName = "SBQQ__QuoteTermEditorUI"
+  content = file("salesforce/InstalledPackages/SBQQ/Records/StaticResource/SBQQ__QuoteTermEditorUI.js")
+}

@@ -1,0 +1,61 @@
+salesforce.LightningPage Training_Product_Rule_Page {
+  fullName = "Training_Product_Rule_Page"
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "collapsed"
+                value = "false"
+              },
+              {
+                name = "numVisibleActions"
+                value = "3"
+              },
+            ]
+            componentName = "force:highlightsPanel"
+          }
+        },
+      ]
+      name = "header"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "force:detailPanel"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "relatedListComponentOverride"
+                value = "NONE"
+              },
+            ]
+            componentName = "force:relatedListContainer"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+    {
+      name = "sidebar"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Training Product Rule Page"
+  sobjectType = "SBQQ__ProductRule__c"
+  template = {
+    name = "flexipage:recordHomeTemplateDesktop"
+  }
+  type = "RecordPage"
+  _parent = [
+    salesforce.SBQQ__ProductRule__c,
+  ]
+}

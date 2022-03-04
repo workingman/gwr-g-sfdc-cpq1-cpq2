@@ -1,0 +1,172 @@
+type salesforce.SBQQ__UsageRate__c {
+  salesforce.MasterDetail SBQQ__UsageRateCard__c {
+    apiName = "SBQQ__UsageRate__c.SBQQ__UsageRateCard__c"
+    label = "Usage Rate Card"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = true
+    referenceTo = [
+      salesforce.SBQQ__UsageRateCard__c,
+    ]
+    inlineHelpText = "Parent usage rate card for this usage rate"
+    createable = true
+    updateable = true
+    relationshipOrder = 0
+    relationshipName = "UsageRates"
+    queryable = true
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Usage Rates"
+    trackTrending = false
+  }
+  salesforce.TextArea SBQQ__Description__c {
+    apiName = "SBQQ__UsageRate__c.SBQQ__Description__c"
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__LowerBound__c {
+    apiName = "SBQQ__UsageRate__c.SBQQ__LowerBound__c"
+    label = "Lower Bound"
+    precision = 12
+    scale = 0
+    inlineHelpText = "Lower bound of the usage range for this usage rate"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__PriceBook__c {
+    apiName = "SBQQ__UsageRate__c.SBQQ__PriceBook__c"
+    label = "Price Book"
+    referenceTo = [
+      salesforce.Pricebook2,
+    ]
+    inlineHelpText = "Choose a price book for this usage rate to reference"
+    createable = true
+    updateable = true
+    relationshipName = "UsageRates"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Usage Rates"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__PriceType__c {
+    apiName = "SBQQ__UsageRate__c.SBQQ__PriceType__c"
+    label = "Price Type"
+    valueSet = [
+      {
+        fullName = "Per Unit"
+        default = false
+        label = "Per Unit"
+      },
+      {
+        fullName = "Flat Fee"
+        default = false
+        label = "Flat Fee"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Currency SBQQ__Price__c {
+    apiName = "SBQQ__UsageRate__c.SBQQ__Price__c"
+    label = "Price"
+    inlineHelpText = "Price for the active currency. Use this field in multi-currency orgs."
+    createable = true
+    updateable = true
+    scale = 7
+    precision = 14
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__UpperBound__c {
+    apiName = "SBQQ__UsageRate__c.SBQQ__UpperBound__c"
+    label = "Upper Bound"
+    precision = 12
+    scale = 0
+    inlineHelpText = "Upper bound of the usage range for this usage rate"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__UsagePriceMethod__c {
+    apiName = "SBQQ__UsageRate__c.SBQQ__UsagePriceMethod__c"
+    label = "Usage Price Method"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Per Unit"
+        default = false
+        label = "Per Unit"
+      },
+      {
+        fullName = "Included Quantity"
+        default = false
+        label = "Included Quantity"
+      },
+      {
+        fullName = "Usage Floor Quantity (Minimum)"
+        default = false
+        label = "Usage Floor Quantity (Minimum)"
+      },
+      {
+        fullName = "Usage Ceiling Quantity (Maximum)"
+        default = false
+        label = "Usage Ceiling Quantity (Maximum)"
+      },
+      {
+        fullName = "Overage (per unit)"
+        default = false
+        label = "Overage (per unit)"
+      },
+      {
+        fullName = "Period High Water Mark"
+        default = false
+        label = "Period High Water Mark"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__UsageProcessingOrder__c {
+    apiName = "SBQQ__UsageRate__c.SBQQ__UsageProcessingOrder__c"
+    label = "Usage Processing Order"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Define a number for Salesforce Billing to use when ordering usage rates for processing"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+}

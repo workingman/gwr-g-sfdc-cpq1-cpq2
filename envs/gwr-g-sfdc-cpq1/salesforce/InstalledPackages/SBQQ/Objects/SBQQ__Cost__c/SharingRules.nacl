@@ -1,0 +1,6 @@
+salesforce.SharingRules SBQQ__Cost__c {
+  fullName = "SBQQ__Cost__c"
+  _parent = [
+    salesforce.SBQQ__Cost__c,
+  ]
+}

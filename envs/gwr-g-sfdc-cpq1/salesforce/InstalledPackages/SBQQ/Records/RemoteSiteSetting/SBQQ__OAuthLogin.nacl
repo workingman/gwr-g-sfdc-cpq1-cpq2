@@ -1,0 +1,6 @@
+salesforce.RemoteSiteSetting SBQQ__OAuthLogin {
+  fullName = "SBQQ__OAuthLogin"
+  disableProtocolSecurity = false
+  isActive = true
+  url = "https://login.salesforce.com"
+}

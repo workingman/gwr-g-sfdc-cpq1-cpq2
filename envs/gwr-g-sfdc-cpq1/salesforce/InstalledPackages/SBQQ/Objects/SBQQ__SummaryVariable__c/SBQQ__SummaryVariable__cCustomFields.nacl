@@ -1,0 +1,333 @@
+type salesforce.SBQQ__SummaryVariable__c {
+  salesforce.Picklist SBQQ__AggregateField__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__AggregateField__c"
+    label = "Aggregate Field"
+    valueSet = [
+      {
+        fullName = "Quantity"
+        default = false
+        label = "Quantity"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Quote Line field that's acted upon by the aggregate function."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Quote Line field that's acted upon by the aggregate function."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__AggregateFunction__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__AggregateFunction__c"
+    label = "Aggregate Function"
+    valueSet = [
+      {
+        fullName = "Count"
+        default = false
+        label = "Count"
+      },
+      {
+        fullName = "Sum"
+        default = false
+        label = "Sum"
+      },
+      {
+        fullName = "Average"
+        default = false
+        label = "Average"
+      },
+      {
+        fullName = "Min"
+        default = false
+        label = "Min"
+      },
+      {
+        fullName = "Max"
+        default = false
+        label = "Max"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Aggregate function used to calculate this variable."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Aggregate function used to calculate this variable."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__CombineWith__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__CombineWith__c"
+    label = "Variable Element"
+    referenceTo = [
+      salesforce.SBQQ__SummaryVariable__c,
+    ]
+    inlineHelpText = "Another summary variable to compose with this summary variable if your condition is based on both results."
+    createable = true
+    updateable = true
+    relationshipName = "CombinedBy"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Another variable to compose with this variable to produce the final result."
+    externalId = false
+    relationshipLabel = "Composed By"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__CompositeOperator__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__CompositeOperator__c"
+    label = "Composite Operator"
+    valueSet = [
+      {
+        fullName = "Add"
+        default = false
+        label = "Add"
+      },
+      {
+        fullName = "Subtract"
+        default = false
+        label = "Subtract"
+      },
+      {
+        fullName = "Multiply"
+        default = false
+        label = "Multiply"
+      },
+      {
+        fullName = "Divide"
+        default = false
+        label = "Divide"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify how this variable should be composed with Variable Element or Value Element."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Operator to use in composing this variable with another variable or value to produce final result used in rules."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ConstraintField__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__ConstraintField__c"
+    label = "Constraint Field"
+    valueSet = [
+      {
+        fullName = "Type"
+        default = false
+        label = "Type"
+      },
+      {
+        fullName = "Status"
+        default = false
+        label = "Status"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "If you want to limit records further based on a quote field, select the field that you want to match against the same field on the quote."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The field that will limit records further based on a quote field."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__FilterField__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__FilterField__c"
+    label = "Filter Field"
+    valueSet = [
+      {
+        fullName = "Product Code"
+        default = false
+        label = "Product Code"
+      },
+      {
+        fullName = "Product Family"
+        default = false
+        label = "Product Family"
+      },
+      {
+        fullName = "ProductCode"
+        default = false
+        label = "ProductCode"
+      },
+      {
+        fullName = "SBQQ__ProductName__c"
+        default = false
+        label = "SBQQ__ProductName__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the field to use when filtering items for inclusion in this summary variable."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Items that are filtered for inclusion in this summary variable."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__FilterValue__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__FilterValue__c"
+    label = "Filter Value"
+    inlineHelpText = "Enter the value to match in this filter."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The value that matches this filter."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Operator__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__Operator__c"
+    label = "Operator"
+    valueSet = [
+      {
+        fullName = "equals"
+        default = false
+        label = "equals"
+      },
+      {
+        fullName = "not equals"
+        default = false
+        label = "not equals"
+      },
+      {
+        fullName = "less than"
+        default = false
+        label = "less than"
+      },
+      {
+        fullName = "less or equals"
+        default = false
+        label = "less or equals"
+      },
+      {
+        fullName = "greater than"
+        default = false
+        label = "greater than"
+      },
+      {
+        fullName = "greater or equals"
+        default = false
+        label = "greater or equals"
+      },
+      {
+        fullName = "starts with"
+        default = false
+        label = "starts with"
+      },
+      {
+        fullName = "ends with"
+        default = false
+        label = "ends with"
+      },
+      {
+        fullName = "contains"
+        default = false
+        label = "contains"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Choose the operator to use in your filter."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The operator being used in the filter."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__Scope__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__Scope__c"
+    label = "Scope"
+    valueSet = [
+      {
+        fullName = "Quote"
+        default = true
+        label = "Quote"
+      },
+      {
+        fullName = "Assets"
+        default = false
+        label = "Assets"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Enter the scope of your summary variable."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The scope of your summary variable."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__TargetObject__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__TargetObject__c"
+    label = "Target Object"
+    valueSet = [
+      {
+        fullName = "Quote Line"
+        default = false
+        label = "Quote Line"
+      },
+      {
+        fullName = "Product Option"
+        default = false
+        label = "Product Option"
+      },
+      {
+        fullName = "Asset"
+        default = false
+        label = "Asset"
+      },
+      {
+        fullName = "Subscription"
+        default = false
+        label = "Subscription"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the object you want to aggregate."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Name of object being summarized."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__ValueElement__c {
+    apiName = "SBQQ__SummaryVariable__c.SBQQ__ValueElement__c"
+    label = "Value Element"
+    precision = 16
+    scale = 4
+    inlineHelpText = "Enter value to use in composing operation."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Value used by Composite Operator in composing final result for this variable."
+    externalId = false
+    trackTrending = false
+  }
+}

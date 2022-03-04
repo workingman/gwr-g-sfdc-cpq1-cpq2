@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__QuoteExtSitesControllerTests {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__QuoteExtSitesControllerTests"
+  content = "(hidden)"
+}

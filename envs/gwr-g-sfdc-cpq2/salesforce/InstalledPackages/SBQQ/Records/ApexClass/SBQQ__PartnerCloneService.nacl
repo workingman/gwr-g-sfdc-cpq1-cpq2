@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__PartnerCloneService {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__PartnerCloneService"
+  content = "(hidden)"
+}

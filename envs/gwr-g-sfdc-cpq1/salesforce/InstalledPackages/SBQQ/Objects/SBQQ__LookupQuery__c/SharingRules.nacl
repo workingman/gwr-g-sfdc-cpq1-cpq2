@@ -1,0 +1,6 @@
+salesforce.SharingRules SBQQ__LookupQuery__c {
+  fullName = "SBQQ__LookupQuery__c"
+  _parent = [
+    salesforce.SBQQ__LookupQuery__c,
+  ]
+}

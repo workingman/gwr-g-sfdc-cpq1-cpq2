@@ -1,0 +1,345 @@
+type salesforce.SBQQ__Dimension__c {
+  salesforce.Picklist SBQQ__CostEditable__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__CostEditable__c"
+    label = "Cost Editable"
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Controls whether cost for this product may be modified on individual quotes."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Controls whether cost for this product may be modified on individual quotes."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__DefaultQuantity__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__DefaultQuantity__c"
+    label = "Default Quantity"
+    precision = 18
+    scale = 5
+    inlineHelpText = "Specify the starting quantity of the product when added."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Specify the starting quantity of the product when added."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__DiscountSchedule__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__DiscountSchedule__c"
+    label = "Discount Schedule"
+    referenceTo = [
+      salesforce.SBQQ__DiscountSchedule__c,
+    ]
+    inlineHelpText = "Discount schedule for use with this dimension"
+    createable = true
+    updateable = true
+    relationshipName = "Dimensions"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Discount schedule for use with this dimension"
+    externalId = false
+    relationshipLabel = "Price Dimensions"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__NonDiscountable__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__NonDiscountable__c"
+    label = "Non Discountable"
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Marks this dimension as not discountable."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Marks this dimension as not discountable."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__NonPartnerDiscountable__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__NonPartnerDiscountable__c"
+    label = "Non Partner Discountable"
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Marks this dimension as non-discountable for partners."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Marks this dimension as non-discountable for partners."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__PriceBook__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__PriceBook__c"
+    label = "Price Book"
+    referenceTo = [
+      salesforce.Pricebook2,
+    ]
+    inlineHelpText = "Associates this dimension to a particular Price Book"
+    createable = true
+    updateable = true
+    relationshipName = "Price_Dimensions"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Associates this dimension to a particular Price Book"
+    externalId = false
+    relationshipLabel = "Price Dimensions"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__PriceEditable__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__PriceEditable__c"
+    label = "Price Editable"
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Indicates this dimension allows for price to be freely editable when building a quote."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates this dimension allows for price to be freely editable when building a quote."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__Product__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__Product__c"
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "Select a Product to associate this Price Dimension with."
+    createable = true
+    updateable = true
+    relationshipName = "Dimensions"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The Product to which this Price Dimension is associated."
+    externalId = false
+    relationshipLabel = "Price Dimensions"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__QuantityEditable__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__QuantityEditable__c"
+    label = "Quantity Editable"
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Allow or prevent changing the quantity for this dimension."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that determines whether the quantity is editable."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__QuantityScale__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__QuantityScale__c"
+    label = "Quantity Scale"
+    precision = 10
+    scale = 0
+    inlineHelpText = "Specifies the number of decimal places used in the Quantity field."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Specifies the number of decimal places used in the Quantity field."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Taxable__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__Taxable__c"
+    label = "Taxable"
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Indicates whether this product is taxable."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates whether this product is taxable."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__TermDiscountSchedule__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__TermDiscountSchedule__c"
+    label = "Term Discount Schedule"
+    referenceTo = [
+      salesforce.SBQQ__DiscountSchedule__c,
+    ]
+    inlineHelpText = "This is a schedule for discounts based on Subscription Term. Values entered into these fields will override the values entered at the Product level."
+    createable = true
+    updateable = true
+    relationshipName = "TermDiscountedDimensions"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "This is a schedule for discounts based on Subscription Term. Values entered into these fields will override the values entered at the Product level."
+    externalId = false
+    relationshipLabel = "Price Dimensions (Term Discount Schedule)"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Type__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__Type__c"
+    label = "Type"
+    valueSet = [
+      {
+        fullName = "Year"
+        default = true
+        label = "Year"
+      },
+      {
+        fullName = "Quarter"
+        default = false
+        label = "Quarter"
+      },
+      {
+        fullName = "Month"
+        default = false
+        label = "Month"
+      },
+      {
+        fullName = "Custom"
+        default = false
+        label = "Custom"
+      },
+      {
+        fullName = "One-time"
+        default = false
+        label = "One-time"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the type of Price Dimension: One-Time or Yearly. Yearly Dimensions are always treated as Subscriptions."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "For multi-dimensional products, the type of Price Dimension: One-Time or Yearly. Yearly Dimensions are always treated as Subscriptions."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Currency SBQQ__UnitPrice__c {
+    apiName = "SBQQ__Dimension__c.SBQQ__UnitPrice__c"
+    label = "Unit Price"
+    inlineHelpText = "Unit price for this Dimension. This will override the value from the Price Book."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Unit price for this Dimension. This will override the value from the Price Book."
+    externalId = false
+    trackTrending = false
+  }
+}

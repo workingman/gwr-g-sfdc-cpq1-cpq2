@@ -1,0 +1,1581 @@
+type salesforce.SBQQ__QuoteTemplate__c {
+  salesforce.Checkbox SBQQ__AllPackageProductsShown__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__AllPackageProductsShown__c"
+    label = "Show All Package Product"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if all package products should be printed on quote documents; otherwise, only ones that are non-zero are printed."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that determines whether all package products are printed on quote documents or only ones that are non-zero."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__BillToTitle__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__BillToTitle__c"
+    label = "Bill To Title"
+    defaultValueFormula = "'Bill To'"
+    inlineHelpText = "Title used for Bill To section. Default value is \"Bill To\"."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    deprecated = false
+    description = "Title used for Bill To section. Default value is \"Bill To\"."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__BorderColor__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__BorderColor__c"
+    label = "Border Color"
+    defaultValueFormula = "\"000000\""
+    inlineHelpText = "Color of table borders expressed as a hexadecimal value."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Color of table borders expressed as a hexadecimal value."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__BottomMargin__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__BottomMargin__c"
+    label = "Bottom Margin"
+    _required = true
+    defaultValueFormula = "1"
+    precision = 6
+    scale = 2
+    inlineHelpText = "Bottom margin on the page."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Bottom margin on the page."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__BundledProductsShown__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__BundledProductsShown__c"
+    label = "Show Bundled Products"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if quote line items with Bundled enabled are displayed on quote documents generated from this template."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines if quote line items with the Bundled checkbox selected are displayed on quote documents generated from this template."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CompanyCity__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanyCity__c"
+    label = "Company City"
+    inlineHelpText = "City portion of company address displayed on quote documents."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    deprecated = false
+    description = "City portion of company address displayed on quote documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CompanyCountry__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanyCountry__c"
+    label = "Company Country"
+    inlineHelpText = "Country portion of company address displayed on quote documents."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 30
+    queryable = true
+    deprecated = false
+    description = "Country portion of company address displayed on quote documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Email SBQQ__CompanyEmail__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanyEmail__c"
+    label = "Company Email"
+    inlineHelpText = "Company email displayed on quote documents. Eg: sales@mycompany.com"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Company email displayed on quote documents. Eg: sales@mycompany.com"
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Phone SBQQ__CompanyFax__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanyFax__c"
+    label = "Company Fax"
+    inlineHelpText = "Company FAX displayed on quote documents."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Company FAX displayed on quote documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CompanyName__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanyName__c"
+    label = "Company Name"
+    inlineHelpText = "Name of the company as displayed on quote documents."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    deprecated = false
+    description = "Name of the company as displayed on quote documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Phone SBQQ__CompanyPhone__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanyPhone__c"
+    label = "Company Phone"
+    inlineHelpText = "Company phone displayed on quote documents."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Company phone displayed on quote documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CompanyPostalCode__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanyPostalCode__c"
+    label = "Company Postal Code"
+    inlineHelpText = "Postal code portion of company address displayed on quote documents."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    deprecated = false
+    description = "Postal code portion of company address displayed on quote documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CompanySlogan__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanySlogan__c"
+    label = "Company Slogan"
+    inlineHelpText = "Company slogan displayed on quote documents."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+    deprecated = false
+    description = "Company slogan displayed on quote documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CompanyState__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanyState__c"
+    label = "Company State"
+    inlineHelpText = "State portion of company address displayed on quote documents."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    deprecated = false
+    description = "State portion of company address displayed on quote documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CompanyStreet__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CompanyStreet__c"
+    label = "Company Street"
+    inlineHelpText = "Street portion of company address displayed on quote documents."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+    deprecated = false
+    description = "Street portion of company address displayed on quote documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__ComponentProductsHidden__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__ComponentProductsHidden__c"
+    label = "Hide Component Products"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if component products with the Component enabled should not be printed on quote documents."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that determines whether component products are printed on quote documents, as indicated by the Component checkbox on the product"
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__CustomerDiscountField__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CustomerDiscountField__c"
+    label = "Customer Discount Field"
+    valueSet = [
+      {
+        fullName = "Total Discount (Amt)"
+        default = false
+        label = "Total Discount (Amt)"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Field on the Quote object that computes the customer discount."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field on the Quote object that computes the customer discount."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__CustomerDiscountLabel__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CustomerDiscountLabel__c"
+    label = "Customer Discount Label"
+    defaultValueFormula = "\"DISCOUNT\""
+    inlineHelpText = "Label used for customer discount in subtotals and totals sections."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 200
+    queryable = true
+    deprecated = false
+    description = "Label used for customer discount in subtotals and totals sections."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__CustomerDiscountShown__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__CustomerDiscountShown__c"
+    label = "Show Customer Discount"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if you want quote-level customer discount displayed in the quote totals."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines if quote-level customer discount is displayed in the quote totals."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Default__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__Default__c"
+    label = "Default"
+    defaultValue = false
+    inlineHelpText = "Select this checkbox to mark this template as default."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Checkbox that marks the template as default, when selected."
+    externalId = false
+    trackHistory = true
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__DeploymentStatus__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__DeploymentStatus__c"
+    label = "Deployment Status"
+    valueSet = [
+      {
+        fullName = "In Development"
+        default = true
+        label = "In Development"
+      },
+      {
+        fullName = "Deployed"
+        default = false
+        label = "Deployed"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Deployment status of this template. Change to \"Deployed\" to make this template visible to non-admin users."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Deployment status of this template. \"In Development\" templates are only visible to users with Customize Application permission."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__DiscountScheduleShown__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__DiscountScheduleShown__c"
+    label = "Show Discount Schedule"
+    valueSet = [
+      {
+        fullName = "Per Quote Line"
+        default = false
+        label = "Per Quote Line"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Choose how to display discount schedules on the quote document. Per Quote Line will show the discount schedule and Tiers right-aligned under each Quote Line."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines if product discount schedule is displayed under the quote-lines."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ExcludeHeaderFooter__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__ExcludeHeaderFooter__c"
+    label = "Exclude Header & Footer"
+    valueSet = [
+      {
+        fullName = "First Page"
+        default = false
+        label = "First Page"
+      },
+      {
+        fullName = "Last Page"
+        default = false
+        label = "Last Page"
+      },
+      {
+        fullName = "First and Last"
+        default = false
+        label = "First and Last"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Excludes template header and footer for First Page, Last Page, or both the First and Last Page."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Excludes template header and footer for First Page, Last Page, or both the First and Last Page."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ExcludedPages__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__ExcludedPages__c"
+    label = "Exclude Page Numbers"
+    valueSet = [
+      {
+        fullName = "All Pages"
+        default = false
+        label = "All Pages"
+      },
+      {
+        fullName = "First Page"
+        default = false
+        label = "First Page"
+      },
+      {
+        fullName = "Last Page"
+        default = false
+        label = "Last Page"
+      },
+      {
+        fullName = "First and Last"
+        default = false
+        label = "First and Last"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Excludes page numbering for All Pages, First Page, Second Page, and/or both the First and Second Page."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Excludes page numbering for All Pages, First Page, Second Page, and/or both the First and Second Page."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__FontFamily__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__FontFamily__c"
+    label = "Font Family"
+    valueSet = [
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Helvetica"
+        default = true
+        label = "Helvetica"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Noto Sans TC"
+        default = false
+        label = "Noto Sans TC"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "Play"
+        default = false
+        label = "Play"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Ubuntu"
+        default = false
+        label = "Ubuntu"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Family of the font that should be applied to text in this template."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Family of the font that should be applied to text in this template."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__FontSize__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__FontSize__c"
+    label = "Font Size"
+    defaultValueFormula = "9"
+    precision = 4
+    scale = 1
+    inlineHelpText = "Default font size for text in this quote document."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Default font size for text in this quote document."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__FooterContent__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__FooterContent__c"
+    label = "Footer Content"
+    referenceTo = [
+      salesforce.SBQQ__TemplateContent__c,
+    ]
+    inlineHelpText = "Template content that should be rendered in the footer."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteTemplatesFooter"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Template content that should be rendered in the footer."
+    externalId = false
+    relationshipLabel = "Quote Templates (Footer)"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__FooterHeight__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__FooterHeight__c"
+    label = "Footer Height"
+    defaultValueFormula = "15"
+    precision = 10
+    scale = 3
+    inlineHelpText = "Height of the footer on documents generated from this template."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Height of the footer on documents generated from this template."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GeneratorName__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GeneratorName__c"
+    label = "Generator Name"
+    inlineHelpText = "Name of the Visualforce page that should be used by this template to generate XSL FO tree."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 150
+    queryable = true
+    deprecated = false
+    description = "Name of the Visualforce page that should be used by this template to generate XSL FO tree."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GrandTotalPrefix__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GrandTotalPrefix__c"
+    label = "Grand Total Prefix"
+    inlineHelpText = "Prefix for subtotal and total labels in grand totals."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 50
+    queryable = true
+    deprecated = false
+    description = "Prefix for subtotal and total labels in grand totals."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__GroupField__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GroupField__c"
+    label = "Group Field"
+    valueSet = [
+      {
+        fullName = "Product Family"
+        default = false
+        label = "Product Family"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the field that has the values you want to use when grouping and subtotaling line items."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Contains the values you want to use when grouping and subtotaling line items."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__GroupFontFamily__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GroupFontFamily__c"
+    label = "Group Font Family"
+    valueSet = [
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Helvetica"
+        default = true
+        label = "Helvetica"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Noto Sans TC"
+        default = false
+        label = "Noto Sans TC"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "Play"
+        default = false
+        label = "Play"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Ubuntu"
+        default = false
+        label = "Ubuntu"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Family of the font that should be applied to Group title text in this template."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Family of the font that should be applied to Group title text in this template."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__GroupFontSize__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GroupFontSize__c"
+    label = "Group Font Size"
+    defaultValueFormula = "9.0"
+    precision = 4
+    scale = 1
+    inlineHelpText = "Default font size for Group titles"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Default font size for Group titles"
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__GroupFontStyle__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GroupFontStyle__c"
+    label = "Group Font Style"
+    valueSet = [
+      {
+        fullName = "Normal"
+        default = true
+        label = "Normal"
+      },
+      {
+        fullName = "Bold"
+        default = false
+        label = "Bold"
+      },
+      {
+        fullName = "Italic"
+        default = false
+        label = "Italic"
+      },
+      {
+        fullName = "Underline"
+        default = false
+        label = "Underline"
+      },
+    ]
+    restricted = true
+    inlineHelpText = "Font style for Group titles. Default is normal if left blank."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Font style for Group titles. Default is normal if left blank."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__GroupGap__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GroupGap__c"
+    label = "Group Gap (px)"
+    defaultValueFormula = "15"
+    precision = 18
+    scale = 0
+    inlineHelpText = "Gap between groups in pixels."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Gap between groups in pixels."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupShadingColor__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GroupShadingColor__c"
+    label = "Group Shading Color"
+    defaultValueFormula = "'FFFFFF'"
+    inlineHelpText = "Color of the shading for table cells that contain group title and description."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Color of the shading for table cells that contain group title and description."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__GroupTextAlignment__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GroupTextAlignment__c"
+    label = "Group Text Alignment"
+    valueSet = [
+      {
+        fullName = "Left"
+        default = true
+        label = "Left"
+      },
+      {
+        fullName = "Center"
+        default = false
+        label = "Center"
+      },
+      {
+        fullName = "Right"
+        default = false
+        label = "Right"
+      },
+    ]
+    restricted = true
+    inlineHelpText = "Specifies the alignment of Group title and Group Description. Defaults to Left if left blank."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Specifies the alignment of Group title and Group Description. Defaults to Left if left blank."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__GroupTextColor__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__GroupTextColor__c"
+    label = "Group Text Color"
+    defaultValueFormula = "'000000'"
+    inlineHelpText = "Color for the group title and description text."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Color for the group title and description text."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__HeaderContent__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__HeaderContent__c"
+    label = "Header Content"
+    referenceTo = [
+      salesforce.SBQQ__TemplateContent__c,
+    ]
+    inlineHelpText = "References template content that should be rendered in the header."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteTemplatesHeader"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "References template content that should be rendered in the header."
+    externalId = false
+    relationshipLabel = "Quote Templates (Header)"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__HeaderHeight__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__HeaderHeight__c"
+    label = "Header Height"
+    precision = 10
+    scale = 3
+    inlineHelpText = "Height of the header on documents generated from this template."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Height of the header on documents generated from this template."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__HideGroupSubtotals__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__HideGroupSubtotals__c"
+    label = "Hide Group Subtotals"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if you want to hide group subtotals on documents generated from this template."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Hides group subtotals on documents generated from this template."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IntroductionTitle__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__IntroductionTitle__c"
+    label = "Introduction Title"
+    inlineHelpText = "Title of the section displayed on the Introduction field. To display no title, leave this field blank."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "Title of the section displayed on the Introduction field."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__LeftMargin__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__LeftMargin__c"
+    label = "Left Margin"
+    _required = true
+    defaultValueFormula = "0.5"
+    precision = 6
+    scale = 2
+    inlineHelpText = "Left margin on the page."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Left margin on the page."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__LineNumbering__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__LineNumbering__c"
+    label = "Line Numbering"
+    valueSet = [
+      {
+        fullName = "Start at quote"
+        default = true
+        label = "Start at quote"
+      },
+      {
+        fullName = "Start at group"
+        default = false
+        label = "Start at group"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify how to number line items on generated documents. \"Start at quote\" numbers all lines sequentially across groups (if any). \"Start at group\" resets numbers within each group."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Specifies how line items are numbered on generated document."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__LineSortField__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__LineSortField__c"
+    label = "Line Sort Field"
+    valueSet = [
+      {
+        fullName = "Number"
+        default = false
+        label = "Number"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify the field used in sorting line items on the document."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field on Quote Line used to sort line items on document generated by this template."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__LogoDocumentId__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__LogoDocumentId__c"
+    label = "Logo Document Id"
+    inlineHelpText = "Salesforce ID for the document containing the logo image used in the quote PDF."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    description = "ID of the Document which conatins logo image for use in quote PDF."
+    externalId = false
+    trackHistory = true
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__NotesTitle__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__NotesTitle__c"
+    label = "Notes Title"
+    inlineHelpText = "Title of the section that displays the Notes field. To display no title, leave this field blank."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "Title of the section that displays the Notes field."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__PageHeight__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__PageHeight__c"
+    label = "Page Height"
+    defaultValueFormula = "11"
+    precision = 6
+    scale = 2
+    inlineHelpText = "Page height in inches."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Page height in inches."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__PageNumberAlignment__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__PageNumberAlignment__c"
+    label = "Page Number Alignment"
+    valueSet = [
+      {
+        fullName = "Center"
+        default = false
+        label = "Center"
+      },
+      {
+        fullName = "Left"
+        default = false
+        label = "Left"
+      },
+      {
+        fullName = "Right"
+        default = false
+        label = "Right"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify the page number alignment for the document. Defaults to Center if the field is blank."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Specifies the page number alignment for the document."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__PageNumberPosition__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__PageNumberPosition__c"
+    label = "Page Number Position"
+    valueSet = [
+      {
+        fullName = "Footer"
+        default = true
+        label = "Footer"
+      },
+      {
+        fullName = "Header"
+        default = false
+        label = "Header"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify where the page numbers are displayed in the document. Defaults to Footer if the field is blank."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Specifies where the page numbers are displayed in the document."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__PageNumberText__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__PageNumberText__c"
+    label = "Page Number Text"
+    defaultValueFormula = "\"Page {0} of {1}\""
+    inlineHelpText = "Declare the text description of the page number. \"{0}\" independently represents the current page. \"{1}\" is dependent of \"{0}\" and it represents the total pages with page numbers. Defaults to \"Page {0} of {1}\" if the field is blank."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 50
+    queryable = true
+    deprecated = false
+    description = "Declares the text description of the page number."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__PageOrientation__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__PageOrientation__c"
+    label = "Page Orientation"
+    valueSet = [
+      {
+        fullName = "Portrait"
+        default = true
+        label = "Portrait"
+      },
+      {
+        fullName = "Landscape"
+        default = false
+        label = "Landscape"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Page orientation of PDF documents generated with this template."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Page orientation of PDF documents generated with this template."
+    externalId = false
+    trackHistory = true
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__PageWidth__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__PageWidth__c"
+    label = "Page Width"
+    defaultValueFormula = "8.5"
+    precision = 6
+    scale = 2
+    inlineHelpText = "Page width in inches."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Page width in inches."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__PartnerDiscountLabel__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__PartnerDiscountLabel__c"
+    label = "Partner Discount Label"
+    defaultValueFormula = "\"PARTNER DISCOUNT\""
+    inlineHelpText = "Label used for partner discount in subtotals and totals sections."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 200
+    queryable = true
+    deprecated = false
+    description = "Label used for partner discount in subtotals and totals sections."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__PartnerDiscountShown__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__PartnerDiscountShown__c"
+    label = "Show Partner Discount"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if you want quote-level partner discount displayed in the quote totals."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines if the quote-level partner discount is displayed in the quote totals."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__RenewedProductsShown__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__RenewedProductsShown__c"
+    label = "Show Renewed Products"
+    defaultValue = true
+    inlineHelpText = "Select the checkbox if renewed products should be shown on Renewal quotes generated from this template."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines if renewed products are shown on Renewal quotes generated from this template."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__RightMargin__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__RightMargin__c"
+    label = "Right Margin"
+    _required = true
+    defaultValueFormula = "0.5"
+    precision = 6
+    scale = 2
+    inlineHelpText = "Right margin setting on the page."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Right margin on the page."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__RollUpField__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__RollUpField__c"
+    label = "Roll-Up Field"
+    valueSet = [
+      {
+        fullName = "Product"
+        default = false
+        label = "Product"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Quote line field used for roll-up. All lines where this field returns the same value will be rolled up into the first line where the value occurs."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field on quote line object that's used to rollup lines."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__ShadingColor__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__ShadingColor__c"
+    label = "Shading Color"
+    defaultValueFormula = "\"FFFFFF\""
+    inlineHelpText = "Color of shading in column headers expressed as a hexadecimal."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Color of shading in column headers expressed as a hexadecimal."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ShipToTitle__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__ShipToTitle__c"
+    label = "Ship To Title"
+    defaultValueFormula = "'Ship To'"
+    inlineHelpText = "Label used for \"Ship To\" section. Default value is \"Ship To\"."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    deprecated = false
+    description = "Label used for \"Ship To\" section. Default value is \"Ship To\"."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__SubGroupField__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__SubGroupField__c"
+    label = "Sub Group Field"
+    valueSet = [
+      {
+        fullName = "Product Family"
+        default = false
+        label = "Product Family"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Field used to sub group line items."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field used to sub group line items."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__SubtotalField__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__SubtotalField__c"
+    label = "Subtotal Field"
+    valueSet = [
+      {
+        fullName = "List Total"
+        default = false
+        label = "List Total"
+      },
+      {
+        fullName = "Customer Total"
+        default = false
+        label = "Customer Total"
+      },
+      {
+        fullName = "Net Total"
+        default = false
+        label = "Net Total"
+      },
+      {
+        fullName = "Regular Total"
+        default = false
+        label = "Regular Total"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select a Field to sum and display as group/quote subtotal."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field to sum and display as group/quote subtotal."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__SubtotalLabel__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__SubtotalLabel__c"
+    label = "Subtotal Label"
+    inlineHelpText = "Enter a label for the subtotal field."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 200
+    queryable = true
+    deprecated = false
+    description = "Label for subtotal field."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__TermBodyIndent__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__TermBodyIndent__c"
+    label = "Term Body Indent (px)"
+    defaultValueFormula = "15"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Indent in pixels of quote term body relative to the term number."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Indent in pixels of quote term body relative to the term number."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TermsConditionsTitle__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__TermsConditionsTitle__c"
+    label = "Terms & Conditions Title"
+    defaultValueFormula = "\"Terms & Conditions\""
+    inlineHelpText = "Title of the section that displays Terms & Conditions."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "Title of the section that displays Terms & Conditions."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__TermsConditions__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__TermsConditions__c"
+    label = "Terms & Conditions"
+    inlineHelpText = "Terms & Conditions printed on every document generated with this template."
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+    deprecated = false
+    description = "Terms & Conditions printed on every document generated with this template."
+    externalId = false
+    trackHistory = true
+    trackTrending = false
+    visibleLines = 4
+  }
+  salesforce.Checkbox SBQQ__TermsNumbered__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__TermsNumbered__c"
+    label = "Number Terms"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if the quote terms rendered by this template should be numbered."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines whether quote terms rendered by this template are numbered."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TextColor__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__TextColor__c"
+    label = "Text Color"
+    inlineHelpText = "Default color (in HEX) applied to text in this template."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Default color (in HEX) applied to text in this template."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__TopMargin__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__TopMargin__c"
+    label = "Top Margin"
+    _required = true
+    defaultValueFormula = "1"
+    precision = 6
+    scale = 2
+    inlineHelpText = "Top margin on the page."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Top margin on the page."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TotalField__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__TotalField__c"
+    label = "Total Field"
+    valueSet = [
+      {
+        fullName = "Net Total"
+        default = false
+        label = "Net Total"
+      },
+      {
+        fullName = "List Total"
+        default = false
+        label = "List Total"
+      },
+      {
+        fullName = "Customer Total"
+        default = false
+        label = "Customer Total"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the Field to sum and display as group/quote total."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field to sum and display as group/quote total."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TotalLabel__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__TotalLabel__c"
+    label = "Total Label"
+    inlineHelpText = "Enter the label for the field set in Total Field."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 200
+    queryable = true
+    deprecated = false
+    description = "Label for total field."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__TotalsHidden__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__TotalsHidden__c"
+    label = "Hide Totals"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox to hide quote totals on the quote document."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that indicates whether quote totals should be printed on the quote document."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__WatermarkId__c {
+    apiName = "SBQQ__QuoteTemplate__c.SBQQ__WatermarkId__c"
+    label = "Watermark ID"
+    inlineHelpText = "Salesforce ID for the document containing the watermark image used in the quote PDF."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    description = "Salesforce ID for the document containing the watermark image used in the quote PDF."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+}

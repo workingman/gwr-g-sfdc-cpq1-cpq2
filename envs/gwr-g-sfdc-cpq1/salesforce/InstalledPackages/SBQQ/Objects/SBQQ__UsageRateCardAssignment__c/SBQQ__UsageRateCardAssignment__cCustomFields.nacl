@@ -1,0 +1,38 @@
+type salesforce.SBQQ__UsageRateCardAssignment__c {
+  salesforce.MasterDetail SBQQ__UsageRateCard__c {
+    apiName = "SBQQ__UsageRateCardAssignment__c.SBQQ__UsageRateCard__c"
+    label = "Usage Rate Card"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = true
+    referenceTo = [
+      salesforce.SBQQ__UsageRateCard__c,
+    ]
+    inlineHelpText = "The usage rate card associated with this order product"
+    createable = true
+    updateable = true
+    relationshipOrder = 0
+    relationshipName = "UsageRateCardAssignments"
+    queryable = true
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Usage Rate Card Assignments"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Product__c {
+    apiName = "SBQQ__UsageRateCardAssignment__c.SBQQ__Product__c"
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "The product that this rate card assignment covers"
+    createable = true
+    updateable = true
+    relationshipName = "UsageRateCardAssignments"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Usage Rate Card Assignments"
+    trackTrending = false
+  }
+}

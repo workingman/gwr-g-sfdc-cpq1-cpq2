@@ -1,0 +1,274 @@
+type salesforce.SBQQ__Localization__c {
+  salesforce.Text SBQQ__APIName__c {
+    apiName = "SBQQ__Localization__c.SBQQ__APIName__c"
+    label = "API Name"
+    inlineHelpText = "The API Name of this content."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The API Name of this content."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__Description__c {
+    apiName = "SBQQ__Localization__c.SBQQ__Description__c"
+    label = "Description"
+    inlineHelpText = "To describe where the text is located"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "To describe where the text is located"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__Label__c {
+    apiName = "SBQQ__Localization__c.SBQQ__Label__c"
+    label = "Label"
+    inlineHelpText = "This action’s label in the UI."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "This action’s label in the UI."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__Language__c {
+    apiName = "SBQQ__Localization__c.SBQQ__Language__c"
+    label = "Language"
+    inlineHelpText = "The language code for this translation."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The language code for this translation."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__LineColumn__c {
+    apiName = "SBQQ__Localization__c.SBQQ__LineColumn__c"
+    label = "Line Column"
+    referenceTo = [
+      salesforce.SBQQ__LineColumn__c,
+    ]
+    inlineHelpText = "The line column related to this content."
+    createable = true
+    updateable = true
+    relationshipName = "Localizations"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The line column related to this content."
+    externalId = false
+    relationshipLabel = "Localizations"
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__LongTextArea__c {
+    apiName = "SBQQ__Localization__c.SBQQ__LongTextArea__c"
+    label = "Long Text Area"
+    inlineHelpText = "This field stores translations for Long Text fields."
+    createable = true
+    updateable = true
+    length = 32768
+    queryable = true
+    deprecated = false
+    description = "This field stores translations for Long Text fields."
+    externalId = false
+    trackTrending = false
+    visibleLines = 3
+  }
+  salesforce.Lookup SBQQ__PriceDimension__c {
+    apiName = "SBQQ__Localization__c.SBQQ__PriceDimension__c"
+    label = "Price Dimension"
+    referenceTo = [
+      salesforce.SBQQ__Dimension__c,
+    ]
+    inlineHelpText = "The Dimension related to this content."
+    createable = true
+    updateable = true
+    relationshipName = "Localizations"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The Dimension related to this content."
+    externalId = false
+    relationshipLabel = "Localizations"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__ProductFeature__c {
+    apiName = "SBQQ__Localization__c.SBQQ__ProductFeature__c"
+    label = "Product Feature"
+    referenceTo = [
+      salesforce.SBQQ__ProductFeature__c,
+    ]
+    inlineHelpText = "The product feature related to this content."
+    createable = true
+    updateable = true
+    relationshipName = "Localizations"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The product feature related to this content."
+    externalId = false
+    relationshipLabel = "Localizations"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__ProductOption__c {
+    apiName = "SBQQ__Localization__c.SBQQ__ProductOption__c"
+    label = "Product Option"
+    referenceTo = [
+      salesforce.SBQQ__ProductOption__c,
+    ]
+    inlineHelpText = "The product option that generated this line."
+    createable = true
+    updateable = true
+    relationshipName = "Localizations"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The product option that generated this line."
+    externalId = false
+    relationshipLabel = "Localizations"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Product__c {
+    apiName = "SBQQ__Localization__c.SBQQ__Product__c"
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "The product related to this content."
+    createable = true
+    updateable = true
+    relationshipName = "Localizations"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The product related to this content."
+    externalId = false
+    relationshipLabel = "Localizations"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__QuoteTemplate__c {
+    apiName = "SBQQ__Localization__c.SBQQ__QuoteTemplate__c"
+    label = "Quote Template"
+    referenceTo = [
+      salesforce.SBQQ__QuoteTemplate__c,
+    ]
+    inlineHelpText = "The template to use for this content."
+    createable = true
+    updateable = true
+    relationshipName = "Localizations"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The template to use for this content."
+    externalId = false
+    relationshipLabel = "Localizations"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__QuoteTerm__c {
+    apiName = "SBQQ__Localization__c.SBQQ__QuoteTerm__c"
+    label = "Quote Term"
+    referenceTo = [
+      salesforce.SBQQ__QuoteTerm__c,
+    ]
+    inlineHelpText = "The parent term for this term."
+    createable = true
+    updateable = true
+    relationshipName = "Localizations"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The parent term for this term."
+    externalId = false
+    relationshipLabel = "Localizations"
+    trackTrending = false
+  }
+  salesforce.Html SBQQ__RichTextArea__c {
+    apiName = "SBQQ__Localization__c.SBQQ__RichTextArea__c"
+    label = "Rich Text Area"
+    inlineHelpText = "This field stores translations for Rich Text fields."
+    createable = true
+    updateable = true
+    length = 32768
+    queryable = true
+    deprecated = false
+    description = "This field stores translations for Rich Text fields."
+    externalId = false
+    trackTrending = false
+    visibleLines = 25
+  }
+  salesforce.Lookup SBQQ__TemplateContent__c {
+    apiName = "SBQQ__Localization__c.SBQQ__TemplateContent__c"
+    label = "Template Content"
+    referenceTo = [
+      salesforce.SBQQ__TemplateContent__c,
+    ]
+    inlineHelpText = "The template content to use for this content."
+    createable = true
+    updateable = true
+    relationshipName = "Localizations"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The template content to use for this content."
+    externalId = false
+    relationshipLabel = "Localizations"
+    trackTrending = false
+  }
+  salesforce.TextArea SBQQ__TextArea__c {
+    apiName = "SBQQ__Localization__c.SBQQ__TextArea__c"
+    label = "Text Area"
+    inlineHelpText = "This field stores translations for Text Area fields."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "This field stores translations for Text Area fields."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__Text__c {
+    apiName = "SBQQ__Localization__c.SBQQ__Text__c"
+    label = "Text"
+    inlineHelpText = "This field stores translations for Text fields."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "This field stores translations for Text fields."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__UserDefined__c {
+    apiName = "SBQQ__Localization__c.SBQQ__UserDefined__c"
+    label = "User Defined"
+    defaultValue = false
+    inlineHelpText = "To indicate whether this field is user-defined or not."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "To indicate whether this field is user-defined or not."
+    externalId = false
+    trackTrending = false
+  }
+}

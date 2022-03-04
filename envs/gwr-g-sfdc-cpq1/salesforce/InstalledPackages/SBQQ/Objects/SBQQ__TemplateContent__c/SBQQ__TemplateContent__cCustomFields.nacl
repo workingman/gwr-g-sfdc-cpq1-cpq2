@@ -1,0 +1,255 @@
+type salesforce.SBQQ__TemplateContent__c {
+  salesforce.Url SBQQ__CustomSource__c {
+    apiName = "SBQQ__TemplateContent__c.SBQQ__CustomSource__c"
+    label = "Custom Source"
+    inlineHelpText = "URL to a VisualForce page that generates content when type is set to \"Custom\"."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "URL to a VisualForce page that generates content when type is set to \"Custom\"."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__FontFamily__c {
+    apiName = "SBQQ__TemplateContent__c.SBQQ__FontFamily__c"
+    label = "Font Family"
+    valueSet = [
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Noto Sans TC"
+        default = false
+        label = "Noto Sans TC"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "Play"
+        default = false
+        label = "Play"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Ubuntu"
+        default = false
+        label = "Ubuntu"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family to use when rendering this content in the generated PDF quote document."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Font family to use when rendering this content in the generated PDF quote document."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__FontSize__c {
+    apiName = "SBQQ__TemplateContent__c.SBQQ__FontSize__c"
+    label = "Font Size"
+    precision = 5
+    scale = 2
+    inlineHelpText = "Font size to use when rendering this content on the generated PDF quote document."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Font size to use when rendering this content on the generated PDF quote document."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Html SBQQ__Markup__c {
+    apiName = "SBQQ__TemplateContent__c.SBQQ__Markup__c"
+    label = "Markup"
+    inlineHelpText = "Contains the markup if this content is of type \"Markup\"."
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+    deprecated = false
+    description = "Contains the markup if this content is of type \"Markup\"."
+    externalId = false
+    trackTrending = false
+    visibleLines = 25
+  }
+  salesforce.LongTextArea SBQQ__RawMarkup__c {
+    apiName = "SBQQ__TemplateContent__c.SBQQ__RawMarkup__c"
+    label = "Raw Markup"
+    inlineHelpText = "Original HTML version of the content in the Markup field."
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+    deprecated = false
+    description = "Raw HTML markup. Rich Text field (Markup) strips out many HTML tags so this holds the original version as created by the editor."
+    externalId = false
+    trackTrending = false
+    visibleLines = 5
+  }
+  salesforce.Picklist SBQQ__TableStyle__c {
+    apiName = "SBQQ__TemplateContent__c.SBQQ__TableStyle__c"
+    label = "Table Style"
+    valueSet = [
+      {
+        fullName = "Standard"
+        default = true
+        label = "Standard"
+      },
+      {
+        fullName = "Price Dimensions as Columns"
+        default = false
+        label = "Price Dimensions as Columns"
+      },
+      {
+        fullName = "Price Dimensions as Rows with Summary"
+        default = false
+        label = "Price Dimensions as Rows with Summary"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Style of the table used for line items. Standard (default) = user-defined fields as columns with line items listed vertically."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Style of the table used for line items. Standard (default) = user-defined fields as columns with line items listed vertically."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TextColor__c {
+    apiName = "SBQQ__TemplateContent__c.SBQQ__TextColor__c"
+    label = "Text Color"
+    inlineHelpText = "Default color (in HEX) applied to text rendered by this content."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Default color (in HEX) applied to text rendered by this content."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Type__c {
+    apiName = "SBQQ__TemplateContent__c.SBQQ__Type__c"
+    label = "Type"
+    valueSet = [
+      {
+        fullName = "HTML"
+        default = true
+        label = "HTML"
+      },
+      {
+        fullName = "Line Items"
+        default = false
+        label = "Line Items"
+      },
+      {
+        fullName = "Quote Terms"
+        default = false
+        label = "Quote Terms"
+      },
+      {
+        fullName = "Custom"
+        default = false
+        label = "Custom"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Type of this content."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Type of this content."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+}

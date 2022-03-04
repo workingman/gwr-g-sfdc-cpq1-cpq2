@@ -1,0 +1,6 @@
+salesforce.StaticResource SBQQ__NoAccessSimplified {
+  cacheControl = "Public"
+  contentType = "image/svg+xml"
+  fullName = "SBQQ__NoAccessSimplified"
+  content = file("salesforce/InstalledPackages/SBQQ/Records/StaticResource/SBQQ__NoAccessSimplified.svg")
+}

@@ -1,0 +1,124 @@
+type salesforce.SBQQ__FavoriteProduct__c {
+  salesforce.MasterDetail SBQQ__Favorite__c {
+    apiName = "SBQQ__FavoriteProduct__c.SBQQ__Favorite__c"
+    label = "Favorite"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__Favorite__c,
+    ]
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "FavoriteProduct"
+    queryable = true
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Favorite Product"
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__ConfigurationAttributes__c {
+    apiName = "SBQQ__FavoriteProduct__c.SBQQ__ConfigurationAttributes__c"
+    label = "Configuration Attributes"
+    createable = true
+    updateable = true
+    length = 131072
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    visibleLines = 5
+  }
+  salesforce.Lookup SBQQ__DiscountSchedule__c {
+    apiName = "SBQQ__FavoriteProduct__c.SBQQ__DiscountSchedule__c"
+    label = "Discount Schedule"
+    referenceTo = [
+      salesforce.SBQQ__DiscountSchedule__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Favorite_Product"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Favorite Product"
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DynamicOptionId__c {
+    apiName = "SBQQ__FavoriteProduct__c.SBQQ__DynamicOptionId__c"
+    label = "Dynamic Option ID"
+    inlineHelpText = "Identifies feature and dynamic option for this line."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    deprecated = false
+    description = "Contains feature id and product id to identify the feature and optional SKU associated with this line."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__ProductOption__c {
+    apiName = "SBQQ__FavoriteProduct__c.SBQQ__ProductOption__c"
+    label = "Product Option"
+    referenceTo = [
+      salesforce.SBQQ__ProductOption__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "FavoriteProduct"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Favorite Product"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Product__c {
+    apiName = "SBQQ__FavoriteProduct__c.SBQQ__Product__c"
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "FavoriteProduct"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Favorite Product"
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__Quantity__c {
+    apiName = "SBQQ__FavoriteProduct__c.SBQQ__Quantity__c"
+    label = "Quantity"
+    precision = 12
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__RequiredBy__c {
+    apiName = "SBQQ__FavoriteProduct__c.SBQQ__RequiredBy__c"
+    label = "Required By"
+    referenceTo = [
+      salesforce.SBQQ__FavoriteProduct__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "FavoriteProduct"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Favorite Product"
+    trackTrending = false
+  }
+}

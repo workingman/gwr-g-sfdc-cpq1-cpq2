@@ -1,0 +1,6 @@
+salesforce.SharingRules SBQQ__DiscountCategory__c {
+  fullName = "SBQQ__DiscountCategory__c"
+  _parent = [
+    salesforce.SBQQ__DiscountCategory__c,
+  ]
+}

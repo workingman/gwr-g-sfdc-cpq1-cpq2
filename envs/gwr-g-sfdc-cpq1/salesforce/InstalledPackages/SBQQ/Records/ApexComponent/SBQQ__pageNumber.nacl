@@ -1,0 +1,6 @@
+salesforce.ApexComponent SBQQ__pageNumber {
+  apiVersion = 51
+  label = "pageNumber"
+  fullName = "SBQQ__pageNumber"
+  content = "(hidden)"
+}

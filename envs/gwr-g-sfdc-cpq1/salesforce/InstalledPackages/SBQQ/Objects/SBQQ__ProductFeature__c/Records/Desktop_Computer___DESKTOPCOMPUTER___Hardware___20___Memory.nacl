@@ -1,0 +1,10 @@
+salesforce.SBQQ__ProductFeature__c Desktop_Computer___DESKTOPCOMPUTER___Hardware___20___Memory@suuuuuuuuuuuu {
+  Name = "Memory"
+  SBQQ__ConfiguredSKU__c = salesforce.Product2.instance.Desktop_Computer___DESKTOPCOMPUTER___Hardware@suuuuuu
+  SBQQ__MaxOptionCount__c = 1
+  SBQQ__MinOptionCount__c = 1
+  SBQQ__Number__c = 20
+  _parent = [
+    salesforce.Product2.instance.Desktop_Computer___DESKTOPCOMPUTER___Hardware@suuuuuu,
+  ]
+}

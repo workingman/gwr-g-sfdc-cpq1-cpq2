@@ -1,0 +1,6 @@
+salesforce.DocumentFolder SBQQ__Quotes {
+  accessType = "Public"
+  name = "Quotes"
+  publicFolderAccess = "ReadWrite"
+  fullName = "SBQQ__Quotes"
+}

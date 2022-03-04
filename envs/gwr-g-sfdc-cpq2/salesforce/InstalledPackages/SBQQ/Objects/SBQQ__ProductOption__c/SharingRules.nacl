@@ -1,0 +1,6 @@
+salesforce.SharingRules SBQQ__ProductOption__c {
+  fullName = "SBQQ__ProductOption__c"
+  _parent = [
+    salesforce.SBQQ__ProductOption__c,
+  ]
+}

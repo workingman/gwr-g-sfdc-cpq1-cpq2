@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__ObjectManager {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__ObjectManager"
+  content = "(hidden)"
+}

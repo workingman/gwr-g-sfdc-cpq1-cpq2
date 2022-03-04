@@ -1,0 +1,145 @@
+type salesforce.SBQQ__LookupData__c {
+  salesforce.Text SBQQ__Category__c {
+    apiName = "SBQQ__LookupData__c.SBQQ__Category__c"
+    label = "Category"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.TextArea SBQQ__Message__c {
+    apiName = "SBQQ__LookupData__c.SBQQ__Message__c"
+    label = "Message"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Product__c {
+    apiName = "SBQQ__LookupData__c.SBQQ__Product__c"
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "For use with Product Selection Rules, represents the Product to which the Product Action applies."
+    createable = true
+    updateable = true
+    relationshipName = "LookupData"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "For use with Product Selection Rules, represents the Product to which the Product Action applies."
+    externalId = false
+    relationshipLabel = "Lookup Data"
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Required__c {
+    apiName = "SBQQ__LookupData__c.SBQQ__Required__c"
+    label = "Required"
+    defaultValue = false
+    inlineHelpText = "For Product Selection Rules, indicates that the action is required."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "For Product Selection Rules, indicates that the action is required."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Type__c {
+    apiName = "SBQQ__LookupData__c.SBQQ__Type__c"
+    label = "Type"
+    valueSet = [
+      {
+        fullName = "Add"
+        default = false
+        label = "Add"
+      },
+      {
+        fullName = "Remove"
+        default = false
+        label = "Remove"
+      },
+      {
+        fullName = "Enable"
+        default = false
+        label = "Enable"
+      },
+      {
+        fullName = "Disable"
+        default = false
+        label = "Disable"
+      },
+      {
+        fullName = "Enable & Add"
+        default = false
+        label = "Enable & Add"
+      },
+      {
+        fullName = "Disable & Remove"
+        default = false
+        label = "Disable & Remove"
+      },
+      {
+        fullName = "Show"
+        default = false
+        label = "Show"
+      },
+      {
+        fullName = "Hide"
+        default = false
+        label = "Hide"
+      },
+      {
+        fullName = "Show & Add"
+        default = false
+        label = "Show & Add"
+      },
+      {
+        fullName = "Hide & Remove"
+        default = false
+        label = "Hide & Remove"
+      },
+      {
+        fullName = "Default Filter"
+        default = false
+        label = "Default Filter"
+      },
+      {
+        fullName = "Optional Filter"
+        default = false
+        label = "Optional Filter"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "For use with Product Selection Rules, specifies the type of action to be performed on the Product."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "For use with Product Selection Rules, specifies the type of action to be performed on the Product."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__Value__c {
+    apiName = "SBQQ__LookupData__c.SBQQ__Value__c"
+    label = "Value"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+}

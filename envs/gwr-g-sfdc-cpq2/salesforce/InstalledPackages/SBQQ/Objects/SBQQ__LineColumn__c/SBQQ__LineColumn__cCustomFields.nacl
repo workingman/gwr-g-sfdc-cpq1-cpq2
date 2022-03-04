@@ -1,0 +1,631 @@
+type salesforce.SBQQ__LineColumn__c {
+  salesforce.MasterDetail SBQQ__Template__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__Template__c"
+    label = "Template"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__QuoteTemplate__c,
+    ]
+    inlineHelpText = "Template on which this field is to be displayed."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "LineColumns"
+    queryable = true
+    deprecated = false
+    description = "Template on which this field is to be displayed."
+    externalId = false
+    relationshipLabel = "Line Columns"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Alignment__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__Alignment__c"
+    label = "Alignment"
+    valueSet = [
+      {
+        fullName = "Left"
+        default = true
+        label = "Left"
+      },
+      {
+        fullName = "Center"
+        default = false
+        label = "Center"
+      },
+      {
+        fullName = "Right"
+        default = false
+        label = "Right"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Determines how the column label and values are aligned."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines how the column label and values are aligned."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__BottomMargin__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__BottomMargin__c"
+    label = "Bottom Margin (px)"
+    defaultValueFormula = "3"
+    precision = 5
+    scale = 0
+    inlineHelpText = "The amount of space in pixels between bottom border and content."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "This is the bottom margin in pixels."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__ColumnHeadingField__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__ColumnHeadingField__c"
+    label = "Column Heading Field"
+    valueSet = [
+      {
+        fullName = "Type"
+        default = false
+        label = "Type"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "The field that sources the dynamic heading for this column."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The API name of the field on quote object that sources value for this column's heading."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ConditionalPrintField__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__ConditionalPrintField__c"
+    label = "Conditional Print Field"
+    valueSet = [
+      {
+        fullName = "Group Line Items"
+        default = false
+        label = "Group Line Items"
+      },
+      {
+        fullName = "SBQQ__AveragePartnerDiscount__c"
+        default = false
+        label = "SBQQ__AveragePartnerDiscount__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Field on quote object that controls whether this column prints on generated PDF document."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field on quote object that controls whether this column prints on generated PDF document."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__DisplayOrder__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__DisplayOrder__c"
+    label = "Display Order"
+    _required = true
+    precision = 9
+    scale = 0
+    inlineHelpText = "Order in which the column hosting this field is displayed."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Order in which the column hosting this field is displayed."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__DynamicNumberScale__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__DynamicNumberScale__c"
+    label = "Dynamic Number Scale"
+    defaultValue = false
+    inlineHelpText = "The decimal scale for numbers in the column are set based on the largest precision in the column."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The decimal scale for numbers in the column are set based on the largest precision in the column."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__FieldName__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__FieldName__c"
+    label = "Field Name"
+    _required = true
+    inlineHelpText = "API name for the field on the Quote Line object you want displayed in this column."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "Field name relative to the Quote Line object."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__FontFamily__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__FontFamily__c"
+    label = "Font Family"
+    valueSet = [
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Noto Sans TC"
+        default = false
+        label = "Noto Sans TC"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "Play"
+        default = false
+        label = "Play"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Ubuntu"
+        default = false
+        label = "Ubuntu"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select font family to apply to this column. Leaving blank inherits form the template."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Font family that should be applied to text in this column."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__FontSize__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__FontSize__c"
+    label = "Font Size (pt)"
+    precision = 4
+    scale = 1
+    inlineHelpText = "Specify font size (in points) for text in this column. Leaving black inherits from the template."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Size of font (in points) applied to this column."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__FontWeight__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__FontWeight__c"
+    label = "Font Weight"
+    valueSet = [
+      {
+        fullName = "Normal"
+        default = true
+        label = "Normal"
+      },
+      {
+        fullName = "Bold"
+        default = false
+        label = "Bold"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify font weight for text in this column. Leaving blank defaults to \"Normal\"."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Weight of font applied to this column."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__HeadingTextColor__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__HeadingTextColor__c"
+    label = "Heading Text Color"
+    inlineHelpText = "Specify color (in Hex) for text in the heading of this column. Leaving blank inherits from text color for this column."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Color (in Hex) applied to text in the heading of this column."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__HideOnComponents__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__HideOnComponents__c"
+    label = "Hide On Product Options"
+    defaultValue = false
+    inlineHelpText = "Hides value in this column if line item is a Product Option."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Hides value in this column if line item is a Product Option."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__LeftMargin__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__LeftMargin__c"
+    label = "Left Margin (px)"
+    defaultValueFormula = "3"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Amount of space in pixels between left border and content."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Left margin in pixels."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__RightMargin__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__RightMargin__c"
+    label = "Right Margin (px)"
+    defaultValueFormula = "3"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Amount of space in pixels between right border and content."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Right margin in pixels."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__RollUp__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__RollUp__c"
+    label = "Roll Up"
+    defaultValue = false
+    inlineHelpText = "Indicates whether this field should be rolled up into master line. Only applicable if Roll-Up Field is specified on the template."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates whether this field should be rolled up into master line. Only applicable if Roll-Up Field is specified on the template."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Section__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__Section__c"
+    label = "Section"
+    referenceTo = [
+      salesforce.SBQQ__TemplateSection__c,
+    ]
+    inlineHelpText = "Section to which this line column applies. No section means the column applies to all sections."
+    createable = true
+    updateable = true
+    relationshipName = "LineColumns"
+    queryable = true
+    deleteConstraint = "Restrict"
+    deprecated = false
+    description = "Section to which this line column applies. No section means the column applies to all sections."
+    externalId = false
+    lookupFilter = {
+      active = true
+      filterItems = [
+        {
+          field = "$Source.SBQQ__Template__c"
+          operation = "equals"
+          valueField = "SBQQ__TemplateSection__c.SBQQ__Template__c"
+        },
+        {
+          field = "SBQQ__TemplateSection__c.SBQQ__Content__r.SBQQ__Type__c"
+          operation = "equals"
+          value = "Line Items"
+        },
+      ]
+      isOptional = false
+    }
+    relationshipLabel = "Line Columns"
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__SeparateLine__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__SeparateLine__c"
+    label = "Separate Line"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox in order for this field to be printed on its own line. Use for long text fields such as product description."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that determines whether this field is printed on its own separate line."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SubGroupSummaryLabel__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__SubGroupSummaryLabel__c"
+    label = "Sub Group Summary Label"
+    inlineHelpText = "Summary label for sub Group level."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "Summary label for sub Group level."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__SummaryFontWeight__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__SummaryFontWeight__c"
+    label = "Summary Font Weight"
+    valueSet = [
+      {
+        fullName = "Normal"
+        default = false
+        label = "Normal"
+      },
+      {
+        fullName = "Bold"
+        default = false
+        label = "Bold"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify font weight for text in the summary row for this column Leaving blank defaults to font weight for the column overall."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Weight of font applied to text in the summary row."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__SummaryFunction__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__SummaryFunction__c"
+    label = "Summary Function"
+    valueSet = [
+      {
+        fullName = "SUM"
+        default = false
+        label = "SUM"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Function used to summarize values in this column."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Function used to summarize values in this column."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__SummaryLabel__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__SummaryLabel__c"
+    label = "Summary Label"
+    inlineHelpText = "Label output for this column in the summary row."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 200
+    queryable = true
+    deprecated = false
+    description = "Label output for this column in the summary row."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__SummaryLevel__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__SummaryLevel__c"
+    label = "Summary Level"
+    valueSet = [
+      {
+        fullName = "All"
+        default = true
+        label = "All"
+      },
+      {
+        fullName = "Sub Group"
+        default = false
+        label = "Sub Group"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Set the level on which this column should be summarized."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Level this column should be summarized at."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__SummaryShadingColor__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__SummaryShadingColor__c"
+    label = "Summary Shading Color"
+    inlineHelpText = "Specify color (in Hex) for cell background in the summary row for this column. Leaving blank inherits shading color for the template."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Color (in Hex) applied to cell background in the summary row for this column."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SummaryTextColor__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__SummaryTextColor__c"
+    label = "Summary Text Color"
+    inlineHelpText = "Specify color (in Hex) for text in the summary row for this column. Leaving blank inherits from text color for this column."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Color (in Hex) applied to text in the summary row for this column."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TextColor__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__TextColor__c"
+    label = "Text Color"
+    inlineHelpText = "Specify color (in Hex) for text in this column. Leaving blank inherits from the template."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+    deprecated = false
+    description = "Color (in Hex) applied to text in this column."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__TopMargin__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__TopMargin__c"
+    label = "Top Margin (px)"
+    defaultValueFormula = "3"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Amount of space in pixels between top border and content."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Top margin in pixels."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__WidthDiscardedWhenHidden__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__WidthDiscardedWhenHidden__c"
+    label = "Discard Width When Hidden"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox for conditionally displayed column to replace another column(s). Leaving this box unselected will re-allocate width of this column when it's hidden to another column therefore keeping table width unchanged."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that determines whether width of this column is re-allocated to another column or discarded when the column is dynamically hidden."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__Width__c {
+    apiName = "SBQQ__LineColumn__c.SBQQ__Width__c"
+    label = "Width"
+    _required = true
+    precision = 10
+    scale = 2
+    inlineHelpText = "Width (percentage) of the column taken up by this field."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Width of the column taken up by this field."
+    externalId = false
+    trackTrending = false
+  }
+}

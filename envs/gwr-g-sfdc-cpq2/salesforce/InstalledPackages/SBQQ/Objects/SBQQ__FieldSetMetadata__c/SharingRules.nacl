@@ -1,0 +1,6 @@
+salesforce.SharingRules SBQQ__FieldSetMetadata__c {
+  fullName = "SBQQ__FieldSetMetadata__c"
+  _parent = [
+    salesforce.SBQQ__FieldSetMetadata__c,
+  ]
+}

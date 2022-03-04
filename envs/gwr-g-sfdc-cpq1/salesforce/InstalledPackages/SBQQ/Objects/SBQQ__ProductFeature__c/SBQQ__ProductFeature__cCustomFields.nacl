@@ -1,0 +1,218 @@
+type salesforce.SBQQ__ProductFeature__c {
+  salesforce.Picklist SBQQ__Category__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__Category__c"
+    label = "Category"
+    valueSet = [
+      {
+        fullName = "Hardware"
+        default = false
+        label = "Hardware"
+      },
+      {
+        fullName = "Software"
+        default = false
+        label = "Software"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Assign this feature to a category such that multiple features with related options are grouped together."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Category of options in this feature. Allows for another level of grouping."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ConfigurationFieldSet__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__ConfigurationFieldSet__c"
+    label = "Configuration Field Set"
+    valueSet = [
+      {
+        fullName = "OptionConfiguration"
+        default = false
+        label = "OptionConfiguration"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "The API name of the field set that will be used for this feature during configuration."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The API name of the field set that will be used for this feature during configuration."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__ConfiguredSKU__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__ConfiguredSKU__c"
+    label = "Configured SKU"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "The product bundle that includes this feature. If you created the feature from the product detail page, this should already be populated."
+    createable = true
+    updateable = true
+    relationshipName = "Features"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The product bundle that includes this feature. If you created the feature from the product detail page, this should already be populated."
+    externalId = false
+    relationshipLabel = "Features"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__DiscountSchedule__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__DiscountSchedule__c"
+    label = "Discount Schedule"
+    referenceTo = [
+      salesforce.SBQQ__DiscountSchedule__c,
+    ]
+    inlineHelpText = "Discount schedule to be applied to the product selected by all options in this feature. This overrides discount schedule selected on the product."
+    createable = true
+    updateable = true
+    relationshipName = "ProductFeatures"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Discount schedule to be applied to the product selected by all options in this feature."
+    externalId = false
+    relationshipLabel = "Product Features"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__DynamicProductFilterFieldSet__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__DynamicProductFilterFieldSet__c"
+    label = "Dynamic Option Filter Field Set"
+    valueSet = [
+      {
+        fullName = "ConfiguratorFilter"
+        default = false
+        label = "ConfiguratorFilter"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "The API name of the field set that will be used when filtering dynamic options for this feature during configuration."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The API name of the field set that will be used when filtering dynamic options for this feature during configuration."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__DynamicProductLookupFieldSet__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__DynamicProductLookupFieldSet__c"
+    label = "Dynamic Option Lookup Field Set"
+    valueSet = [
+      {
+        fullName = "ConfiguratorLookup"
+        default = false
+        label = "ConfiguratorLookup"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "The API name of the field set that will be used when viewing dynamic options for this feature during configuration."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The API name of the field set that will be used when viewing dynamic options for this feature during configuration."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__MaxOptionCount__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__MaxOptionCount__c"
+    label = "Max Options"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Maximum number of options for this feature that can be selected as part of the product bundle."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Maximum number of options for this feature that can be selected as part of the product bundle."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__MinOptionCount__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__MinOptionCount__c"
+    label = "Min Options"
+    _required = true
+    defaultValueFormula = "1"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Minimum number of options for this feature that must be part of the product bundle."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Minimum number of options for this feature that must be part of the product bundle."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__Number__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__Number__c"
+    label = "Number"
+    _required = true
+    precision = 5
+    scale = 0
+    inlineHelpText = "A sequential number that determines how the features are sorted in the related list on the product."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "A sequential number that determines how the features are sorted in the related list on the product."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__OptionSelectionMethod__c {
+    apiName = "SBQQ__ProductFeature__c.SBQQ__OptionSelectionMethod__c"
+    label = "Option Selection Method"
+    valueSet = [
+      {
+        fullName = "Click"
+        default = false
+        label = "Click"
+      },
+      {
+        fullName = "Add"
+        default = false
+        label = "Add"
+      },
+      {
+        fullName = "Dynamic"
+        default = false
+        label = "Dynamic"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Determines how user selects options attached to this product. \"Click\" method presents options with checkboxes next to them. \"Add\" renders a button which brings up predefined options. \"Dynamic\" renders a button which brings up all active products."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines how user selects options attached to this product. \"Click\" method presents options with checkboxes next to them. \"Add\" renders a button which brings up predefined options. \"Dynamic\" renders a button which brings up all active products."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text External_ID__c {
+    apiName = "SBQQ__ProductFeature__c.External_ID__c"
+    label = "External ID"
+    createable = true
+    updateable = true
+    externalId = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    trackTrending = false
+  }
+}

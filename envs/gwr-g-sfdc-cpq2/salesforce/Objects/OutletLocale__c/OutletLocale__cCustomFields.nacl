@@ -1,0 +1,102 @@
+type salesforce.OutletLocale__c {
+  salesforce.Text OLCountry__c {
+    apiName = "OutletLocale__c.OLCountry__c"
+    label = "OLCountry"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup OLProduct__c {
+    apiName = "OutletLocale__c.OLProduct__c"
+    label = "OLProduct"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Outlet_Locales"
+    queryable = true
+    deleteConstraint = "SetNull"
+    externalId = false
+    relationshipLabel = "Outlet Locales"
+    trackTrending = false
+  }
+  salesforce.Picklist OLType__c {
+    apiName = "OutletLocale__c.OLType__c"
+    label = "OLType"
+    valueSet = [
+      {
+        fullName = "Add"
+        default = false
+        label = "Add"
+      },
+      {
+        fullName = "Remove"
+        default = false
+        label = "Remove"
+      },
+      {
+        fullName = "Enable"
+        default = false
+        label = "Enable"
+      },
+      {
+        fullName = "Disable"
+        default = false
+        label = "Disable"
+      },
+      {
+        fullName = "Enable & Add"
+        default = false
+        label = "Enable & Add"
+      },
+      {
+        fullName = "Disable & Remove"
+        default = false
+        label = "Disable & Remove"
+      },
+      {
+        fullName = "Show"
+        default = false
+        label = "Show"
+      },
+      {
+        fullName = "Hide"
+        default = false
+        label = "Hide"
+      },
+      {
+        fullName = "Show & Add"
+        default = false
+        label = "Show & Add"
+      },
+      {
+        fullName = "Hide & Remove"
+        default = false
+        label = "Hide & Remove"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Checkbox OLRequired__c {
+    apiName = "OutletLocale__c.OLRequired__c"
+    label = "OLRequired"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackTrending = false
+  }
+}

@@ -1,0 +1,68 @@
+type salesforce.SBQQ__ProcessInputValue__c {
+  salesforce.Lookup SBQQ__ProcessInputID__c {
+    apiName = "SBQQ__ProcessInputValue__c.SBQQ__ProcessInputID__c"
+    label = "Process Input ID"
+    _required = true
+    referenceTo = [
+      salesforce.SBQQ__ProcessInput__c,
+    ]
+    inlineHelpText = "Choose the Process Input that the object belongs to."
+    createable = true
+    updateable = true
+    relationshipName = "Process_Input_Values"
+    queryable = true
+    deleteConstraint = "Restrict"
+    deprecated = false
+    description = "This is the Process Input that the object belongs to."
+    externalId = false
+    relationshipLabel = "Process Input Values"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__QuoteId__c {
+    apiName = "SBQQ__ProcessInputValue__c.SBQQ__QuoteId__c"
+    label = "Quote ID"
+    _required = true
+    referenceTo = [
+      salesforce.SBQQ__Quote__c,
+    ]
+    inlineHelpText = "The Id of the Quote that this Process Input Value belongs to."
+    createable = true
+    updateable = true
+    relationshipName = "Process_Input_Values"
+    queryable = true
+    deleteConstraint = "Restrict"
+    deprecated = false
+    description = "The Id of the Quote that this Process Input Value belongs to."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__UserID__c {
+    apiName = "SBQQ__ProcessInputValue__c.SBQQ__UserID__c"
+    label = "UserID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    inlineHelpText = "This Process Input value belongs to the user."
+    createable = true
+    updateable = true
+    relationshipName = "Process_Input_Values"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "This Process Input value belongs to the user."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.TextArea SBQQ__Value__c {
+    apiName = "SBQQ__ProcessInputValue__c.SBQQ__Value__c"
+    label = "Value"
+    inlineHelpText = "This is the answer to the input process value."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "This is the answer to the input process value."
+    externalId = false
+    trackTrending = false
+  }
+}

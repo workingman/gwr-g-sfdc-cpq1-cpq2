@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__InstallExecutor {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__InstallExecutor"
+  content = file("salesforce/InstalledPackages/SBQQ/Records/ApexClass/SBQQ__InstallExecutor.cls")
+}

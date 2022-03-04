@@ -1,4 +1,22 @@
 envs {
   envs = [
+    {
+      name = "gwr-g-sfdc-cpq2"
+      services = [
+        "salesforce",
+      ]
+      accountToServiceName = {
+        salesforce = "salesforce"
+      }
+    },
+    {
+      name = "gwr-g-sfdc-cpq1"
+      services = [
+        "salesforce",
+      ]
+      accountToServiceName = {
+        salesforce = "salesforce"
+      }
+    },
   ]
 }

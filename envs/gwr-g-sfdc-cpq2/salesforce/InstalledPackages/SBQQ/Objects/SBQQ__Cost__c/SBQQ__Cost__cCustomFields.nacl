@@ -1,0 +1,48 @@
+type salesforce.SBQQ__Cost__c {
+  salesforce.Checkbox SBQQ__Active__c {
+    apiName = "SBQQ__Cost__c.SBQQ__Active__c"
+    label = "Active"
+    defaultValue = true
+    inlineHelpText = "Select the checkbox to activate the cost."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag to indicate whether the cost is active."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Product__c {
+    apiName = "SBQQ__Cost__c.SBQQ__Product__c"
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "Product associated with this cost."
+    createable = true
+    updateable = true
+    relationshipName = "Costs"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Product associated with this cost."
+    externalId = false
+    relationshipLabel = "Costs"
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__UnitCost__c {
+    apiName = "SBQQ__Cost__c.SBQQ__UnitCost__c"
+    label = "Unit Cost"
+    _required = true
+    inlineHelpText = "Enter the unit cost."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "This field indicates the unit cost."
+    externalId = false
+    trackTrending = false
+  }
+}

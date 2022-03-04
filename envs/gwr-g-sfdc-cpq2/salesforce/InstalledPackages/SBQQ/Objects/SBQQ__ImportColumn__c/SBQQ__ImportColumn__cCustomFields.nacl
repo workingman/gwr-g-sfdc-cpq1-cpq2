@@ -1,0 +1,97 @@
+type salesforce.SBQQ__ImportColumn__c {
+  salesforce.MasterDetail SBQQ__ImportFormat__c {
+    apiName = "SBQQ__ImportColumn__c.SBQQ__ImportFormat__c"
+    label = "Import Format"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__ImportFormat__c,
+    ]
+    inlineHelpText = "Select the format in which your records will be imported."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "ImportColumns"
+    queryable = true
+    deprecated = false
+    description = "The format in which your records are being imported."
+    externalId = false
+    relationshipLabel = "Import Columns"
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__ColumnIndex__c {
+    apiName = "SBQQ__ImportColumn__c.SBQQ__ColumnIndex__c"
+    label = "Column Index"
+    _required = true
+    precision = 5
+    scale = 0
+    inlineHelpText = "Enter a numeric index value that represents the location of the column. Column index must start from 1."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "A numeric index value that represents the location of the column. Column index must start from 1."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__FieldName__c {
+    apiName = "SBQQ__ImportColumn__c.SBQQ__FieldName__c"
+    label = "Field Name"
+    valueSet = [
+      {
+        fullName = "Discount (%)"
+        default = false
+        label = "Discount (%)"
+      },
+      {
+        fullName = "Discount (Amt)"
+        default = false
+        label = "Discount (Amt)"
+      },
+      {
+        fullName = "Partner Discount"
+        default = false
+        label = "Partner Discount"
+      },
+      {
+        fullName = "Product Code"
+        default = false
+        label = "Product Code"
+      },
+      {
+        fullName = "Quantity"
+        default = false
+        label = "Quantity"
+      },
+      {
+        fullName = "List Price"
+        default = false
+        label = "List Price"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Enter the API Name."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "This is the API Name."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Checkbox SBQQ__Key__c {
+    apiName = "SBQQ__ImportColumn__c.SBQQ__Key__c"
+    label = "Key"
+    defaultValue = false
+    inlineHelpText = "Select if this column should be a unique key column."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "This column represents a unique key column."
+    externalId = false
+    trackTrending = false
+  }
+}

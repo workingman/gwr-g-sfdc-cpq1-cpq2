@@ -1,0 +1,8 @@
+salesforce.CustomTab SBQQ__Favorite__c {
+  fullName = "SBQQ__Favorite__c"
+  customObject = true
+  motif = "Custom1: Heart"
+  _parent = [
+    salesforce.SBQQ__Favorite__c,
+  ]
+}

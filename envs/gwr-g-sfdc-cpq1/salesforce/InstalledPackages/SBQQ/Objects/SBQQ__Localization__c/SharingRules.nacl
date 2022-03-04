@@ -1,0 +1,6 @@
+salesforce.SharingRules SBQQ__Localization__c {
+  fullName = "SBQQ__Localization__c"
+  _parent = [
+    salesforce.SBQQ__Localization__c,
+  ]
+}

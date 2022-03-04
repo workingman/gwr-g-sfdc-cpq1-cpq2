@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__PermissionSetsProcessor {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__PermissionSetsProcessor"
+  content = "(hidden)"
+}

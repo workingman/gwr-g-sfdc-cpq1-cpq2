@@ -1,0 +1,324 @@
+type salesforce.SBQQ__QuoteLineGroup__c {
+  salesforce.MasterDetail SBQQ__Quote__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__Quote__c"
+    label = "Quote"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__Quote__c,
+    ]
+    inlineHelpText = "Quote to which this group belongs."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "LineItemGroups"
+    queryable = true
+    deprecated = false
+    description = "Quote to which this group belongs."
+    externalId = false
+    relationshipLabel = "Quote Line Groups"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Account__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__Account__c"
+    label = "Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    inlineHelpText = "Account to which this Quote Line Group references."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLineGroups"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Account to which this Quote Line Group references."
+    externalId = false
+    relationshipLabel = "Quote Line Groups"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__AdditionalDiscountRate__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__AdditionalDiscountRate__c"
+    label = "Additional  Disc. (%)"
+    inlineHelpText = "Default additional discount rate applied to line items in this group."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+    deprecated = false
+    description = "Default additional discount rate applied to line items in this group."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__BillingFrequency__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__BillingFrequency__c"
+    label = "Billing Frequency"
+    restricted = true
+    inlineHelpText = "Defines the billing frequency."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Defines the billing frequency."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    valueSetName = salesforce.GlobalValueSet.instance.SBQQ__BillingFrequency
+  }
+  salesforce.Currency SBQQ__CustomerTotal__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__CustomerTotal__c"
+    label = "Customer Total"
+    inlineHelpText = "Total for this group's line items before any partner discounts are applied."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Total for this group's line items before any partner discounts are applied."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Html SBQQ__Description__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__Description__c"
+    label = "Description"
+    inlineHelpText = "Description for this group."
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+    deprecated = false
+    description = "Description for this group."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    visibleLines = 15
+  }
+  salesforce.Date SBQQ__EndDate__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__EndDate__c"
+    label = "End Date"
+    inlineHelpText = "End date for subscriptions in this group."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "End date for subscriptions in this group."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Favorite__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__Favorite__c"
+    label = "Favorite"
+    referenceTo = [
+      salesforce.SBQQ__Favorite__c,
+    ]
+    inlineHelpText = "Favorite to which this Quote Line Group belongs."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLineGroups"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Favorite to which this Quote Line Group belongs."
+    externalId = false
+    relationshipLabel = "Quote Line Groups"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__ListTotal__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__ListTotal__c"
+    label = "List Total"
+    inlineHelpText = "Total for this group's line items before any discounts are applied."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Total for this group's line items before any discounts are applied."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__MarkupRate__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__MarkupRate__c"
+    label = "Markup (%)"
+    inlineHelpText = "Default markup rate applied to line items in this group. This will override the line item level."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 8
+    queryable = true
+    deprecated = false
+    description = "Default markup rate applied to line items in this group."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__NetTotal__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__NetTotal__c"
+    label = "Net Total"
+    inlineHelpText = "Total for this group's line items after all discounts are applied."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Total for this group's line items after all discounts are applied."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__Number__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__Number__c"
+    label = "Number"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Sort order of this group within its quote."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Sort order of this group within its quote."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Optional__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__Optional__c"
+    label = "Optional"
+    defaultValue = false
+    inlineHelpText = "Marks the entire group as optional."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Marks the entire group as optional."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__QuoteProcess__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__QuoteProcess__c"
+    label = "Quote Process"
+    referenceTo = [
+      salesforce.SBQQ__QuoteProcess__c,
+    ]
+    inlineHelpText = "Quote process used with this group. Overrides the quote level field."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLineGroups"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Quote process used with this group."
+    externalId = false
+    relationshipLabel = "Quote Line Groups"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__SeparateContract__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__SeparateContract__c"
+    label = "Separate Contract"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox to generate a separate contract for subscriptions in this group."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that forces a separate contract for this group."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__SolutionGroup__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__SolutionGroup__c"
+    label = "Solution Group"
+    referenceTo = [
+      salesforce.SBQQ__SolutionGroup__c,
+    ]
+    inlineHelpText = "Solution group from which this quote group was generated (if any)."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLineGroups"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Solution group from which this quote group was generated (if any)."
+    externalId = false
+    relationshipLabel = "Quote Line Groups"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Source__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__Source__c"
+    label = "Source"
+    referenceTo = [
+      salesforce.SBQQ__QuoteLineGroup__c,
+    ]
+    inlineHelpText = "Source of cloned quote line group."
+    createable = true
+    updateable = true
+    relationshipName = "Clones"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Source of cloned quote line group."
+    externalId = false
+    relationshipLabel = "Quote Line Groups"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Date SBQQ__StartDate__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__StartDate__c"
+    label = "Start Date"
+    inlineHelpText = "Start date for subscriptions in this group."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Start date for subscriptions in this group."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__SubscriptionTerm__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__SubscriptionTerm__c"
+    label = "Subscription Term"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Subscription term used to prorate eligible products in this group."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Subscription term used to prorate eligible products in this group."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__TargetCustomerAmount__c {
+    apiName = "SBQQ__QuoteLineGroup__c.SBQQ__TargetCustomerAmount__c"
+    label = "Target Customer Amount"
+    inlineHelpText = "Enter desired customer amount to automatically calculate additional discount on discountable line items."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Customer amount to be targeted in calculating additional discounts."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+}

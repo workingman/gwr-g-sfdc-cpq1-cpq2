@@ -1,0 +1,28 @@
+type salesforce.SBQQ__Favorite__c {
+  salesforce.TextArea SBQQ__Description__c {
+    apiName = "SBQQ__Favorite__c.SBQQ__Description__c"
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.FormulaText SBQQ__OwnerName__c {
+    apiName = "SBQQ__Favorite__c.SBQQ__OwnerName__c"
+    label = "Owner Name"
+    formula = "Owner:User.FirstName + \" \" +  Owner:User.LastName"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+}

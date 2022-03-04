@@ -1,0 +1,291 @@
+type salesforce.SBQQ__ProcessInput__c {
+  salesforce.MasterDetail SBQQ__QuoteProcess__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__QuoteProcess__c"
+    label = "Quote Process"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__QuoteProcess__c,
+    ]
+    inlineHelpText = "Quote process that owns the input."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "Inputs"
+    queryable = true
+    deprecated = false
+    description = "Quote process that owns the input."
+    externalId = false
+    relationshipLabel = "Process Inputs"
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Active__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__Active__c"
+    label = "Active"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox to activate this process input."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates if this process input is active."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__BinaryChoice__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__BinaryChoice__c"
+    label = "Binary Choice"
+    valueSet = [
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ConditionsMet__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__ConditionsMet__c"
+    label = "Conditions Met"
+    valueSet = [
+      {
+        fullName = "All"
+        default = false
+        label = "All"
+      },
+      {
+        fullName = "Any"
+        default = false
+        label = "Any"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Indicate which Process Input conditions must be met."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates which Process Input conditions must be met."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__DefaultField__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__DefaultField__c"
+    label = "Default Field"
+    valueSet = [
+      {
+        fullName = "Bill To Country"
+        default = false
+        label = "Bill To Country"
+      },
+      {
+        fullName = "Ship To Country"
+        default = false
+        label = "Ship To Country"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Quote field that sources default value for this input."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Quote field that sources default value for this input."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__DisplayOrder__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__DisplayOrder__c"
+    label = "Display Order"
+    _required = true
+    defaultValueFormula = "1"
+    precision = 8
+    scale = 0
+    inlineHelpText = "Enter the order that the process input should be displayed."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "The order that the process input is displayed."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__InputField__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__InputField__c"
+    label = "Input Field"
+    valueSet = [
+      {
+        fullName = "BinaryChoice__c"
+        default = false
+        label = "BinaryChoice__c"
+      },
+      {
+        fullName = "IntegerInput__c"
+        default = false
+        label = "IntegerInput__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the API name for the field that accepts the user entry."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The API name for the field that accepts the user entry."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__IntegerInput__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__IntegerInput__c"
+    label = "Integer Input"
+    precision = 18
+    scale = 0
+    inlineHelpText = "Enter a numerical value."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__Label__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__Label__c"
+    label = "Label"
+    inlineHelpText = "The text that you want displayed to the user in the prompt."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "Label for this filter."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Operator__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__Operator__c"
+    label = "Operator"
+    valueSet = [
+      {
+        fullName = "equals"
+        default = false
+        label = "equals"
+      },
+      {
+        fullName = "not equals"
+        default = false
+        label = "not equals"
+      },
+      {
+        fullName = "less than"
+        default = false
+        label = "less than"
+      },
+      {
+        fullName = "less or equals"
+        default = false
+        label = "less or equals"
+      },
+      {
+        fullName = "greater than"
+        default = false
+        label = "greater than"
+      },
+      {
+        fullName = "greater or equals"
+        default = false
+        label = "greater or equals"
+      },
+      {
+        fullName = "starts with"
+        default = false
+        label = "starts with"
+      },
+      {
+        fullName = "ends with"
+        default = false
+        label = "ends with"
+      },
+      {
+        fullName = "contains"
+        default = false
+        label = "contains"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the operator to use when comparing the Input Field entry with the Product Field."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The operator used when comparing the Input Field entry with the Product Field."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__ProcessInputCondition__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__ProcessInputCondition__c"
+    label = "Process Input Condition"
+    referenceTo = [
+      salesforce.SBQQ__ProcessInputCondition__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ProcessInputCondition"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Process Inputs"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__ProductField__c {
+    apiName = "SBQQ__ProcessInput__c.SBQQ__ProductField__c"
+    label = "Product Field"
+    valueSet = [
+      {
+        fullName = "Product Name"
+        default = false
+        label = "Product Name"
+      },
+      {
+        fullName = "Product Code"
+        default = false
+        label = "Product Code"
+      },
+      {
+        fullName = "Product Family"
+        default = false
+        label = "Product Family"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Field on Product object used in filtering products that match this input."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field on Product object used in filtering products that match this input."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+}

@@ -1,0 +1,86 @@
+type salesforce.SBQQ__QuoteProcess__c {
+  salesforce.Checkbox SBQQ__Default__c {
+    apiName = "SBQQ__QuoteProcess__c.SBQQ__Default__c"
+    label = "Default"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox to default the quote process selector to this process in Line Editor. This only applies when quote process selector is rendered as a picklist."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Marks this quote process as default."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__GuidedOnly__c {
+    apiName = "SBQQ__QuoteProcess__c.SBQQ__GuidedOnly__c"
+    label = "Guided Only"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if you want quotes covered by this process forced into guided product selection; otherwise, this defaults to ad-hoc filtering."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that controls whether quotes covered by this process force guided product selection or allow for ad-hoc filtering."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__ProductAutoSelected__c {
+    apiName = "SBQQ__QuoteProcess__c.SBQQ__ProductAutoSelected__c"
+    label = "Auto Select Product?"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox to determine whether the product is auto selected if it's the only one returned by a search."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that determines if product is auto selected if it's the only one returned by a search."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ProductConfigurationInitializer__c {
+    apiName = "SBQQ__QuoteProcess__c.SBQQ__ProductConfigurationInitializer__c"
+    label = "Product Configuration Initializer"
+    inlineHelpText = "Custom Visualforce page that will be invoked on every configurable product to initialize the options."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 200
+    queryable = true
+    deprecated = false
+    description = "Custom Visualforce page that will be invoked on every configurable product to initialize the options."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ProductSearchExecutor__c {
+    apiName = "SBQQ__QuoteProcess__c.SBQQ__ProductSearchExecutor__c"
+    label = "Product Search Executor"
+    inlineHelpText = "VisualForce page that performs custom product search."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 200
+    queryable = true
+    deprecated = false
+    description = "Name of VisualForce page that performs custom product search."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__SortOrder__c {
+    apiName = "SBQQ__QuoteProcess__c.SBQQ__SortOrder__c"
+    label = "Sort Order"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Specify the sequential number that determines the quote process's display order."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Determines display order of quote processes in Line Editor (pick list rendering only)."
+    externalId = false
+    trackTrending = false
+  }
+}

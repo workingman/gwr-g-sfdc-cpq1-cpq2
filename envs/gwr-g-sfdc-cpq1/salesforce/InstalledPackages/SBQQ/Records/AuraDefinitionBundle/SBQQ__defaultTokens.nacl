@@ -1,0 +1,7 @@
+salesforce.AuraDefinitionBundle SBQQ__defaultTokens {
+  apiVersion = 51
+  description = "defaultTokens"
+  fullName = "SBQQ__defaultTokens"
+  type = "Tokens"
+  markup = "(hidden)"
+}

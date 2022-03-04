@@ -1,0 +1,6 @@
+salesforce.RemoteSiteSetting SBQQ__OAuthTestLogin {
+  fullName = "SBQQ__OAuthTestLogin"
+  disableProtocolSecurity = false
+  isActive = true
+  url = "https://test.salesforce.com"
+}

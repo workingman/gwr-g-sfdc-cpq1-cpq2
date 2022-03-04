@@ -1,0 +1,30 @@
+type salesforce.SBQQ__SearchIndex__c {
+  salesforce.Lookup SBQQ__Localization__c {
+    apiName = "SBQQ__SearchIndex__c.SBQQ__Localization__c"
+    label = "Localization"
+    referenceTo = [
+      salesforce.SBQQ__Localization__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Search_Index"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Search Index"
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__Value__c {
+    apiName = "SBQQ__SearchIndex__c.SBQQ__Value__c"
+    label = "Value"
+    createable = true
+    updateable = true
+    length = 130000
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    visibleLines = 3
+  }
+}

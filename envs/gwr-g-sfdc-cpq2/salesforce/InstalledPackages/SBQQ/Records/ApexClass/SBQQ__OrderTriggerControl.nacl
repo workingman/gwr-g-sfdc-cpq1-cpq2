@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__OrderTriggerControl {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__OrderTriggerControl"
+  content = "(hidden)"
+}

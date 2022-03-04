@@ -1,0 +1,371 @@
+type salesforce.SBQQ__SearchFilter__c {
+  salesforce.Lookup SBQQ__Action__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__Action__c"
+    label = "Action"
+    referenceTo = [
+      salesforce.SBQQ__CustomAction__c,
+    ]
+    inlineHelpText = "Action to which this filter applies. Blank value means the filter is global."
+    createable = true
+    updateable = true
+    relationshipName = "SearchFilters"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Action to which this filter applies. Blank value means the filter is global."
+    externalId = false
+    relationshipLabel = "Search Filters"
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__DisplayOrder__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__DisplayOrder__c"
+    label = "Display Order"
+    _required = true
+    precision = 4
+    scale = 0
+    inlineHelpText = "Order in which this filter is displayed in the UI."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Order in which this filter is displayed in the UI."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__FilterSourceField__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__FilterSourceField__c"
+    label = "Filter Source Field"
+    valueSet = [
+      {
+        fullName = "Type"
+        default = false
+        label = "Type"
+      },
+      {
+        fullName = "Status"
+        default = false
+        label = "Status"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Field that sources value for use in filtering."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field that sources value for use in filtering."
+    externalId = false
+    trackTrending = false
+    sorted = false
+    fieldDependency = {
+      controllingField = "SBQQ__FilterSourceObject__c"
+      valueSettings = [
+        {
+          valueName = "Type"
+          controllingFieldValue = [
+            "Quote",
+          ]
+        },
+        {
+          valueName = "Status"
+          controllingFieldValue = [
+            "Quote",
+          ]
+        },
+      ]
+    }
+  }
+  salesforce.Picklist SBQQ__FilterSourceObject__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__FilterSourceObject__c"
+    label = "Filter Source Object"
+    valueSet = [
+      {
+        fullName = "Quote"
+        default = false
+        label = "Quote"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Object that sources value for use in filtering."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Object that sources value for use in filtering."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__FilterValue__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__FilterValue__c"
+    label = "Filter Value"
+    inlineHelpText = "Static value used in filtering."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    deprecated = false
+    description = "Static value used in filtering."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__HiddenSourceField__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__HiddenSourceField__c"
+    label = "Hidden Source Field"
+    valueSet = [
+      {
+        fullName = "Primary"
+        default = false
+        label = "Primary"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify the field that sources value for use in determining whether the filter is hidden."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field that sources value for use in determining whether the filter is hidden."
+    externalId = false
+    trackTrending = false
+    sorted = false
+    fieldDependency = {
+      controllingField = "SBQQ__HiddenSourceObject__c"
+      valueSettings = [
+        {
+          valueName = "Primary"
+          controllingFieldValue = [
+            "Quote",
+          ]
+        },
+      ]
+    }
+  }
+  salesforce.Picklist SBQQ__HiddenSourceObject__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__HiddenSourceObject__c"
+    label = "Hidden Source Object"
+    valueSet = [
+      {
+        fullName = "Quote"
+        default = false
+        label = "Quote"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify object that sources value for use in determining whether the filter is hidden."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Object that sources value for use in determining whether the filter is hidden."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Checkbox SBQQ__Hidden__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__Hidden__c"
+    label = "Hidden"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox to mark this filter as hidden. Hidden filters do not display in the UI but contribute to search queries."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that marks this filter as hidden. Hidden filters do not display in the UI but contribute to search queries."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Operator__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__Operator__c"
+    label = "Operator"
+    valueSet = [
+      {
+        fullName = "equals"
+        default = false
+        label = "equals"
+      },
+      {
+        fullName = "not equals"
+        default = false
+        label = "not equals"
+      },
+      {
+        fullName = "less than"
+        default = false
+        label = "less than"
+      },
+      {
+        fullName = "less or equals"
+        default = false
+        label = "less or equals"
+      },
+      {
+        fullName = "greater than"
+        default = false
+        label = "greater than"
+      },
+      {
+        fullName = "greater or equals"
+        default = false
+        label = "greater or equals"
+      },
+      {
+        fullName = "starts with"
+        default = false
+        label = "starts with"
+      },
+      {
+        fullName = "ends with"
+        default = false
+        label = "ends with"
+      },
+      {
+        fullName = "contains"
+        default = false
+        label = "contains"
+      },
+      {
+        fullName = "between"
+        default = false
+        label = "between"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify the operator to use with this filter."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Operator used by this filter to determine whether filter value is matched."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__TargetField__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__TargetField__c"
+    label = "Target Field"
+    valueSet = [
+      {
+        fullName = "Name"
+        default = false
+        label = "Name"
+      },
+      {
+        fullName = "Product Code"
+        default = false
+        label = "Product Code"
+      },
+      {
+        fullName = "Product Family"
+        default = false
+        label = "Product Family"
+      },
+      {
+        fullName = "Product Description"
+        default = false
+        label = "Product Description"
+      },
+      {
+        fullName = "Quantity"
+        default = false
+        label = "Quantity"
+      },
+      {
+        fullName = "Status"
+        default = false
+        label = "Status"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify the field to search."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field searched by this filter."
+    externalId = false
+    trackTrending = false
+    sorted = false
+    fieldDependency = {
+      controllingField = "SBQQ__TargetObject__c"
+      valueSettings = [
+        {
+          valueName = "Name"
+          controllingFieldValue = [
+            "Product",
+            "Asset",
+          ]
+        },
+        {
+          valueName = "Product Code"
+          controllingFieldValue = [
+            "Product",
+            "Asset",
+            "Subscription",
+          ]
+        },
+        {
+          valueName = "Product Family"
+          controllingFieldValue = [
+            "Product",
+            "Asset",
+          ]
+        },
+        {
+          valueName = "Product Description"
+          controllingFieldValue = [
+            "Product",
+            "Asset",
+          ]
+        },
+        {
+          valueName = "Quantity"
+          controllingFieldValue = [
+            "Asset",
+            "Subscription",
+          ]
+        },
+        {
+          valueName = "Status"
+          controllingFieldValue = [
+            "Asset",
+          ]
+        },
+      ]
+    }
+  }
+  salesforce.Picklist SBQQ__TargetObject__c {
+    apiName = "SBQQ__SearchFilter__c.SBQQ__TargetObject__c"
+    label = "Target Object"
+    valueSet = [
+      {
+        fullName = "Product"
+        default = false
+        label = "Product"
+      },
+      {
+        fullName = "Asset"
+        default = false
+        label = "Asset"
+      },
+      {
+        fullName = "Subscription"
+        default = false
+        label = "Subscription"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify object to search."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Object searched by this filter."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+}

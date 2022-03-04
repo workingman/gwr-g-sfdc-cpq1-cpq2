@@ -1,0 +1,142 @@
+type salesforce.SBQQ__ProcessInputCondition__c {
+  salesforce.MasterDetail SBQQ__ProcessInput__c {
+    apiName = "SBQQ__ProcessInputCondition__c.SBQQ__ProcessInput__c"
+    label = "Process Input"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__ProcessInput__c,
+    ]
+    inlineHelpText = "Process input that owns the condition."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "ProcessInputCondition"
+    queryable = true
+    deprecated = false
+    description = "Process input that owns the condition."
+    externalId = false
+    relationshipLabel = "Process Input Conditions"
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Active__c {
+    apiName = "SBQQ__ProcessInputCondition__c.SBQQ__Active__c"
+    label = "Active"
+    defaultValue = false
+    inlineHelpText = "Flag that indicates whether this rule is active or inactive."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that indicates whether this rule is active or inactive."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__MasterProcessInput__c {
+    apiName = "SBQQ__ProcessInputCondition__c.SBQQ__MasterProcessInput__c"
+    label = "Master Process Input"
+    _required = true
+    referenceTo = [
+      salesforce.SBQQ__ProcessInput__c,
+    ]
+    inlineHelpText = "Values of this process input will determine the visibility of the current input."
+    createable = true
+    updateable = true
+    relationshipName = "DependentInputs"
+    queryable = true
+    deleteConstraint = "Restrict"
+    deprecated = false
+    description = "Values of this process input will determine the visibility of the current input."
+    externalId = false
+    lookupFilter = {
+      active = true
+      filterItems = [
+        {
+          field = "$Source.SBQQ__ProcessInput__c"
+          operation = "equals"
+          valueField = "$Source.SBQQ__ProcessInput__c"
+        },
+      ]
+      isOptional = false
+    }
+    relationshipLabel = "Process Inputs Regulated"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Operator__c {
+    apiName = "SBQQ__ProcessInputCondition__c.SBQQ__Operator__c"
+    label = "Operator"
+    valueSet = [
+      {
+        fullName = "equals"
+        default = false
+        label = "equals"
+      },
+      {
+        fullName = "not equals"
+        default = false
+        label = "not equals"
+      },
+      {
+        fullName = "less than"
+        default = false
+        label = "less than"
+      },
+      {
+        fullName = "less or equals"
+        default = false
+        label = "less or equals"
+      },
+      {
+        fullName = "greater than"
+        default = false
+        label = "greater than"
+      },
+      {
+        fullName = "greater or equals"
+        default = false
+        label = "greater or equals"
+      },
+      {
+        fullName = "starts with"
+        default = false
+        label = "starts with"
+      },
+      {
+        fullName = "ends with"
+        default = false
+        label = "ends with"
+      },
+      {
+        fullName = "contains"
+        default = false
+        label = "contains"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Select the operator to use when comparing process input values."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The operator being used when comparing process input values."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__Value__c {
+    apiName = "SBQQ__ProcessInputCondition__c.SBQQ__Value__c"
+    label = "Value"
+    _required = true
+    inlineHelpText = "The value used to compare to the controlling process input."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The value used to compare to the controlling process input."
+    externalId = false
+    trackTrending = false
+  }
+}

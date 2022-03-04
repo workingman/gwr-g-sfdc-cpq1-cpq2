@@ -1,0 +1,6 @@
+salesforce.SharingRules SBQQ__PricingGuidance__c {
+  fullName = "SBQQ__PricingGuidance__c"
+  _parent = [
+    salesforce.SBQQ__PricingGuidance__c,
+  ]
+}

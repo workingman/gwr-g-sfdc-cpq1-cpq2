@@ -1,0 +1,137 @@
+type salesforce.SBQQ__UsageRateCard__c {
+  salesforce.Picklist SBQQ__AttributeField__c {
+    apiName = "SBQQ__UsageRateCard__c.SBQQ__AttributeField__c"
+    label = "Attribute Field"
+    valueSet = [
+      {
+        fullName = "Usage Price Method"
+        default = false
+        label = "UsagePriceMethod__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Group usage rates by the selected field during document output and billing"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__BillingFrequency__c {
+    apiName = "SBQQ__UsageRateCard__c.SBQQ__BillingFrequency__c"
+    label = "Billing Frequency"
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    valueSetName = salesforce.GlobalValueSet.instance.SBQQ__BillingFrequency
+  }
+  salesforce.TextArea SBQQ__Description__c {
+    apiName = "SBQQ__UsageRateCard__c.SBQQ__Description__c"
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__OriginalUsageRateCard__c {
+    apiName = "SBQQ__UsageRateCard__c.SBQQ__OriginalUsageRateCard__c"
+    label = "Original Usage Rate Card"
+    referenceTo = [
+      salesforce.SBQQ__UsageRateCard__c,
+    ]
+    inlineHelpText = "The usage rate card that you cloned to create this usage rate card"
+    createable = true
+    updateable = true
+    relationshipName = "UsageRateCards"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Usage Rate Cards (Original Usage Rate Card)"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__QuoteLine__c {
+    apiName = "SBQQ__UsageRateCard__c.SBQQ__QuoteLine__c"
+    label = "Quote Line"
+    referenceTo = [
+      salesforce.SBQQ__QuoteLine__c,
+    ]
+    inlineHelpText = "The quote line that this usage rate card covers"
+    createable = true
+    updateable = true
+    relationshipName = "UsageRateCards"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Usage Rate Cards"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Subscription__c {
+    apiName = "SBQQ__UsageRateCard__c.SBQQ__Subscription__c"
+    label = "Subscription"
+    referenceTo = [
+      salesforce.SBQQ__Subscription__c,
+    ]
+    inlineHelpText = "The subscription that this usage rate card covers"
+    createable = true
+    updateable = true
+    relationshipName = "UsageRateCards"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Usage Rate Cards"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__TemplateRateCard__c {
+    apiName = "SBQQ__UsageRateCard__c.SBQQ__TemplateRateCard__c"
+    label = "Template Rate Card"
+    referenceTo = [
+      salesforce.SBQQ__UsageRateCard__c,
+    ]
+    inlineHelpText = "The usage rate card that you added to the original quote"
+    createable = true
+    updateable = true
+    relationshipName = "QuotedRateCards"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Quoted Rate Cards"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Type__c {
+    apiName = "SBQQ__UsageRateCard__c.SBQQ__Type__c"
+    label = "Type"
+    valueSet = [
+      {
+        fullName = "Range"
+        default = false
+        label = "Range"
+      },
+      {
+        fullName = "Slab"
+        default = false
+        label = "Slab"
+      },
+    ]
+    restricted = true
+    inlineHelpText = "Choose how Salesforce Billing bills usage rates for this usage rate card. Range bills a single rate while slab bills all applicable usage rates."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+}

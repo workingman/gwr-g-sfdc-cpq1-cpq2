@@ -1,0 +1,11 @@
+salesforce.SBQQ__ProductFeature__c "13__Laptop_GWR___LAPTOP13GWR___Hardware___20___Memory@rssuuuuuuuuuuuu" {
+  Name = "Memory"
+  SBQQ__ConfiguredSKU__c = salesforce.Product2.instance.13__Laptop_GWR___LAPTOP13GWR___Hardware@rssuuuuuu
+  SBQQ__MaxOptionCount__c = 1
+  SBQQ__MinOptionCount__c = 1
+  SBQQ__Number__c = 20
+  External_ID__c = "FE0005"
+  _parent = [
+    salesforce.Product2.instance.13__Laptop_GWR___LAPTOP13GWR___Hardware@rssuuuuuu,
+  ]
+}

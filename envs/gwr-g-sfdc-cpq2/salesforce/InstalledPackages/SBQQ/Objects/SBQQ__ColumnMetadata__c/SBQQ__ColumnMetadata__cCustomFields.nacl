@@ -1,0 +1,66 @@
+type salesforce.SBQQ__ColumnMetadata__c {
+  salesforce.MasterDetail SBQQ__FieldSetMetadata__c {
+    apiName = "SBQQ__ColumnMetadata__c.SBQQ__FieldSetMetadata__c"
+    label = "FieldSet Metadata"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__FieldSetMetadata__c,
+    ]
+    inlineHelpText = "FieldSet Metadata relationship."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "ColumnsMetadata"
+    queryable = true
+    deprecated = false
+    description = "Master detail to FieldSet Metadata."
+    externalId = false
+    relationshipLabel = "Columns Metadata"
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ColumnValidation__c {
+    apiName = "SBQQ__ColumnMetadata__c.SBQQ__ColumnValidation__c"
+    label = "Column Validation"
+    createable = true
+    updateable = true
+    unique = true
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__FieldColumnSize__c {
+    apiName = "SBQQ__ColumnMetadata__c.SBQQ__FieldColumnSize__c"
+    label = "Field Column Size"
+    _required = true
+    precision = 6
+    scale = 2
+    inlineHelpText = "Column Size for corresponding field. Default 150px."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "The column size for the field"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__FieldName__c {
+    apiName = "SBQQ__ColumnMetadata__c.SBQQ__FieldName__c"
+    label = "Field Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 128
+    queryable = true
+    deprecated = false
+    description = "The API Name of the field you would like to use."
+    externalId = false
+    trackTrending = false
+  }
+}

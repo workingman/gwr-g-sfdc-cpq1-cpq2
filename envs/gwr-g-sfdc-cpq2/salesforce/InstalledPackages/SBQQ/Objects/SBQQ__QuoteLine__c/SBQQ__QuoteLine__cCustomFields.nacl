@@ -1,0 +1,2387 @@
+type salesforce.SBQQ__QuoteLine__c {
+  salesforce.MasterDetail SBQQ__Quote__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Quote__c"
+    label = "Quote"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__Quote__c,
+    ]
+    inlineHelpText = "Quote to which this line item belongs."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "LineItems"
+    queryable = true
+    deprecated = false
+    description = "Quote to which this line item belongs."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__AdditionalDiscountAmount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__AdditionalDiscountAmount__c"
+    label = "Additional Disc. (Amt)"
+    inlineHelpText = "Additional customer discount extended on this line item in the form of an absolute amount."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Additional customer discount extended on this line item in terms of absolute amount."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency SBQQ__AdditionalDiscount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__AdditionalDiscount__c"
+    label = "Additional Disc."
+    formula = "(SBQQ__RegularPrice__c - SBQQ__CustomerPrice__c) *  SBQQ__EffectiveQuantity__c"
+    inlineHelpText = "Total additional discounts extended to this line item. Additional discount is defined as discount extended on top of volume discount or negotiated prices."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Total additional discount extends on this line item. Additional discount is defined as discount extended on top of volume discount or negotiated prices."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Number SBQQ__AdditionalQuantity__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__AdditionalQuantity__c"
+    label = "Additional Quantity"
+    precision = 12
+    scale = 2
+    inlineHelpText = "Additional quantity for this product that contributes to volume discount calculations"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Additional quantity for this product which contributes to volume discount calculations."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__AllowAssetRefund__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__AllowAssetRefund__c"
+    label = "Allow Asset Refunds"
+    defaultValue = false
+    inlineHelpText = "Indicates whether the asset represented by this line may be refunded."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates whether the underlying asset may have its quantity refunded. Only relevant for Amendments."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__BatchQuantity__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__BatchQuantity__c"
+    label = "Batch Quantity"
+    precision = 12
+    scale = 2
+    inlineHelpText = "If products are sold in batches, this stores the quantity in each batch, defaulted from the product."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "For products sold in batches quantity in each batch. Defaulted from the product record."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__BillingFrequency__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__BillingFrequency__c"
+    label = "Billing Frequency"
+    restricted = true
+    inlineHelpText = "Defines the billing frequency."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Defines the billing frequency."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    valueSetName = salesforce.GlobalValueSet.instance.SBQQ__BillingFrequency
+  }
+  salesforce.Picklist SBQQ__BillingType__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__BillingType__c"
+    label = "Billing Type"
+    restricted = true
+    inlineHelpText = "The billing type that defines when the billing occurs. Billing in advance lets you bill your customers for products or services before you provide them; Billing in arrears lets you bill your customers after the products or services are provided."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The billing type that defines when the billing occurs. Billing in advance lets you bill your customers for products or services before you provide them; Billing in arrears lets you bill your customers after the products or services are provided."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    valueSetName = salesforce.GlobalValueSet.instance.SBQQ__BillingType
+  }
+  salesforce.Lookup SBQQ__BlockPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__BlockPrice__c"
+    label = "Block Price"
+    referenceTo = [
+      salesforce.SBQQ__BlockPrice__c,
+    ]
+    inlineHelpText = "Assign a fixed price to a product based on quantity and quantity range. This overrides the automatic calculation of quantity * unit price."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Assign a fixed price to a product based on quantity and quantity range. This overrides the automatic calculation of quantity * unit price."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Bundle__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Bundle__c"
+    label = "Package"
+    defaultValue = false
+    inlineHelpText = "Indicates whether this line item represents a package; meaning, it includes other line items in this quote."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates whether this line item represents a package; meaning, it includes other line items in this quote."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__BundledQuantity__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__BundledQuantity__c"
+    label = "Original Quantity"
+    precision = 12
+    scale = 2
+    inlineHelpText = "For items with calculated quantities this field holds the original quantity entered by the user."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "For items with calculated quantities this field hold the original (user entered) quantity."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Bundled__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Bundled__c"
+    label = "Bundled"
+    defaultValue = false
+    inlineHelpText = "Indicates the product on this line item is bundled (included) by another product in this quote. Bundled lines items have a zero price and do not allow price or quantity to be edited."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates the product on this line item is bundled (included) by another product in this quote. Bundled lines items are zero price and do not allow price or quantity to be edited."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__CarryoverLine__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__CarryoverLine__c"
+    label = "Carry-Over Line"
+    defaultValue = false
+    inlineHelpText = "Denotes this line as an auto-selected option of an upgrade bundle."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Denotes this line as an auto-mapped option on an Upgraded Bundle."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__ChargeType__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ChargeType__c"
+    label = "Charge Type"
+    restricted = true
+    inlineHelpText = "The type of the product charge.  This is a system field that is derived from the associated product."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The type of the product charge.  This is a system field that is derived from the associated product."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    valueSetName = salesforce.GlobalValueSet.instance.SBQQ__ChargeType
+  }
+  salesforce.Currency SBQQ__ComponentCost__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ComponentCost__c"
+    label = "Component Cost"
+    inlineHelpText = "Total cost of components in this package."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "Total cost of components in this package."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__ComponentDiscountedByPackage__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ComponentDiscountedByPackage__c"
+    label = "Component Discounted By Package"
+    defaultValue = false
+    inlineHelpText = "Fixes additional discount for this component to the parent package discount."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Fixes additional discount for this component to the parent package discount."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__ComponentListTotal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ComponentListTotal__c"
+    label = "Component List Total"
+    inlineHelpText = "List total of components in this configuration. This field is only populated if this line item references a configurable product."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "List total of components in this configuration. This field is only populated if this line item references configurable product."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__ComponentSubscriptionScope__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ComponentSubscriptionScope__c"
+    label = "Component Percent of Total Scope"
+    valueSet = [
+      {
+        fullName = "Package"
+        default = false
+        label = "Package"
+      },
+      {
+        fullName = "Components"
+        default = false
+        label = "Components"
+      },
+      {
+        fullName = "Both"
+        default = false
+        label = "Both"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Percent of Total scope set at the component level. This field overrides the Percent of Total scope copied from the Product Option."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Subscription scope set at the component level. This field overrides the subscriptions cope copied from the product."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Currency SBQQ__ComponentTotal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ComponentTotal__c"
+    label = "Component Net Total"
+    inlineHelpText = "Sum total of components in this configuration. This field is only populated if this line item references a configurable product."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "Sum total of components in this configuration. This field is only populated if this line item references configurable product."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__ComponentUpliftedByPackage__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ComponentUpliftedByPackage__c"
+    label = "Component Uplifted By Package"
+    defaultValue = false
+    inlineHelpText = "Fixes uplift for this component to the parent package uplift. Uplift only applies to multi-segmented products."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Fixes uplift for this component to the parent package uplift. Uplift only applies to multi-segmented products."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaText SBQQ__ComponentVisibility__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ComponentVisibility__c"
+    label = "Component Visibility"
+    formula = "TEXT(SBQQ__ProductOption__r.SBQQ__QuoteLineVisibility__c)"
+    inlineHelpText = "Indicates the visibility of the component line item."
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    description = "Visibility of this component line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Percent SBQQ__CompoundDiscountRate__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__CompoundDiscountRate__c"
+    label = "Compound Discount (%)"
+    inlineHelpText = "Discount rate compounded by quantity (historic)."
+    createable = true
+    updateable = true
+    scale = 3
+    precision = 8
+    queryable = true
+    deprecated = false
+    description = "Discount rate compounded by quantity (historic)."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__ConfigurationRequired__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ConfigurationRequired__c"
+    label = "Configuration Required"
+    defaultValue = false
+    inlineHelpText = "Flag that marks this quote line as requiring configuration. Can be used by custom code to request this product be re-configured."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that marks this quote line as requiring configuration. Can be used by custom code to request this product be re-configured."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__ContractedPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ContractedPrice__c"
+    label = "Contracted Price"
+    referenceTo = [
+      salesforce.SBQQ__ContractedPrice__c,
+    ]
+    inlineHelpText = "Contracted price if the product has negotiated pricing for the opportunity's account. Contracted Prices are available on the Account and can be applied to any product in any price book."
+    createable = true
+    updateable = true
+    relationshipName = "Quote_Lines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Contracted price if the product has negotiated pricing for opportunity's account. Contracted Prices are available on the Account and can be applied to any product in any price book."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__CostEditable__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__CostEditable__c"
+    label = "Cost Editable"
+    defaultValue = false
+    inlineHelpText = "Specifies whether cost can be edited on this line item."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Specifies whether cost can be edited on this line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Cost__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Cost__c"
+    label = "Cost"
+    referenceTo = [
+      salesforce.SBQQ__Cost__c,
+    ]
+    inlineHelpText = "Cost record for this line item."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Cost record for this line item."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__CustomerPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__CustomerPrice__c"
+    label = "Customer Unit Price"
+    inlineHelpText = "Customer unit price for the product quoted by this line item. This is the Net Unit Price excluding any partner discounts."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Customer unit price for the product quoted by this line item. This is the Net Unit Price excluding any partner discounts."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency SBQQ__CustomerTotal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__CustomerTotal__c"
+    label = "Customer Total"
+    formula = "IF(AND(SBQQ__Renewal__c, !SBQQ__Existing__c, ISBLANK(SBQQ__PriorQuantity__c)), 0, SBQQ__CustomerPrice__c * SBQQ__EffectiveQuantity__c)"
+    inlineHelpText = "Customer total price for this quote line item. This is the Net Total excluding any partner discounts."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Customer total price for this quote line item. This is the Net Total excluding any partner discounts."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Number SBQQ__DefaultSubscriptionTerm__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__DefaultSubscriptionTerm__c"
+    label = "Default Subscription Term"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Term length of the subscription, which only applies if the product is a subscription. It is copied from the Subscription Term of the related product when the line item is first generated."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Term length of the subscription, which only applies if the product is a subscription. It is copied from the Subscription Term of the related product when the line item is first generated."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Html SBQQ__Description__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Description__c"
+    label = "Description"
+    inlineHelpText = "Description for this line item."
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+    deprecated = false
+    description = "Description for this line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    visibleLines = 15
+  }
+  salesforce.Lookup SBQQ__Dimension__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Dimension__c"
+    label = "Price Dimension"
+    referenceTo = [
+      salesforce.SBQQ__Dimension__c,
+    ]
+    inlineHelpText = "Dimensions within an MDQ Product that all each segment to be priced independently. Each Product may contain several Price Dimensions. Yearly Price Dimensions are treated as Subscriptions."
+    createable = true
+    updateable = true
+    relationshipName = "Quote_Lines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Dimensions within an MDQ Product that all each segment to be priced independently. Each Product may contain several Price Dimensions. Yearly Price Dimensions are treated as Subscriptions."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__DiscountScheduleType__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__DiscountScheduleType__c"
+    label = "Discount Schedule Type"
+    valueSet = [
+      {
+        fullName = "Range"
+        default = false
+        label = "Range"
+      },
+      {
+        fullName = "Slab"
+        default = false
+        label = "Slab"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Discount schedule type. Copied from Type field in associated discount schedule."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Discount schedule type. Must be a stored value because it's used in formula fields that are rolled up."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__DiscountSchedule__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__DiscountSchedule__c"
+    label = "Discount Schedule"
+    referenceTo = [
+      salesforce.SBQQ__DiscountSchedule__c,
+    ]
+    inlineHelpText = "Specify discounts in terms of % or Amt to be discounted off the product's price using quantity purchased or term. Set quantity/term ranges in tiers of different discount %. Discount is applied to List Price & resulting total is stored in the Regular Price"
+    createable = true
+    updateable = true
+    relationshipName = "R00N70000001opkuEAA"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Specify discounts in terms of % or Amt to be discounted off the product's price using quantity purchased or term. Set quantity/term ranges in tiers of different discount %. Discount is applied to List Price & resulting total is stored in the Regular Price"
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__DiscountTier__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__DiscountTier__c"
+    label = "Discount Tier"
+    referenceTo = [
+      salesforce.SBQQ__DiscountTier__c,
+    ]
+    inlineHelpText = "Discount tier used by this line item. This field is only populated if a volume discount was applied and the discount schedule is of type \"Range\"."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Discount tier used by this line item. This field is only populated if a product is volume discounted and discount schedule is of type \"Range\"."
+    externalId = false
+    relationshipLabel = "Quote Lines (Volume Discounted)"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__Discount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Discount__c"
+    label = "Additional Disc. (%)"
+    inlineHelpText = "Additional customer discount extended to this line item expressed in form of a percentage."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 11
+    queryable = true
+    deprecated = false
+    description = "Additional customer discount extended for this line item expressed in terms of percentage."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__DistributorDiscount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__DistributorDiscount__c"
+    label = "Distributor Discount"
+    inlineHelpText = "This is a discount that is applied to partner price and reflected in the net price."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+    deprecated = false
+    description = "This is a discount that is applied to partner price and reflected in the net price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DynamicOptionId__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__DynamicOptionId__c"
+    label = "Dynamic Option ID"
+    inlineHelpText = "Identifies feature and dynamic option for this line."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    deprecated = false
+    description = "Contains feature id and product id to identify the feature and optional SKU associated with this line."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaDate SBQQ__EffectiveEndDate__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__EffectiveEndDate__c"
+    label = "Effective End Date"
+    formula = '''
+IF(ISPICKVAL(SBQQ__SubscriptionType__c, "Evergreen"), null,
+    IF(ISBLANK(SBQQ__EndDate__c),
+        IF(ISBLANK(SBQQ__Group__r.SBQQ__EndDate__c),SBQQ__Quote__r.SBQQ__EndDate__c,SBQQ__Group__r.SBQQ__EndDate__c),SBQQ__EndDate__c)
+    )
+'''
+    inlineHelpText = "Effective end date for this subscription."
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    description = "Effective end date for this subscription."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaNumber SBQQ__EffectiveQuantity__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__EffectiveQuantity__c"
+    label = "Effective Quantity"
+    precision = 18
+    scale = 2
+    formula = "IF(OR(ISPICKVAL(SBQQ__DiscountScheduleType__c, 'Slab'),ISPICKVAL(SBQQ__PricingMethod__c, 'Block')),IF(OR(AND(!SBQQ__Existing__c, !SBQQ__CarryoverLine__c, SBQQ__Quantity__c == 0),AND(OR(SBQQ__Existing__c, SBQQ__CarryoverLine__c),OR(SBQQ__Quantity__c == SBQQ__PriorQuantity__c - SBQQ__UpgradedQuantity__c,AND(!SBQQ__AllowAssetRefund__c, ISPICKVAL(SBQQ__SubscriptionPricing__c, ''), SBQQ__Quantity__c < SBQQ__PriorQuantity__c - SBQQ__UpgradedQuantity__c)))),0,1),IF(AND(!SBQQ__Existing__c, !SBQQ__CarryoverLine__c),SBQQ__Quantity__c,IF(SBQQ__Quantity__c >= SBQQ__PriorQuantity__c - SBQQ__UpgradedQuantity__c,IF(ISPICKVAL(SBQQ__SubscriptionPricing__c, 'Percent Of Total'),SBQQ__Quantity__c,SBQQ__Quantity__c - SBQQ__PriorQuantity__c + SBQQ__UpgradedQuantity__c),IF(AND(!SBQQ__AllowAssetRefund__c, ISPICKVAL(SBQQ__SubscriptionPricing__c, '')),0,SBQQ__Quantity__c - SBQQ__PriorQuantity__c + SBQQ__UpgradedQuantity__c))))"
+    inlineHelpText = "Effective quantity used in computing totals. Same as quantity unless the product is block priced, covered by \"Slab\" discount schedule, or an existing subscription."
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Effective quantity used in computing totals. Same as quantity unless the product is block priced, covered by \"Slab\" discount schedule, or an existing subscription."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaDate SBQQ__EffectiveStartDate__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__EffectiveStartDate__c"
+    label = "Effective Start Date"
+    formula = '''
+IF(ISBLANK(SBQQ__StartDate__c),
+  IF(ISBLANK(SBQQ__Group__r.SBQQ__StartDate__c),SBQQ__Quote__r.SBQQ__StartDate__c,SBQQ__Group__r.SBQQ__StartDate__c),
+  SBQQ__StartDate__c
+)
+'''
+    inlineHelpText = "Effective start date for this subscription."
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    description = "Effective start date for this subscription."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Date SBQQ__EndDate__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__EndDate__c"
+    label = "End Date"
+    inlineHelpText = "Date the service represented by this line item will end (only applies if product is a subscription)."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Date the service represented by this line item will end (only applies if product is a subscription)."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Existing__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Existing__c"
+    label = "Existing"
+    defaultValue = false
+    inlineHelpText = "Indicates the customer already owns this product. This is typically used for products with options during add-on quoting. The product is on the quote solely to drive the Configurator."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates the customer already owns this product. This is typically used for products with options during add-on quoting. The product is on the quote solely to drive the Configurator."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Favorite__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Favorite__c"
+    label = "Favorite"
+    referenceTo = [
+      salesforce.SBQQ__Favorite__c,
+    ]
+    inlineHelpText = "Favorite to which this Quote Line belongs."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Favorite to which this Quote Line belongs."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__GenerateContractedPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__GenerateContractedPrice__c"
+    label = "Generate Contracted Price"
+    valueSet = [
+      {
+        fullName = "Price"
+        default = false
+        label = "Price"
+      },
+      {
+        fullName = "Discount Schedule"
+        default = false
+        label = "Discount Schedule"
+      },
+      {
+        fullName = "Do Not Generate"
+        default = false
+        label = "Do Not Generate"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Will generate a contracted price based on the adjusted quote line if flagged."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Will generate a contracted price based on the adjusted quote line if flagged."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Currency SBQQ__GrossProfit__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__GrossProfit__c"
+    label = "Gross Profit"
+    inlineHelpText = "Gross profit amount on this line item."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "Gross profit amount on this line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Group__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Group__c"
+    label = "Group"
+    referenceTo = [
+      salesforce.SBQQ__QuoteLineGroup__c,
+    ]
+    inlineHelpText = "Group to which this line belongs, if any."
+    createable = true
+    updateable = true
+    relationshipName = "LineItems"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Group to which this line belongs, if any."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Hidden__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Hidden__c"
+    label = "Hidden"
+    defaultValue = false
+    inlineHelpText = "Denotes whether this line item is hidden in generated PDF documents."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Denotes whether this line item is hidden in generated PDF documents."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Incomplete__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Incomplete__c"
+    label = "Incomplete"
+    defaultValue = false
+    inlineHelpText = "Flag set internally by application logic when a line is saved to an incomplete database. This may happen when price rules are evaluated. Test this field in validation rules to avoid them firing prematurely. Do NOT add to page layout or otherwise update."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag set internally by application logic when a line is saved to an incomplete database. This may happen when price rules are evaluated. Test this field in validation rules to avoid them firing prematurely. Do NOT add to page layout or otherwise update."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__ListPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ListPrice__c"
+    label = "List Unit Price"
+    inlineHelpText = "List unit price for the product quoted by this line item. List Price originates from the price book."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "List unit price for the product quoted by this line item. List Price originates from the price book."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency SBQQ__ListTotal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ListTotal__c"
+    label = "List Total"
+    formula = "IF(OR(AND(SBQQ__Renewal__c, !SBQQ__Existing__c, !SBQQ__CarryoverLine__c, ISBLANK(SBQQ__PriorQuantity__c)),SBQQ__Bundled__c),0,CASE(SBQQ__PricingMethod__c,'Block',SBQQ__ProratedListPrice__c * SBQQ__EffectiveQuantity__c,SBQQ__ProratedListPrice__c * IF(OR(AND(!SBQQ__Existing__c, !SBQQ__CarryoverLine__c), ISPICKVAL(SBQQ__SubscriptionPricing__c, 'Percent Of Total')),SBQQ__Quantity__c,SBQQ__Quantity__c - BLANKVALUE(SBQQ__PriorQuantity__c, 0) + BLANKVALUE(SBQQ__UpgradedQuantity__c, 0))))"
+    inlineHelpText = "List total price for this quote line item."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "List total price for this quote line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Currency SBQQ__MarkupAmount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__MarkupAmount__c"
+    label = "Markup (Amt)"
+    inlineHelpText = "Markup amount for this line item."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "Markup amount for this line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__MarkupRate__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__MarkupRate__c"
+    label = "Markup (%)"
+    inlineHelpText = "Markup on this line item expressed as a percentage."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 8
+    queryable = true
+    deprecated = false
+    description = "Markup on this line item expressed as a percentage."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency SBQQ__Markup__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Markup__c"
+    label = "Markup"
+    formula = "IF(NOT(ISBLANK(SBQQ__MarkupRate__c)), SBQQ__UnitCost__c * SBQQ__MarkupRate__c, SBQQ__UnitCost__c + SBQQ__MarkupAmount__c)"
+    inlineHelpText = "Markup amount on this item. This value is automatically calculated by applying markup rate or absolute amount to the product cost."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Markup amount on this item. This value is automatically calculated by applying markup rate or absolute amount to the product cost."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Currency SBQQ__MaximumPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__MaximumPrice__c"
+    label = "Maximum List Unit Price"
+    inlineHelpText = "Maximum list unit price for this product. Used to enforce list price ceiling for products with dynamically calculated list prices."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "Maximum list unit price for this product. Used to enforce list price ceiling for products with dynamically calculated list prices."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__MinimumPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__MinimumPrice__c"
+    label = "Minimum List Unit Price"
+    inlineHelpText = "Minimum list unit price for this product. Used to enforce list price floor for products with dynamically calculated list prices."
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Minimum list unit price for this product. Used to enforce list price floor for products with dynamically calculated list prices."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__NetPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__NetPrice__c"
+    label = "Net Unit Price"
+    inlineHelpText = "Net unit price for the product quoted by this line item."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Net unit price for the product quoted by this line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency SBQQ__NetTotal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__NetTotal__c"
+    label = "Net Total"
+    formula = "IF(AND(SBQQ__Renewal__c, !SBQQ__Existing__c, ISBLANK(SBQQ__PriorQuantity__c)), 0, SBQQ__NetPrice__c * SBQQ__EffectiveQuantity__c)"
+    inlineHelpText = "Net total price for this quote line item."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Net total price for this quote line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox SBQQ__NonDiscountable__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__NonDiscountable__c"
+    label = "Non Discountable"
+    defaultValue = false
+    inlineHelpText = "Marks this line item as non-discountable."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Marks this line item as non-discountable."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__NonPartnerDiscountable__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__NonPartnerDiscountable__c"
+    label = "Non Partner Discountable"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox to make this line item non discountable for partners."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Marks this line item non discountable for partners."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__Number__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Number__c"
+    label = "Number"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Number indicating this line's position within its group or quote."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Number indicating this line's position within its group or quote."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__OptionDiscountAmount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__OptionDiscountAmount__c"
+    label = "Option Discount (Amt)"
+    inlineHelpText = "Discount extended on this product because it's part of a package."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 12
+    queryable = true
+    deprecated = false
+    description = "Discount extended on this product because it's part of a package."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__OptionDiscount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__OptionDiscount__c"
+    label = "Option Discount (%)"
+    inlineHelpText = "If this line is for an optional SKU, this field captures any discount given to the package and extended to the option."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+    deprecated = false
+    description = "If this line is for an optional SKU, this field captures any discount given to the package and extended to the option."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__OptionLevel__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__OptionLevel__c"
+    label = "Option Level"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Indicates nest level of this option (only applies to lines that are generated from options)."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Indicates nest level of this option (only applies to lines that are generated from options)."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__OptionType__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__OptionType__c"
+    label = "Option Type"
+    valueSet = [
+      {
+        fullName = "Component"
+        default = false
+        label = "Component"
+      },
+      {
+        fullName = "Accessory"
+        default = false
+        label = "Accessory"
+      },
+      {
+        fullName = "Related Product"
+        default = false
+        label = "Related Product"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Indicates the Option Type, which is copied from related Product Option. Determines how quantity is calculated."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates the Option Type, which is copied from related Product Option. Determines how quantity is calculated."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Checkbox SBQQ__Optional__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Optional__c"
+    label = "Optional"
+    defaultValue = false
+    inlineHelpText = "Marks this line as optional. Optional line items don't contribute to quote totals and are not transferred to the Opportunity."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Marks this line as optional. Optional line items don't contribute to quote totals and are not transferred to the Opportunity."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__OriginalPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__OriginalPrice__c"
+    label = "Original Price"
+    inlineHelpText = "The original unit price for the product quoted by this line item.  Original Price originates from the price book."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "The original unit price for the product quoted by this line item.  Original Price originates from the price book.  Also known as MSRP."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__OriginalQuoteLineId__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__OriginalQuoteLineId__c"
+    label = "Original Quote Line Id"
+    inlineHelpText = "The id of the original quote line which this line was derived from."
+    createable = true
+    updateable = true
+    externalId = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The id of the original quote line which this line was derived from."
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__OriginalUnitCost__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__OriginalUnitCost__c"
+    label = "Original Unit Cost"
+    inlineHelpText = "Cost for one unit of product quoted on this line item if Cost Schedules were not applied."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "Cost for one unit of product quoted on this line item if Cost Schedules were not applied."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency SBQQ__PackageCost__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PackageCost__c"
+    label = "Package Cost"
+    formula = "SBQQ__ComponentCost__c + (SBQQ__UnitCost__c * SBQQ__Quantity__c)"
+    inlineHelpText = "Total cost for this package including the cost of its components."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Total cost for this package including the cost of its components."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaCurrency SBQQ__PackageListTotal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PackageListTotal__c"
+    label = "Package List Total"
+    formula = "SBQQ__ComponentListTotal__c +  SBQQ__ListTotal__c"
+    inlineHelpText = "Total list price of this package including its components."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Total list price of this package including its components."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Text SBQQ__PackageProductCode__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PackageProductCode__c"
+    label = "Package Product Code"
+    inlineHelpText = "Automatically generated list of product codes for each component in this package."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "Product code for the package generated by appending codes of selected components according to specified pattern."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Html SBQQ__PackageProductDescription__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PackageProductDescription__c"
+    label = "Package Product Description"
+    inlineHelpText = "Dynamic Product Description generated from the components inside this package."
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+    deprecated = false
+    description = "Product Description for the package generated by appending descriptions of selected components according to specified pattern."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    visibleLines = 25
+  }
+  salesforce.FormulaCurrency SBQQ__PackageTotal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PackageTotal__c"
+    label = "Package Total"
+    formula = "SBQQ__ComponentTotal__c + SBQQ__NetTotal__c"
+    inlineHelpText = "Total price of this package including its components."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Total price of this package including its components."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Percent SBQQ__PartnerDiscount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PartnerDiscount__c"
+    label = "Partner Discount"
+    inlineHelpText = "If your organization sells through a channel/VARI, a Partner Discount on a quote or individual product line item can be given. Partner discounts are applied after all automatic and discretionary discounts."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+    deprecated = false
+    description = "If your organization sells through a channel/VARl, you can give a “partner discount” on quote or the individual product line item on the quote. By default, partner discounts are applied after all automatic and discretionary discounts. The partner discount is taken into account in the Partner Price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__PartnerPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PartnerPrice__c"
+    label = "Partner Unit Price"
+    inlineHelpText = "Partner unit price. Price after partner discount but before distributor discount."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Partner unit price. Price after partner discount but before distributor discount."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency SBQQ__PartnerTotal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PartnerTotal__c"
+    label = "Partner Total"
+    formula = "IF(AND(SBQQ__Renewal__c, !SBQQ__Existing__c, ISBLANK(SBQQ__PriorQuantity__c)), 0, SBQQ__PartnerPrice__c * SBQQ__EffectiveQuantity__c)"
+    inlineHelpText = "Total of the Partner Discount."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Total of the Partner Discount. By default, partner discounts are applied after all automatic and discretionary discounts. The partner discount is taken into account in the Partner Price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Currency SBQQ__PreviousSegmentPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PreviousSegmentPrice__c"
+    label = "Previous Segment Regular Price"
+    inlineHelpText = "When set, this value takes the place of the previous segment's regular price when calculating Uplift for this segment."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "When set, this value takes the place of the previous segment's regular price when calculating Uplift for this segment."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__PreviousSegmentUplift__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PreviousSegmentUplift__c"
+    label = "Previous Segment Uplift"
+    inlineHelpText = "When set, this value takes the place of the previous segment's uplift amount when calculating Uplift for this segment."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 12
+    queryable = true
+    deprecated = false
+    description = "When set, this value takes the place of the previous segment's uplift amount when calculating Uplift for this segment."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__PriceEditable__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PriceEditable__c"
+    label = "Price Editable"
+    defaultValue = false
+    inlineHelpText = "Flag that indicates if price is editable for this line item."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that indicates if price is editable for this line item"
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__PricebookEntryId__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PricebookEntryId__c"
+    label = "Pricebook Entry Id"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__PricingMethodEditable__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PricingMethodEditable__c"
+    label = "Pricing Method Editable"
+    defaultValue = false
+    inlineHelpText = "Flag indicating if this line item's price is editable."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Specifies whether pricing method can be edited on this line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__PricingMethod__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PricingMethod__c"
+    label = "Pricing Method"
+    valueSet = [
+      {
+        fullName = "List"
+        default = true
+        label = "List"
+      },
+      {
+        fullName = "Cost"
+        default = false
+        label = "Cost"
+      },
+      {
+        fullName = "Block"
+        default = false
+        label = "Block"
+      },
+      {
+        fullName = "Percent Of Total"
+        default = false
+        label = "Percent Of Total"
+      },
+      {
+        fullName = "Custom"
+        default = false
+        label = "Custom"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Indicates how the price for this line item is calculated. \"List\" = subtracting discount from list price. \"Cost\" = adding markup to cost."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines how the price for this line item is set. \"List\" = calculated by subtracting discount from list price. \"Cost\"  = calculated by adding markup to cost."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__PriorQuantity__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__PriorQuantity__c"
+    label = "Prior Quantity"
+    precision = 12
+    scale = 2
+    inlineHelpText = "Combined quantity of this product from prior purchases."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Combined quantity of this product from prior purchases."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaText SBQQ__ProductCode__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ProductCode__c"
+    label = "Product Code"
+    formula = "SBQQ__Product__r.ProductCode"
+    inlineHelpText = "Code for the product referenced by this line."
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    description = "Code for the product referenced by this line."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaText SBQQ__ProductFamily__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ProductFamily__c"
+    label = "Product Family"
+    formula = "TEXT(SBQQ__Product__r.Family)"
+    inlineHelpText = "How you would categorize/group/organize this within Salesforce (whether it's a new or existing Product Family). Additionally, this field can be used during product selection to filter to the correct product or product SKU."
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    description = "How you would categorize/group/organize this within Salesforce (whether it's a new or existing Product Family). Additionally, this field can be used during product selection to filter to the correct product or product SKU."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaText SBQQ__ProductName__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ProductName__c"
+    label = "Product Name"
+    formula = "SBQQ__Product__r.Name"
+    inlineHelpText = "Name for the product referenced by this line item."
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    description = "Name for the product referenced by this line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Lookup SBQQ__ProductOption__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ProductOption__c"
+    label = "Product Option"
+    referenceTo = [
+      salesforce.SBQQ__ProductOption__c,
+    ]
+    inlineHelpText = "Product option that generated this line (if any)."
+    createable = true
+    updateable = true
+    relationshipName = "Quote_Lines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Product option that generated this line (if any)."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Product__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Product__c"
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "Product quoted by this line item."
+    createable = true
+    updateable = true
+    relationshipName = "R00N70000001lXB6EAM"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Product quoted by this line item."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__ProrateMultiplier__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ProrateMultiplier__c"
+    label = "Prorate Multiplier"
+    precision = 8
+    scale = 4
+    inlineHelpText = "Calculated ratio used to compute Prorated Price."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Calculated ratio used to compute Prorated Price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__ProratedListPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ProratedListPrice__c"
+    label = "Prorated List Price"
+    inlineHelpText = "Prorated list unit price."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Prorated list unit price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__ProratedPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ProratedPrice__c"
+    label = "Prorated Unit Price"
+    inlineHelpText = "Prorated price for the product quoted by this line item. This price will only differ from Special Price if the product is a subscription and the line item is being prorated."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Prorated price for the product quoted by this line item. This price will only differ from Special Price if the product is a subscription and the line item is being prorated."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__Quantity__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Quantity__c"
+    label = "Quantity"
+    precision = 12
+    scale = 2
+    inlineHelpText = "Quantity being quoted."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Quantity being quoted."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__RegularPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__RegularPrice__c"
+    label = "Regular Unit Price"
+    inlineHelpText = "Unit price before additional discount."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Unit price before additional discount."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency SBQQ__RegularTotal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__RegularTotal__c"
+    label = "Regular Total"
+    formula = "IF(AND(SBQQ__Renewal__c, !SBQQ__Existing__c, ISBLANK(SBQQ__PriorQuantity__c)), 0, SBQQ__RegularPrice__c * SBQQ__EffectiveQuantity__c)"
+    inlineHelpText = "Unit price before additional discount multiplied by quantity."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Unit price before additional discount multiplied by quantity."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox SBQQ__Renewal__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Renewal__c"
+    label = "Renewal"
+    defaultValue = false
+    inlineHelpText = "Indicates this line item represents a product being renewed. This field should not be modified."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates this line item represents a product being renewed. Only non-subscription products for quote type \"Renewal\" will have this field set to true. Under normal circumstances this field should not be modified via UI."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__RenewedAsset__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__RenewedAsset__c"
+    label = "Renewed Asset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    inlineHelpText = "Asset being renewed if this line item represents product renewal."
+    createable = true
+    updateable = true
+    relationshipName = "Quote_Lines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Asset being renewed if this line item represents product renewal."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__RenewedSubscription__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__RenewedSubscription__c"
+    label = "Renewed Subscription"
+    referenceTo = [
+      salesforce.SBQQ__Subscription__c,
+    ]
+    inlineHelpText = "Subscription being renewed by this quote line."
+    createable = true
+    updateable = true
+    relationshipName = "RenewalQuoteLines"
+    queryable = true
+    deleteConstraint = "Restrict"
+    deprecated = false
+    description = "Subscription being renewed by this quote line."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__RequiredBy__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__RequiredBy__c"
+    label = "Required By"
+    referenceTo = [
+      salesforce.SBQQ__QuoteLine__c,
+    ]
+    inlineHelpText = "Indicates which other product on this quote requires it."
+    createable = true
+    updateable = true
+    relationshipName = "Quote_Lines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Links this line to another line in the same quote whose product requires this line's product."
+    externalId = false
+    relationshipLabel = "Quote Lines"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__SegmentIndex__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SegmentIndex__c"
+    label = "Segment Index"
+    precision = 2
+    scale = 0
+    inlineHelpText = "For multi-segmented Products, Index representing this Quote Line's position in the segment table."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "For multi-segmented Products, Index representing this Quote Line's position in the segment table."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SegmentKey__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SegmentKey__c"
+    label = "Segment Key"
+    inlineHelpText = "For multi-segmented Products, this is a shared key used to group multi-dimensional Quote Lines together."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 30
+    queryable = true
+    deprecated = false
+    description = "For multi-segmented Products, this is a shared key used to group multi-dimensional Quote Lines together."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SegmentLabel__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SegmentLabel__c"
+    label = "Segment Label"
+    inlineHelpText = "For multi-segmented Products, this is the Column header label (e.g. \"Year 1\") associated with this line."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 25
+    queryable = true
+    deprecated = false
+    description = "For multi-segmented Products, this is the Column header label (e.g. \"Year 1\") associated with this line."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Source__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Source__c"
+    label = "Source"
+    referenceTo = [
+      salesforce.SBQQ__QuoteLine__c,
+    ]
+    inlineHelpText = "Source of cloned quote line."
+    createable = true
+    updateable = true
+    relationshipName = "Clones"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Source of cloned quote line."
+    externalId = false
+    relationshipLabel = "Quote Lines (Source)"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SpecialPriceDescription__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SpecialPriceDescription__c"
+    label = "Special Price Description"
+    inlineHelpText = "Name of the Discount Tier or Contacted Price applied to achieve the special price for this line item."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    deprecated = false
+    description = "Name of the Discount Tier or description of Contracted Price that generated special price for this line item"
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__SpecialPriceType__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SpecialPriceType__c"
+    label = "Special Price Type"
+    valueSet = [
+      {
+        fullName = "Contracted Price"
+        default = false
+        label = "Contracted Price"
+      },
+      {
+        fullName = "Renewal"
+        default = false
+        label = "Renewal"
+      },
+      {
+        fullName = "Custom"
+        default = false
+        label = "Custom"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Stores the type of special price offered on this line item. Null value indicates there is no special pricing."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Stores the type of special price offered on this line item. Null value indicates there is no special pricing. Under normal circumstances this field should not be modified via UI."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Currency SBQQ__SpecialPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SpecialPrice__c"
+    label = "Special Price"
+    inlineHelpText = "Special unit price for this line item, such as volume discount or contracted price."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Special (volume-discounted or contracted) unit price for the product being quoted by this line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Date SBQQ__StartDate__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__StartDate__c"
+    label = "Start Date"
+    inlineHelpText = "The date the subscription for this product begins."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Date the service represented by this line item will begin (only applies if product is a subscription)."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__SubscribedAssetIds__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SubscribedAssetIds__c"
+    label = "Subscribed Asset IDs"
+    inlineHelpText = "List of assets covered by this subscription line item. Do not update unless instructed."
+    createable = true
+    updateable = true
+    length = 19000
+    queryable = true
+    deprecated = false
+    description = "Comma separated list of asset IDs covered by this subscription line. Only applicable to renewal quotes."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    visibleLines = 3
+  }
+  salesforce.Text SBQQ__SubscriptionBase__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SubscriptionBase__c"
+    label = "Percent of Total Base"
+    inlineHelpText = "Determines whether Percent of Total is calculated off List or Net product prices."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 30
+    queryable = true
+    deprecated = false
+    description = "Determines the price that serves as the base for percent-of-total calculations."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__SubscriptionCategory__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SubscriptionCategory__c"
+    label = "Percent of Total Category"
+    valueSet = [
+      {
+        fullName = "Hardware"
+        default = false
+        label = "Hardware"
+      },
+      {
+        fullName = "Software"
+        default = false
+        label = "Software"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Category defined on the product to limit percent-of-total calculations to certain products. Copied from the product record."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Category defined on the product to limit percent-of-total calculations to certain products. Copied from the product record."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Percent SBQQ__SubscriptionPercent__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SubscriptionPercent__c"
+    label = "Percent of Total (%)"
+    inlineHelpText = "Percent of Total to be used when calculating this line item price."
+    createable = true
+    updateable = true
+    scale = 3
+    precision = 7
+    queryable = true
+    deprecated = false
+    description = "Percent of non-subscription total to be used as the price of this subscription."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__SubscriptionPricing__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SubscriptionPricing__c"
+    label = "Subscription Pricing"
+    valueSet = [
+      {
+        fullName = "Fixed Price"
+        default = false
+        label = "Fixed Price"
+      },
+      {
+        fullName = "Percent Of Total"
+        default = false
+        label = "Percent Of Total"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Indicates how the subscription price is calculated. If this is blank, the line items is not a subscription product."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Method of calculating the subscription price. A blank value indicates that the line item isn't a subscription product."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__SubscriptionScope__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SubscriptionScope__c"
+    label = "Percent of Total Scope"
+    valueSet = [
+      {
+        fullName = "Quote"
+        default = true
+        label = "Quote"
+      },
+      {
+        fullName = "Group"
+        default = false
+        label = "Group"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Indicates how percent of total prices are calculated: Quote uses all the non-subscription and include in percent of total products in the quote while Group uses only non-subscription products and include in percent of total products in the same group."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines how percent of total product prices are calculated. If scope is set to \"Quote\" any non-subscription and include in percent of total product is used in calculating every percent of total price. If scope is set to \"Group\" only products in the same group as the percent of total product are used in calculation."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Currency SBQQ__SubscriptionTargetPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SubscriptionTargetPrice__c"
+    label = "Percent of Total Target Price"
+    inlineHelpText = "Price of the target product on which percent of total should calculate."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Price of the subscription target product on which maintenance should calculate."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__SubscriptionTerm__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SubscriptionTerm__c"
+    label = "Subscription Term"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Term for this subscription. If this product is not a subscription this value has no effect."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Term for the subscription product in this line. If the product is not a subscription this value has no effect."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TaxCode__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__TaxCode__c"
+    label = "Tax code"
+    inlineHelpText = "Specifies the tax code for taxation rules."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "Specifies the tax code for taxation rules."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Taxable__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Taxable__c"
+    label = "Taxable"
+    defaultValue = false
+    inlineHelpText = "Indicates if the line item is taxable"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Is this line item taxable."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__TermDiscountSchedule__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__TermDiscountSchedule__c"
+    label = "Term Discount Schedule"
+    referenceTo = [
+      salesforce.SBQQ__DiscountSchedule__c,
+    ]
+    inlineHelpText = "Schedule for discounts based on subscription term. Setting this to \"Group\" applies the discount rate for the group term, while setting it to \"Quote\" applies the discount rate for the entire quote term, regardless of the different terms in your groups."
+    createable = true
+    updateable = true
+    relationshipName = "TermDiscountedQuoteLines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Schedule for discounts based on subscription term. This is useful when you want to show a breakdown of payments in separate groups, for different terms, yet you want to discount reflected for the entire duration of the subscription. Leave Term Discount Level blank if you want discount schedules applied based on the term of each line item."
+    externalId = false
+    relationshipLabel = "Quote Lines (Term Discouned)"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__TermDiscountTier__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__TermDiscountTier__c"
+    label = "Term Discount Tier"
+    referenceTo = [
+      salesforce.SBQQ__DiscountTier__c,
+    ]
+    inlineHelpText = "Tier within the term discount schedule used to discount this line item."
+    createable = true
+    updateable = true
+    relationshipName = "TermDiscountedQuoteLines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Tier within the term discount schedule used to discount this line item."
+    externalId = false
+    relationshipLabel = "Quote Lines (Term Discounted)"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__TermDiscount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__TermDiscount__c"
+    label = "Term Discount"
+    inlineHelpText = "Discount calculated by applying subscription term against term discount schedule."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Discount calculated by applying subscription term against term discount schedule."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency SBQQ__TotalDiscountAmount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__TotalDiscountAmount__c"
+    label = "Total Discount (Amt)"
+    formula = '''
+IF(SBQQ__Bundled__c, 0,
+IF(ISPICKVAL(SBQQ__DiscountScheduleType__c, 'Slab') && NOT(SBQQ__Existing__c), (SBQQ__ProratedListPrice__c * SBQQ__Quantity__c - SBQQ__CustomerPrice__c),
+IF(ISPICKVAL(SBQQ__DiscountScheduleType__c, 'Slab') && SBQQ__Existing__c, (SBQQ__ProratedListPrice__c * (SBQQ__Quantity__c-SBQQ__PriorQuantity__c) - SBQQ__CustomerPrice__c),
+(SBQQ__ProratedListPrice__c -  SBQQ__CustomerPrice__c) * SBQQ__EffectiveQuantity__c)))
+'''
+    inlineHelpText = "Total discount amount for this line item including volume discount, contracted discount, and additional discount."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Total discount amount for this line item including volume discount, contracted discount, and additional discount."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaPercent SBQQ__TotalDiscountRate__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__TotalDiscountRate__c"
+    label = "Total Discount (%)"
+    formula = '''
+IF(SBQQ__ProratedListPrice__c == 0, 0,
+IF(ISPICKVAL(SBQQ__DiscountScheduleType__c, 'Slab') && NOT(SBQQ__Existing__c),
+IF(SBQQ__Quantity__c == 0, 0, (SBQQ__ProratedListPrice__c * SBQQ__Quantity__c - SBQQ__CustomerPrice__c) / (SBQQ__Quantity__c * SBQQ__ProratedListPrice__c)),
+IF(ISPICKVAL(SBQQ__DiscountScheduleType__c, 'Slab') && SBQQ__Existing__c,
+IF(SBQQ__Quantity__c == SBQQ__PriorQuantity__c, 0, (SBQQ__ProratedListPrice__c * (SBQQ__Quantity__c-SBQQ__PriorQuantity__c) - SBQQ__CustomerPrice__c) / ((SBQQ__Quantity__c-SBQQ__PriorQuantity__c) * SBQQ__ProratedListPrice__c)),
+(SBQQ__ProratedListPrice__c - SBQQ__CustomerPrice__c) / SBQQ__ProratedListPrice__c)))
+'''
+    inlineHelpText = "Total discount for this line item including volume discount, contracted discount, and additional discount."
+    createable = false
+    updateable = false
+    scale = 3
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Total discount for this line item including volume discount, contracted discount, and additional discount."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Currency SBQQ__UnitCost__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__UnitCost__c"
+    label = "Unit Cost"
+    inlineHelpText = "Cost for one unit of product quoted on this line item."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "Cost for one unit of product quoted on this line item."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__UnproratedNetPrice__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__UnproratedNetPrice__c"
+    label = "Unprorated Net Price"
+    inlineHelpText = "The full term net price for individual line."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "The full-term Net Price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__UpgradedAsset__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__UpgradedAsset__c"
+    label = "Upgraded Asset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    inlineHelpText = "Asset being upgraded by this quote line. When the quote is contracted this asset will have its Usage End Date populated to indicate it's retired."
+    createable = true
+    updateable = true
+    relationshipName = "UpgradeLines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Asset being upgraded by this quote line. Only populated if this quote line represents an upgrade."
+    externalId = false
+    relationshipLabel = "Quote Lines (Upgrade)"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__UpgradedQuantity__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__UpgradedQuantity__c"
+    label = "Upgraded Quantity"
+    precision = 12
+    scale = 2
+    inlineHelpText = "Portion of this line's Prior Quantity being upgraded to another product."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Quantity being upgraded."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__UpgradedSubscription__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__UpgradedSubscription__c"
+    label = "Upgraded Subscription"
+    referenceTo = [
+      salesforce.SBQQ__Subscription__c,
+    ]
+    inlineHelpText = "Subscription being upgraded by this quote line. When the quote is contracted this subscription will have its Terminated Date field populated."
+    createable = true
+    updateable = true
+    relationshipName = "UpgradeLines"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Subscription being upgraded by this quote line."
+    externalId = false
+    relationshipLabel = "Quote Lines (Upgrade)"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Currency SBQQ__UpliftAmount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__UpliftAmount__c"
+    label = "Uplift (Amt)"
+    inlineHelpText = "Uplift (Amt) is measured as a currency amount. This is a system-calculated field, as Uplift can only be applied to MDQ segments in percent."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 12
+    queryable = true
+    deprecated = false
+    description = "Uplift (Amt) is measured as a currency amount. This is a system-calculated field, as Uplift can only be applied to MDQ segments in percent."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__Uplift__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Uplift__c"
+    label = "Uplift"
+    defaultValueFormula = "0.0"
+    inlineHelpText = "Uplift is applied as a % against the previous year's price; the resulting price is entered into the Regular Price field on top of Special or Contracted Prices. Uplifts compound year after year. Uplift cannot be applied to the 1st Year of any Subscription."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 9
+    queryable = true
+    deprecated = false
+    description = "Uplift is applied as a % against the previous year's price; the resulting price is entered into the Regular Price field on top of Special or Contracted Prices. Uplifts compound year after year. Uplift cannot be applied to the 1st Year of any Subscription."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__VolumeDiscount__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__VolumeDiscount__c"
+    label = "Volume Discount"
+    inlineHelpText = "Specify volume discounts based on a % of the product's price to be discounted using the quantity purchased or term. You can set the quantity or term ranges in tiers of different discount %. You can also apply discount schedules to Subscription Term."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Discount schedules allow you to specify volume discounts based on a percentage of the product's price to be discounted using the quantity purchased or term. You can set the quantity or term ranges in tiers of different discount percentages. You can also apply discount schedules to Subscription Term."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaCurrency Special_Price_Formula__c {
+    apiName = "SBQQ__QuoteLine__c.Special_Price_Formula__c"
+    label = "Special Price"
+    formula = "SBQQ__SpecialPrice__c"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.SBQQ__QuoteLine__c.field.SBQQ__SpecialPrice__c
+      },
+    ]
+  }
+  salesforce.FormulaCurrency Original_Price_Formula__c {
+    apiName = "SBQQ__QuoteLine__c.Original_Price_Formula__c"
+    label = "Original Price"
+    formula = "SBQQ__OriginalPrice__c"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.SBQQ__QuoteLine__c.field.SBQQ__OriginalPrice__c
+      },
+    ]
+  }
+  salesforce.Picklist SBQQ__ProductSubscriptionType__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__ProductSubscriptionType__c"
+    label = "Product Subscription Type"
+    restricted = true
+    inlineHelpText = "Set the quote line's product subscription type."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Set the quote line's product subscription type."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    valueSetName = salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType
+  }
+  salesforce.Picklist SBQQ__SubscriptionType__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__SubscriptionType__c"
+    label = "Subscription Type"
+    restricted = true
+    inlineHelpText = "Indicates the subscription type to determine contract's pricing."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates the subscription type to determine contract's pricing."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    valueSetName = salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType
+    fieldDependency = {
+      controllingField = "SBQQ__ProductSubscriptionType__c"
+      valueSettings = [
+        {
+          valueName = "Renewable"
+          controllingFieldValue = [
+            "Renewable",
+            "Renewable/Evergreen",
+          ]
+        },
+        {
+          valueName = "One-time"
+          controllingFieldValue = [
+            "One-time",
+          ]
+        },
+        {
+          valueName = "Evergreen"
+          controllingFieldValue = [
+            "Renewable/Evergreen",
+            "Evergreen",
+          ]
+        },
+      ]
+    }
+  }
+  salesforce.Checkbox SBQQ__HasConsumptionSchedule__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__HasConsumptionSchedule__c"
+    label = "Has Consumption Schedules"
+    defaultValue = false
+    inlineHelpText = "Indicates if this line has at least one consumption schedule"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates if the Quote Line has at least one consumption schedule"
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaNumber SBQQ__EffectiveSubscriptionTerm__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__EffectiveSubscriptionTerm__c"
+    label = "Effective Subscription Term"
+    precision = 18
+    scale = 0
+    formula = '''
+IF(ISBLANK(SBQQ__SubscriptionTerm__c),
+       IF(ISBLANK(SBQQ__Group__r.SBQQ__SubscriptionTerm__c),SBQQ__Quote__r.SBQQ__SubscriptionTerm__c,SBQQ__Group__r.SBQQ__SubscriptionTerm__c),
+       SBQQ__SubscriptionTerm__c
+    )
+'''
+    inlineHelpText = "Effective term for this subscription."
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Effective term for this subscription."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Percent SBQQ__Guidance__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__Guidance__c"
+    label = "Guidance"
+    inlineHelpText = "Ideal low-range discount based on past sales. If sales reps accept this pricing guidance, Salesforce CPQ applies a discount to reach this price."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Ideal low-range discount based on past sales. If sales reps accept this pricing guidance, Salesforce CPQ applies a discount to reach this price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Date SBQQ__EarliestValidAmendmentStartDate__c {
+    apiName = "SBQQ__QuoteLine__c.SBQQ__EarliestValidAmendmentStartDate__c"
+    label = "Earliest Valid Amendment Start Date"
+    inlineHelpText = "The earliest valid start date for this amendment quote line."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The earliest safe date for an amendment quote line to start before it becomes back-dated and therefore forbidden."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+}

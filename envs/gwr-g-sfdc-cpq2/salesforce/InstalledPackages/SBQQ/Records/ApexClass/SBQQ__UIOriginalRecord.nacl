@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__UIOriginalRecord {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__UIOriginalRecord"
+  content = "(hidden)"
+}

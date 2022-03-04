@@ -1,0 +1,241 @@
+type salesforce.SBQQ__QuoteTerm__c {
+  salesforce.Checkbox SBQQ__Active__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__Active__c"
+    label = "Active"
+    defaultValue = false
+    inlineHelpText = "Indicates that this quote term is available for use."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Flag that indicates whether this quote term is available for use."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.TextArea SBQQ__AdvancedCondition__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__AdvancedCondition__c"
+    label = "Advanced Condition"
+    inlineHelpText = "Can only be entered if the Conditions Met is Custom. Enter a combination of the Term Condition Index #s, AND, OR, and parenthesis (e.g. (123 AND 124) AND 125)."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Can only be entered if the Conditions Met is Custom. Enter a combination of the Term Condition Index #s, AND, OR, and parenthesis (e.g. (123 AND 124) AND 125)."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Html SBQQ__Body__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__Body__c"
+    label = "Body"
+    inlineHelpText = "Text content of this term."
+    createable = true
+    updateable = true
+    length = 32768
+    queryable = true
+    deprecated = false
+    description = "Body containing text of the term."
+    externalId = false
+    trackTrending = false
+    visibleLines = 25
+  }
+  salesforce.Picklist SBQQ__ConditionsMet__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__ConditionsMet__c"
+    label = "Conditions Met"
+    valueSet = [
+      {
+        fullName = "All"
+        default = true
+        label = "All"
+      },
+      {
+        fullName = "Any"
+        default = false
+        label = "Any"
+      },
+      {
+        fullName = "Custom"
+        default = false
+        label = "Custom"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Choose the behavior for your conditions: All is AND, Any is OR, Custom is a combination of AND/OR."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Choose the behavior for your conditions: All is AND, Any is OR, Custom is a combination of AND/OR."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Checkbox SBQQ__Locked__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__Locked__c"
+    label = "Locked"
+    defaultValue = false
+    inlineHelpText = "Controls a Quote Term being editable by a user."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Controls a Quote Term being editable by a user."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__ParentTerm__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__ParentTerm__c"
+    label = "Parent Term"
+    referenceTo = [
+      salesforce.SBQQ__QuoteTerm__c,
+    ]
+    inlineHelpText = "Parent term for this term."
+    createable = true
+    updateable = true
+    relationshipName = "SubTerms"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Parent term for this term."
+    externalId = false
+    relationshipLabel = "Sub Terms"
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__PrintOrder__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__PrintOrder__c"
+    label = "Print Order"
+    _required = true
+    precision = 12
+    scale = 2
+    inlineHelpText = "Specifies the order in which the terms are printed on quote document."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Order in which the terms are printed on quote document."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Quote__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__Quote__c"
+    label = "Quote"
+    referenceTo = [
+      salesforce.SBQQ__Quote__c,
+    ]
+    inlineHelpText = "Quote to which this term applies. Left blank if this is a standard term."
+    createable = true
+    updateable = true
+    relationshipName = "QuoteTerms"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Quote to which this term applies."
+    externalId = false
+    relationshipLabel = "Quote Terms"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__StandardTerm__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__StandardTerm__c"
+    label = "Standard Term"
+    referenceTo = [
+      salesforce.SBQQ__QuoteTerm__c,
+    ]
+    inlineHelpText = "Specifies the standard term that is being modified."
+    createable = true
+    updateable = true
+    relationshipName = "ModifiedTerms"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Specifies the standard term that is being modified."
+    externalId = false
+    relationshipLabel = "Modified Terms"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Status__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__Status__c"
+    label = "Status"
+    valueSet = [
+      {
+        fullName = "Draft"
+        default = true
+        label = "Draft"
+      },
+      {
+        fullName = "In Review"
+        default = false
+        label = "In Review"
+      },
+      {
+        fullName = "Approved"
+        default = false
+        label = "Approved"
+      },
+      {
+        fullName = "Rejected"
+        default = false
+        label = "Rejected"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Status of this quote term."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Status of this quote term."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__TemplateContent__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__TemplateContent__c"
+    label = "Template Content"
+    referenceTo = [
+      salesforce.SBQQ__TemplateContent__c,
+    ]
+    inlineHelpText = "Template Content to which this term is applied."
+    createable = true
+    updateable = true
+    relationshipName = "Quote_Terms"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Template Content to which this term is applied."
+    externalId = false
+    lookupFilter = {
+      active = true
+      filterItems = [
+        {
+          field = "SBQQ__TemplateContent__c.SBQQ__Type__c"
+          operation = "equals"
+          value = "Quote Terms"
+        },
+      ]
+      isOptional = false
+    }
+    relationshipLabel = "Quote Terms"
+    trackTrending = false
+  }
+  salesforce.FormulaText SBQQ__Type__c {
+    apiName = "SBQQ__QuoteTerm__c.SBQQ__Type__c"
+    label = "Type"
+    formula = '''
+IF(AND(ISBLANK(SBQQ__Quote__c),ISBLANK(SBQQ__StandardTerm__c)), $Label.sbqq__lbl_standard,
+  IF(AND(NOT(ISBLANK(SBQQ__Quote__c)),ISBLANK(SBQQ__StandardTerm__c)), $Label.sbqq__lbl_custom, $Label.sbqq__lbl_modified))
+'''
+    inlineHelpText = "Indicates if the term is standard, custom, or modified."
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    description = "Indicates if the term is standard, custom, or modified."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+}

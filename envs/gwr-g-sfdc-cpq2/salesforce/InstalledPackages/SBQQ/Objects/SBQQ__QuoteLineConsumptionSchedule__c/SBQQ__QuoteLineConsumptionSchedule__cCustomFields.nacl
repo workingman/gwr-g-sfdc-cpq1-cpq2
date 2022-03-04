@@ -1,0 +1,195 @@
+type salesforce.SBQQ__QuoteLineConsumptionSchedule__c {
+  salesforce.MasterDetail SBQQ__QuoteLine__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__QuoteLine__c"
+    label = "Quote Line"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__QuoteLine__c,
+    ]
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "QuoteLines"
+    queryable = true
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Quote Line Consumption Schedules"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__BillingTermUnit__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__BillingTermUnit__c"
+    label = "Billing Term Unit"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Month"
+        default = false
+        label = "Month"
+      },
+      {
+        fullName = "Year"
+        default = false
+        label = "Year"
+      },
+      {
+        fullName = "Quarter"
+        default = false
+        label = "Quarter"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "The unit used with the billing term to determine the billing frequency."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Number SBQQ__BillingTerm__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__BillingTerm__c"
+    label = "Billing Term"
+    _required = true
+    precision = 9
+    scale = 0
+    inlineHelpText = "The number used with the billing term unit to determine the billing frequency."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Category__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__Category__c"
+    label = "Category"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Rates"
+        default = false
+        label = "Rates"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__ConsumptionSchedule__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__ConsumptionSchedule__c"
+    label = "Consumption Schedule"
+    referenceTo = [
+      salesforce.ConsumptionSchedule,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "QuoteLineConsumptionSchedules"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Quote Line Consumption Schedules"
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__Description__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__Description__c"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    visibleLines = 3
+  }
+  salesforce.Text SBQQ__MatchingAttribute__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__MatchingAttribute__c"
+    label = "Matching Attribute"
+    inlineHelpText = "Usage is matched with a consumption schedule if the records share the same Matching Attribute value."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__RatingMethod__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__RatingMethod__c"
+    label = "Rating Method"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Tier"
+        default = false
+        label = "Tier"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Choose a specific use case to rate usage against this schedule. This is a controlling picklist for the Type field."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__Type__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__Type__c"
+    label = "Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Range"
+        default = false
+        label = "Range"
+      },
+      {
+        fullName = "Slab"
+        default = false
+        label = "Slab"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Range: The schedule prices only using the tier that applies to the usage quantity. Slab: Usage within a given bound receives pricing equal to its tier's value"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__UnitOfMeasure__c {
+    apiName = "SBQQ__QuoteLineConsumptionSchedule__c.SBQQ__UnitOfMeasure__c"
+    label = "Unit of Measure"
+    valueSet = [
+      {
+        fullName = "None"
+        default = false
+        label = "None"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Usage quantities and rates apply to this unit of measurement."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+}

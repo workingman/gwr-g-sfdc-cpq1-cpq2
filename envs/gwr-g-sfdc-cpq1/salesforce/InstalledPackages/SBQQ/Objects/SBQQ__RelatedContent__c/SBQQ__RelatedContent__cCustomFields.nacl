@@ -1,0 +1,157 @@
+type salesforce.SBQQ__RelatedContent__c {
+  salesforce.Number SBQQ__DisplayOrder__c {
+    apiName = "SBQQ__RelatedContent__c.SBQQ__DisplayOrder__c"
+    label = "Display Order"
+    precision = 5
+    scale = 0
+    inlineHelpText = "Set the order in which this item will appear to a sales user in the Related Content menu. If blank, the content will be sorted last."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "The order in which this item will appear to a sales user in the Related Content menu. If blank, the content will be sorted last."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.FormulaText SBQQ__DocumentName__c {
+    apiName = "SBQQ__RelatedContent__c.SBQQ__DocumentName__c"
+    label = "Document Name"
+    formula = '''
+IF(((LEFT(SBQQ__ExternalId__c , 3)  = '015') || (LEFT(SBQQ__ExternalId__c , 3)  = '00P')), HYPERLINK("/servlet/servlet.FileDownload?file=" & SBQQ__ExternalId__c, "View Document in New Window"), 
+IF(LEFT(SBQQ__ExternalId__c , 3)  = '069', HYPERLINK("/sfc/#version?selectedDocumentId=" & SBQQ__ExternalId__c, "View Content Workspace in New Window"),
+"Not Document or workspace ID Specified"))
+'''
+    inlineHelpText = "Enter a file name for the related content."
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    description = "This contains the file name for the related content."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Text SBQQ__ExternalId__c {
+    apiName = "SBQQ__RelatedContent__c.SBQQ__ExternalId__c"
+    label = "External Id"
+    _required = true
+    inlineHelpText = "Record ID that contains the content, such as document or Salesforce content."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    description = "ID of the record that contains the actual content. Eg: Document or Salesforce Content."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Opportunity__c {
+    apiName = "SBQQ__RelatedContent__c.SBQQ__Opportunity__c"
+    label = "Opportunity"
+    referenceTo = [
+      salesforce.Opportunity,
+    ]
+    inlineHelpText = "Opportunity related to this content."
+    createable = true
+    updateable = true
+    relationshipName = "Additional_Documents"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Opportunity related to this content."
+    externalId = false
+    relationshipLabel = "Additional Documents"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Product__c {
+    apiName = "SBQQ__RelatedContent__c.SBQQ__Product__c"
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    inlineHelpText = "Product related to this content."
+    createable = true
+    updateable = true
+    relationshipName = "Content"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Product related to this content."
+    externalId = false
+    relationshipLabel = "Additional Documents"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__QuoteTemplate__c {
+    apiName = "SBQQ__RelatedContent__c.SBQQ__QuoteTemplate__c"
+    label = "Quote Template"
+    referenceTo = [
+      salesforce.SBQQ__QuoteTemplate__c,
+    ]
+    inlineHelpText = "Template related to this content."
+    createable = true
+    updateable = true
+    relationshipName = "ProductContent"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Template related to this content."
+    externalId = false
+    relationshipLabel = "Additional Documents"
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__Quote__c {
+    apiName = "SBQQ__RelatedContent__c.SBQQ__Quote__c"
+    label = "Quote"
+    referenceTo = [
+      salesforce.SBQQ__Quote__c,
+    ]
+    inlineHelpText = "Quote related to this content."
+    createable = true
+    updateable = true
+    relationshipName = "RelatedContent"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Quote related to this content."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Required__c {
+    apiName = "SBQQ__RelatedContent__c.SBQQ__Required__c"
+    label = "Required"
+    defaultValue = false
+    inlineHelpText = "Select the checkbox if this content is required for the product. Users must include it when generating a quote document."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates whether this content as required for this product."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__TemplateSection__c {
+    apiName = "SBQQ__RelatedContent__c.SBQQ__TemplateSection__c"
+    label = "Template Section"
+    referenceTo = [
+      salesforce.SBQQ__TemplateSection__c,
+    ]
+    inlineHelpText = "Template Section related to this content."
+    createable = true
+    updateable = true
+    relationshipName = "RelatedContent"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Template Section related to this content."
+    externalId = false
+    relationshipLabel = "Additional Documents"
+    trackTrending = false
+  }
+}

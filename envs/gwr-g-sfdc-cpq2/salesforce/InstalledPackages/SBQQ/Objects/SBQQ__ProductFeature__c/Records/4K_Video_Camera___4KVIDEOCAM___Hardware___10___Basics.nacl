@@ -1,0 +1,9 @@
+salesforce.SBQQ__ProductFeature__c "4K_Video_Camera___4KVIDEOCAM___Hardware___10___Basics@ssuuuuuuuuuuuu" {
+  Name = "Basics"
+  SBQQ__ConfiguredSKU__c = salesforce.Product2.instance.4K_Video_Camera___4KVIDEOCAM___Hardware@ssuuuuuu
+  SBQQ__MinOptionCount__c = 0
+  SBQQ__Number__c = 10
+  _parent = [
+    salesforce.Product2.instance.4K_Video_Camera___4KVIDEOCAM___Hardware@ssuuuuuu,
+  ]
+}

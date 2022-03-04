@@ -1,0 +1,100 @@
+type salesforce.SBQQ__PricingGuidanceTier__c {
+  salesforce.MasterDetail SBQQ__PricingGuidance__c {
+    apiName = "SBQQ__PricingGuidanceTier__c.SBQQ__PricingGuidance__c"
+    label = "Pricing Guidance"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__PricingGuidance__c,
+    ]
+    inlineHelpText = "The pricing guidance that contains this tier."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "PricingGuidanceTiers"
+    queryable = true
+    deprecated = false
+    description = "The pricing guidance that contains this tier."
+    externalId = false
+    relationshipLabel = "Pricing Guidance Tiers"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__FloorDiscount__c {
+    apiName = "SBQQ__PricingGuidanceTier__c.SBQQ__FloorDiscount__c"
+    label = "Floor Discount (%)"
+    inlineHelpText = "High discount for exception pricing based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org's approval settings."
+    createable = true
+    updateable = true
+    scale = 10
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "High discount for exception pricing based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org's approval settings."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__LowerBound__c {
+    apiName = "SBQQ__PricingGuidanceTier__c.SBQQ__LowerBound__c"
+    label = "Lower Bound"
+    precision = 12
+    scale = 0
+    inlineHelpText = "The lowest quote line quantity that applies to this tier. This number must match the upper bound of the previous tier."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "The lowest quote line quantity that applies to this tier. This number must match the upper bound of the previous tier."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__NormDiscount__c {
+    apiName = "SBQQ__PricingGuidanceTier__c.SBQQ__NormDiscount__c"
+    label = "Norm Discount (%)"
+    inlineHelpText = "Middle-range discount based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org's approval settings."
+    createable = true
+    updateable = true
+    scale = 10
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Middle-range discount based on past sales. If a sales rep wants to use this price, they must discount the quote line manually. This discount may require approvals based on your org's approval settings."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Percent SBQQ__TargetDiscount__c {
+    apiName = "SBQQ__PricingGuidanceTier__c.SBQQ__TargetDiscount__c"
+    label = "Target Discount (%)"
+    inlineHelpText = "Ideal low-range discount based on past sales. If sales reps accept this pricing guidance, Salesforce CPQ applies a discount to reach this price."
+    createable = true
+    updateable = true
+    scale = 10
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "Ideal low-range discount based on past sales. If sales reps accept this pricing guidance, Salesforce CPQ applies a discount to reach this price."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__UpperBound__c {
+    apiName = "SBQQ__PricingGuidanceTier__c.SBQQ__UpperBound__c"
+    label = "Upper Bound"
+    precision = 12
+    scale = 0
+    inlineHelpText = "The highest quote line quantity that applies to this tier. This number must be one above the highest quantity that you want this tier to include."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "The highest quote line quantity that applies to this tier. This number must be one above the highest quantity that you want this tier to include."
+    externalId = false
+    trackHistory = false
+    trackTrending = false
+  }
+}

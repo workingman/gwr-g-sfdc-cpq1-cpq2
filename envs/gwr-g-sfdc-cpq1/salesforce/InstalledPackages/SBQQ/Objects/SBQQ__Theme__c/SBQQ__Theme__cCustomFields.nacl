@@ -1,0 +1,6087 @@
+type salesforce.SBQQ__Theme__c {
+  salesforce.Text SBQQ__AccentIconDisabledFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__AccentIconDisabledFontColor__c"
+    label = "Icon Disabled Font Color"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__AccentIconFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__AccentIconFontColor__c"
+    label = "Icon Font Color"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__AccentIconHoverFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__AccentIconHoverFontColor__c"
+    label = "Icon Hover Font Color"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__BadgeBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BadgeBackgroundColor__c"
+    label = "Badge Background Color"
+    inlineHelpText = "Background color of badges"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__BadgeBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BadgeBorderColor__c"
+    label = "Badge Border Color"
+    inlineHelpText = "Border color of badges"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__BadgeBorderStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BadgeBorderStyle__c"
+    label = "Badge Border Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Border style of badges (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__BadgeBorderWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BadgeBorderWidth__c"
+    label = "Badge Border Width"
+    inlineHelpText = "Border width of badges"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__BadgeFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BadgeFontColor__c"
+    label = "Badge Font Color"
+    inlineHelpText = "Font color of badges"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__BadgeFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BadgeFontFamily__c"
+    label = "Badge Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family of badges"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__BadgeFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BadgeFontSize__c"
+    label = "Badge Font Size"
+    inlineHelpText = "Font size of badges"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__BrandButtonBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BrandButtonBorderColor__c"
+    label = "Brand Button Border Color"
+    inlineHelpText = "Border color of brand buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__BrandButtonDisabledFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BrandButtonDisabledFontColor__c"
+    label = "Brand Button Disabled Font Color"
+    inlineHelpText = "Font color of disabled brand buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__BrandButtonFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BrandButtonFontFamily__c"
+    label = "Brand Button Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family for brand buttons"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__BrandButtonHoverFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BrandButtonHoverFontColor__c"
+    label = "Brand Button Hover Font Color"
+    inlineHelpText = "Hover font color of brand buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__BundleLayoutHeaderBgColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BundleLayoutHeaderBgColor__c"
+    label = "Bundle Layout Header Color"
+    inlineHelpText = "Background color of the header displaying the bundle name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__BundleLayoutHeaderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BundleLayoutHeaderColor__c"
+    label = "Bundle Layout Header Font Color"
+    inlineHelpText = "Font color of the header displaying the bundle name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__BundleLayoutHeaderFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BundleLayoutHeaderFontFamily__c"
+    label = "Bundle Layout Header Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family of the header displaying the bundle name"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__BundleLayoutHeaderFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BundleLayoutHeaderFontSize__c"
+    label = "Bundle Layout Header Font Size"
+    inlineHelpText = "Font size of the header displaying the bundle name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__BundleLayoutHeaderFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BundleLayoutHeaderFontStyle__c"
+    label = "Bundle Layout Header Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of the header displaying the bundle name (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__BundleLayoutHeaderFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BundleLayoutHeaderFontWeight__c"
+    label = "Bundle Layout Header Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = true
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = false
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of the header displaying the bundle name (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__BundleLayoutHeaderTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__BundleLayoutHeaderTextDecoration__c"
+    label = "Bundle Layout Header Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text in the header displaying the bundle name (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__CheckboxBackgroundColorChecked__c {
+    apiName = "SBQQ__Theme__c.SBQQ__CheckboxBackgroundColorChecked__c"
+    label = "Checkbox Background Color Checked"
+    inlineHelpText = "Background color of checked checkboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CheckboxBackgroundColorUnchecked__c {
+    apiName = "SBQQ__Theme__c.SBQQ__CheckboxBackgroundColorUnchecked__c"
+    label = "Checkbox Background Color Unchecked"
+    inlineHelpText = "Background color of unchecked checkboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CheckboxBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__CheckboxBorderColor__c"
+    label = "Checkbox Border Color"
+    inlineHelpText = "Border color of checkboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CheckboxBorderRadius__c {
+    apiName = "SBQQ__Theme__c.SBQQ__CheckboxBorderRadius__c"
+    label = "Checkbox Border Radius"
+    inlineHelpText = "Border radius of checkboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__CheckboxBorderStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__CheckboxBorderStyle__c"
+    label = "Checkbox Border Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Border style of checkboxes"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__CheckboxBorderWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__CheckboxBorderWidth__c"
+    label = "Checkbox Border Width"
+    inlineHelpText = "Border width of checkboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CheckboxCheckMarkColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__CheckboxCheckMarkColor__c"
+    label = "Checkbox Checkmark Color"
+    inlineHelpText = "Checkmark color of checkboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__CheckboxSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__CheckboxSize__c"
+    label = "Checkbox Size"
+    inlineHelpText = "Size of checkboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.LongTextArea SBQQ__CompiledCSS__c {
+    apiName = "SBQQ__Theme__c.SBQQ__CompiledCSS__c"
+    label = "Hidden Values"
+    createable = true
+    updateable = true
+    length = 30000
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    visibleLines = 2
+  }
+  salesforce.Text SBQQ__ComponentRowFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ComponentRowFontColor__c"
+    label = "Component Row Font Color"
+    inlineHelpText = "Font color of component rows in quote line editor"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__ComponentRowFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ComponentRowFontStyle__c"
+    label = "Component Row Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of component rows in quote line editor (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ComponentRowFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ComponentRowFontWeight__c"
+    label = "Component Row Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = true
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of component rows in quote line editor (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ComponentRowTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ComponentRowTextDecoration__c"
+    label = "Component Row Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text of component rows in quote line editor (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__ConfigurationAttributeLabelColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ConfigurationAttributeLabelColor__c"
+    label = "Configuration Attribute Label Color"
+    inlineHelpText = "Label color for configuration attributes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ConfiguratorCustomActionBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ConfiguratorCustomActionBorderColor__c"
+    label = "Config Custom Action Border Color"
+    inlineHelpText = "Border color of configurator custom actions"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ConfiguratorCustomActionColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ConfiguratorCustomActionColor__c"
+    label = "Config Custom Action Background Color"
+    inlineHelpText = "Background color of configurator custom actions"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ConfiguratorCustomActionFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ConfiguratorCustomActionFontColor__c"
+    label = "Config Custom Action Font Color"
+    inlineHelpText = "Font color of configurator custom actions"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ConfiguratorCustomActionHoverColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ConfiguratorCustomActionHoverColor__c"
+    label = "Config Custom Action Hover Color"
+    inlineHelpText = "Hover color of configurator custom actions"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ConfiguratorCustomActionHoverFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ConfiguratorCustomActionHoverFontColor__c"
+    label = "Config Custom Action Hover Font Color"
+    inlineHelpText = "Hover font color of configurator custom actions"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DetailColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DetailColor__c"
+    label = "Filter Drawer Color"
+    inlineHelpText = "Background color of filter side panels"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogBackgroundColor__c"
+    label = "Dialog Background Color"
+    inlineHelpText = "Background color of pop-up modals"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogBorderRadius__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogBorderRadius__c"
+    label = "Dialog Border Radius"
+    inlineHelpText = "Border radius of pop-up modal"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogCloseColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogCloseColor__c"
+    label = "Dialog Close Color"
+    inlineHelpText = "Color of pop-up modals on close"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__DialogFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogFontFamily__c"
+    label = "Dialog Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family of pop-up modals"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__DialogFooterBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogFooterBorderColor__c"
+    label = "Dialog Footer Border Color"
+    inlineHelpText = "Border color of pop-up modal footer"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__DialogFooterBorderStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogFooterBorderStyle__c"
+    label = "Dialog Footer Border Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Border style of pop-up modal footer (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__DialogFooterBorderWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogFooterBorderWidth__c"
+    label = "Dialog Footer Border Width"
+    inlineHelpText = "Border width of pop-up modal footer"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogFooterColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogFooterColor__c"
+    label = "Dialog Footer Color"
+    inlineHelpText = "Background color of pop-up modal footer"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogHeaderBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogHeaderBorderColor__c"
+    label = "Dialog Header Border Color"
+    inlineHelpText = "Border color of pop-up modal header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__DialogHeaderBorderStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogHeaderBorderStyle__c"
+    label = "Dialog Header Border Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Border style of pop-up modal header (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__DialogHeaderBorderWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogHeaderBorderWidth__c"
+    label = "Dialog Header Border Width"
+    inlineHelpText = "Border width of pop-up modal header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogHeaderPaddingBottom__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogHeaderPaddingBottom__c"
+    label = "Dialog Header Bottom Padding"
+    inlineHelpText = "Bottom padding of pop-up modal header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogHeaderPaddingLeft__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogHeaderPaddingLeft__c"
+    label = "Dialog Header Left Padding"
+    inlineHelpText = "Left padding of pop-up modal header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogHeaderPaddingRight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogHeaderPaddingRight__c"
+    label = "Dialog Header Right Padding"
+    inlineHelpText = "Right padding of pop-up modal header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogHeaderPaddingTop__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogHeaderPaddingTop__c"
+    label = "Dialog Header Top Padding"
+    inlineHelpText = "Top padding of pop-up modal header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DialogMaskColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DialogMaskColor__c"
+    label = "Dialog Mask Color"
+    inlineHelpText = "Color of pop-up modal masks"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__DocumentId__c {
+    apiName = "SBQQ__Theme__c.SBQQ__DocumentId__c"
+    label = "Legacy Document ID"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__FeatureInstructionsColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsColor__c"
+    label = "Feature Instructions Font Color"
+    inlineHelpText = "Font color of additional instructions displayed under feature name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__FeatureInstructionsFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsFontFamily__c"
+    label = "Feature Instructions Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family additional instructions displayed under feature name"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__FeatureInstructionsFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsFontSize__c"
+    label = "Feature Instructions Font Size"
+    inlineHelpText = "Font size of additional instructions displayed under feature name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__FeatureInstructionsFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsFontStyle__c"
+    label = "Feature Instructions Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of additional instructions displayed under feature name (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__FeatureInstructionsFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsFontWeight__c"
+    label = "Feature Instructions Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = true
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = false
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of additional instructions displayed under feature name (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__FeatureInstructionsPaddingBottom__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsPaddingBottom__c"
+    label = "Feature Instructions Bottom Padding"
+    inlineHelpText = "Bottom padding of additional instructions displayed under feature name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__FeatureInstructionsPaddingLeft__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsPaddingLeft__c"
+    label = "Feature Instructions Left Padding"
+    inlineHelpText = "Left padding of additional instructions displayed under feature name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__FeatureInstructionsPaddingRight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsPaddingRight__c"
+    label = "Feature Instructions Right Padding"
+    inlineHelpText = "Right padding of additional instructions displayed under feature name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__FeatureInstructionsPaddingTop__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsPaddingTop__c"
+    label = "Feature Instructions Top Padding"
+    inlineHelpText = "Top padding of additional instructions displayed under feature name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__FeatureInstructionsTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FeatureInstructionsTextDecoration__c"
+    label = "Feature Instructions Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text in additional instructions displayed under feature name (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__FieldEditableIconColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FieldEditableIconColor__c"
+    label = "Field Editable Icon Color"
+    inlineHelpText = "Color of icon displayed next to a field indicating if its editable or not"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__FieldEditedColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FieldEditedColor__c"
+    label = "Edited Field Icon and Font Color"
+    inlineHelpText = "Color of icon displayed next to a field that has been edited / Font color of edited fields"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__FilterDrawerFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__FilterDrawerFontColor__c"
+    label = "Filter Drawer Font Color"
+    inlineHelpText = "Font color of filter side panels"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GeneralBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GeneralBorderColor__c"
+    label = "General Border Color"
+    inlineHelpText = "Border color of non-admin CPQ page"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GeneralColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GeneralColor__c"
+    label = "General Color"
+    inlineHelpText = "Background color of non-admin CPQ pages"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GeneralFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GeneralFontColor__c"
+    label = "General Font Color"
+    inlineHelpText = "Default font color"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__GeneralFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GeneralFontFamily__c"
+    label = "General Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Default font family"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__GroupBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupBorderColor__c"
+    label = "Group Border Color"
+    inlineHelpText = "Border color of quote line groups and features"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupBorderWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupBorderWidth__c"
+    label = "Group Border Width"
+    inlineHelpText = "Border width of quote line groups and features"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupButtonBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupButtonBorderColor__c"
+    label = "Standard Button Border Color"
+    inlineHelpText = "Border color of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupButtonColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupButtonColor__c"
+    label = "Standard Button Color"
+    inlineHelpText = "Background color of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupButtonDisabledFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupButtonDisabledFontColor__c"
+    label = "Standard Button Disabled Font Color"
+    inlineHelpText = "Font color of disabled standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupButtonFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupButtonFontColor__c"
+    label = "Standard Button Font Color"
+    inlineHelpText = "Font color of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupButtonHoverColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupButtonHoverColor__c"
+    label = "Standard Button Hover Color"
+    inlineHelpText = "Hover color of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupButtonHoverFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupButtonHoverFontColor__c"
+    label = "Standard Button Hover Font Color"
+    inlineHelpText = "Hover font color of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupHeaderBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupHeaderBackgroundColor__c"
+    label = "Group Header Color"
+    inlineHelpText = "Background color of quote line group and feature headers"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupHeaderBorderBottomColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupHeaderBorderBottomColor__c"
+    label = "Group Header Border Bottom Color"
+    inlineHelpText = "Bottom border color of quote line group and feature headers"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupHeaderBorderBottomWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupHeaderBorderBottomWidth__c"
+    label = "Group Header Border Bottom Width"
+    inlineHelpText = "Bottom border width of quote line group and feature headers"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__GroupHeaderFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupHeaderFontColor__c"
+    label = "Group Header Font Color"
+    inlineHelpText = "Font color of quote line group and feature headers"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__GroupHeaderFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupHeaderFontFamily__c"
+    label = "Group Header Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family of quote line group and feature headers"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__GroupHeaderFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupHeaderFontSize__c"
+    label = "Group Header Font Size"
+    inlineHelpText = "Font size of quote line group and feature headers"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__GroupHeaderFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupHeaderFontStyle__c"
+    label = "Group Header Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of quote line group and feature headers (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__GroupHeaderFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupHeaderFontWeight__c"
+    label = "Group Header Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = true
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = false
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of quote line group and feature headers (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__GroupHeaderTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__GroupHeaderTextDecoration__c"
+    label = "Group Header Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text in quote line group and feature headers (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__HeaderBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderBorderColor__c"
+    label = "Header Border Color"
+    inlineHelpText = "Border color of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__HeaderBorderStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderBorderStyle__c"
+    label = "Header Border Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Border style of page header (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__HeaderBorderWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderBorderWidth__c"
+    label = "Header Border Width"
+    inlineHelpText = "Border width of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HeaderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderColor__c"
+    label = "Header Color"
+    inlineHelpText = "Background color of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HeaderFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderFontColor__c"
+    label = "Header Font Color"
+    inlineHelpText = "Font color of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__HeaderFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderFontFamily__c"
+    label = "Header Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family of page header"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__HeaderFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderFontSize__c"
+    label = "Header Font Size"
+    inlineHelpText = "Font size of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__HeaderFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderFontStyle__c"
+    label = "Header Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of page header (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__HeaderFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderFontWeight__c"
+    label = "Header Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = false
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = true
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of page header text (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__HeaderIconColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderIconColor__c"
+    label = "Header Icon Color"
+    inlineHelpText = "Color of page header icon"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HeaderIconFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderIconFontSize__c"
+    label = "Header Icon Font Size"
+    inlineHelpText = "Font size of page header icon"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HeaderMinHeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderMinHeight__c"
+    label = "Header Minimum Height"
+    inlineHelpText = "Minimum height of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HeaderPaddingBottom__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderPaddingBottom__c"
+    label = "Header Bottom Padding"
+    inlineHelpText = "Bottom padding of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HeaderPaddingLeft__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderPaddingLeft__c"
+    label = "Header Left Padding"
+    inlineHelpText = "Left padding of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HeaderPaddingRight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderPaddingRight__c"
+    label = "Header Right Padding"
+    inlineHelpText = "Right padding of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HeaderPaddingTop__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderPaddingTop__c"
+    label = "Header Top Padding"
+    inlineHelpText = "Top padding of page header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HeaderSecondaryFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderSecondaryFontColor__c"
+    label = "Header Secondary Font Color"
+    inlineHelpText = "Font color of page sub-header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__HeaderSecondaryFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderSecondaryFontFamily__c"
+    label = "Header Secondary Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family of page sub-header"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__HeaderSecondaryFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderSecondaryFontSize__c"
+    label = "Header Secondary Font Size"
+    inlineHelpText = "Font size of page sub-header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__HeaderSecondaryFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderSecondaryFontStyle__c"
+    label = "Header Secondary Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of page sub-header (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__HeaderSecondaryFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderSecondaryFontWeight__c"
+    label = "Header Secondary Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = true
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of page sub-header (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__HeaderSecondaryTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderSecondaryTextDecoration__c"
+    label = "Header Secondary Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text in page sub-header (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__HeaderTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HeaderTextDecoration__c"
+    label = "Header Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text in page header (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Checkbox SBQQ__HideIcons__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HideIcons__c"
+    label = "Hide Icons on Page Headers"
+    defaultValue = false
+    inlineHelpText = "If checked, will hide the icon square located on the left side of page headers"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "If checked, will hide the icon square located on the left side of custom page headers"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HyperlinkActiveColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HyperlinkActiveColor__c"
+    label = "Hyperlink Active Color"
+    inlineHelpText = "Color of active links"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HyperlinkColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HyperlinkColor__c"
+    label = "Hyperlink Color"
+    inlineHelpText = "Color of links"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HyperlinkDisabledColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HyperlinkDisabledColor__c"
+    label = "Hyperlink Disabled Color"
+    inlineHelpText = "Color of disabled links"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__HyperlinkHoverColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__HyperlinkHoverColor__c"
+    label = "Hyperlink Hover Color"
+    inlineHelpText = "Hover color of links"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconDisabledColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconDisabledColor__c"
+    label = "Icon Disabled Color"
+    inlineHelpText = "Color of disabled icons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconFontColor__c"
+    label = "Icon Font Color"
+    inlineHelpText = "Font color of icons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconHoverColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconHoverColor__c"
+    label = "Icon Hover Color"
+    inlineHelpText = "Hover color of icons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconMobileCopyBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconMobileCopyBackgroundColor__c"
+    label = "Mobile Copy Icon Background Color"
+    inlineHelpText = "Background color of copy mobile icon"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconMobileDeleteBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconMobileDeleteBackgroundColor__c"
+    label = "Mobile Delete Icon Background Color"
+    inlineHelpText = "Background color of delete mobile icon"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconMobileLineActionColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconMobileLineActionColor__c"
+    label = "Mobile Line Action Icon Color"
+    inlineHelpText = "Color of mobile line action icons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconMobileStarBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconMobileStarBackgroundColor__c"
+    label = "Mobile Star Icon Background Color"
+    inlineHelpText = "Background color of star mobile icon"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconMobileStarFillColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconMobileStarFillColor__c"
+    label = "Mobile Star Icon Fill Color"
+    inlineHelpText = "Fill color of star mobile icon"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconMobileWandBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconMobileWandBackgroundColor__c"
+    label = "Mobile Wand Icon Background Color"
+    inlineHelpText = "Background color of wand mobile icon"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__IconPageLoadingColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__IconPageLoadingColor__c"
+    label = "Page Loading Icon Color"
+    inlineHelpText = "Color of page loading icon"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__InputOutlineColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__InputOutlineColor__c"
+    label = "Input Outline Color"
+    inlineHelpText = "Outline color of input forms on focus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__InputOutlineWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__InputOutlineWidth__c"
+    label = "Input Outline Width"
+    inlineHelpText = "Outline width of input forms on focus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__LoadingMaskColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__LoadingMaskColor__c"
+    label = "Loading Mask Color"
+    inlineHelpText = "Color of loading mask when navigating to a new page"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__NavigationDrawerColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__NavigationDrawerColor__c"
+    label = "Navigation Drawer Color"
+    inlineHelpText = "Background color of navigation side panels"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__NavigationDrawerFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__NavigationDrawerFontColor__c"
+    label = "Navigation Drawer Font Color"
+    inlineHelpText = "Font color of navigation side panels"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__NavigationDrawerHeaderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__NavigationDrawerHeaderColor__c"
+    label = "Navigation Drawer Header Color"
+    inlineHelpText = "Background color of navigation side panel headers"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__NavigationDrawerHeaderFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__NavigationDrawerHeaderFontColor__c"
+    label = "Navigation Drawer Header Font Color"
+    inlineHelpText = "Font color of navigation side panel headers"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__NavigationDrawerRowColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__NavigationDrawerRowColor__c"
+    label = "Navigation Drawer Row Color"
+    inlineHelpText = "Background color of rows in navigation side panels"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__NavigationDrawerRowHoverColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__NavigationDrawerRowHoverColor__c"
+    label = "Navigation Drawer Row Hover Color"
+    inlineHelpText = "Background color of hovered rows in navigation side panels"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__NavigationDrawerRowSelectedColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__NavigationDrawerRowSelectedColor__c"
+    label = "Navigation Drawer Row Selected Color"
+    inlineHelpText = "Background color of selected row in navigation side panels"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__ParentLineRowFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ParentLineRowFontColor__c"
+    label = "Parent Line Row Font Color"
+    inlineHelpText = "Font color of parent line rows in quote line editor"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__ParentLineRowFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ParentLineRowFontStyle__c"
+    label = "Parent Line Row Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of parent line rows in quote line editor (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ParentLineRowFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ParentLineRowFontWeight__c"
+    label = "Parent Line Row Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = true
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of parent line rows in quote line editor (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ParentLineRowTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__ParentLineRowTextDecoration__c"
+    label = "Parent Line Row Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text of parent line rows in quote line editor (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__PrimaryButtonColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__PrimaryButtonColor__c"
+    label = "Brand Button Color"
+    inlineHelpText = "Color of brand buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__PrimaryButtonFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__PrimaryButtonFontColor__c"
+    label = "Brand Button Font Color"
+    inlineHelpText = "Font color of brand buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__PrimaryButtonHoverColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__PrimaryButtonHoverColor__c"
+    label = "Brand Button Hover Color"
+    inlineHelpText = "Hover color of brand buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__RadioButtonColorChecked__c {
+    apiName = "SBQQ__Theme__c.SBQQ__RadioButtonColorChecked__c"
+    label = "Radio Button Color Checked"
+    inlineHelpText = "Color of selected radio button"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__RadioButtonColorUnchecked__c {
+    apiName = "SBQQ__Theme__c.SBQQ__RadioButtonColorUnchecked__c"
+    label = "Radio Button Color Unchecked"
+    inlineHelpText = "Color of unselected radio button"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SecondaryFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SecondaryFontColor__c"
+    label = "Secondary Font Color"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SecondaryHeaderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SecondaryHeaderColor__c"
+    label = "Secondary Header Color"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SelectBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectBackgroundColor__c"
+    label = "Picklist Background Color"
+    inlineHelpText = "Background color of drop-down menus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SelectBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectBorderColor__c"
+    label = "Picklist Border Color"
+    inlineHelpText = "Border color of drop-down menus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SelectBorderRadius__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectBorderRadius__c"
+    label = "Picklist Border Radius"
+    inlineHelpText = "Border radius of drop-down menus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__SelectBorderStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectBorderStyle__c"
+    label = "Picklist Border Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Border style of drop-down menus"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__SelectBorderWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectBorderWidth__c"
+    label = "Picklist Border Width"
+    inlineHelpText = "Border width of drop-down menus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__SelectContractHideSkipActionOnAddOn__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectContractHideSkipActionOnAddOn__c"
+    label = "Hide Skip Action (Add-on Workflow)"
+    defaultValue = false
+    inlineHelpText = "If checked, will hide the Skip action button on the contract selector page for add-on workflow"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "If checked, will hide the Skip action button on the contract selector page for add-on workflow"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__SelectContractHideSkipActionOnAmend__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectContractHideSkipActionOnAmend__c"
+    label = "Hide Skip Action (Amend Workflow)"
+    defaultValue = false
+    inlineHelpText = "If checked, will hide the Skip action button on the contract selector page for amend workflow"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "If checked, will hide the Skip action button on the contract selector page for amend workflow"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SelectHeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectHeight__c"
+    label = "Picklist Border Height"
+    inlineHelpText = "Height of drop-down menus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SelectPaddingBottom__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectPaddingBottom__c"
+    label = "Picklist Bottom Padding"
+    inlineHelpText = "Bottom padding of drop-down menus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SelectPaddingLeft__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectPaddingLeft__c"
+    label = "Picklist Left Padding"
+    inlineHelpText = "Left padding of drop-down menus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SelectPaddingRight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectPaddingRight__c"
+    label = "Picklist Right Padding"
+    inlineHelpText = "Right padding of drop-down menus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__SelectPaddingTop__c {
+    apiName = "SBQQ__Theme__c.SBQQ__SelectPaddingTop__c"
+    label = "Picklist Top Padding"
+    inlineHelpText = "Top padding of drop-down menus"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__StandaloneProductRowFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandaloneProductRowFontColor__c"
+    label = "Standalone Product Row Font Color"
+    inlineHelpText = "Font color of standalone product rows in quote line editor"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__StandaloneProductRowFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandaloneProductRowFontStyle__c"
+    label = "Standalone Product Row Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of standalone product rows in quote line editor (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__StandaloneProductRowFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandaloneProductRowFontWeight__c"
+    label = "Standalone Product Row Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = true
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of standalone product rows in quote line editor (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__StandaloneProductRowTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandaloneProductRowTextDecoration__c"
+    label = "Standalone Product Row Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text in standalone product rows in quote line editor (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__StandardButtonBorderRadius__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandardButtonBorderRadius__c"
+    label = "Standard Button Border Radius"
+    inlineHelpText = "Border radius of standard buttons (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__StandardButtonDisabledBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandardButtonDisabledBackgroundColor__c"
+    label = "Standard Button Disabled Color"
+    inlineHelpText = "Background color of disabled standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__StandardButtonFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandardButtonFontFamily__c"
+    label = "Standard Button Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family for standard buttons"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__StandardButtonFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandardButtonFontSize__c"
+    label = "Standard Button Font Size"
+    inlineHelpText = "Font size of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__StandardButtonFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandardButtonFontWeight__c"
+    label = "Standard Button Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = true
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of standard buttons (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__StandardButtonPaddingBottom__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandardButtonPaddingBottom__c"
+    label = "Standard Button Bottom Padding"
+    inlineHelpText = "Bottom padding of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__StandardButtonPaddingLeft__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandardButtonPaddingLeft__c"
+    label = "Standard Button Left Padding"
+    inlineHelpText = "Left padding of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__StandardButtonPaddingRight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandardButtonPaddingRight__c"
+    label = "Standard Button Right Padding"
+    inlineHelpText = "Right padding of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__StandardButtonPaddingTop__c {
+    apiName = "SBQQ__Theme__c.SBQQ__StandardButtonPaddingTop__c"
+    label = "Standard Button Top Padding"
+    inlineHelpText = "Top padding of standard buttons"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TabColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TabColor__c"
+    label = "Tab Color"
+    inlineHelpText = "Color of tabs"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TabFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TabFontFamily__c"
+    label = "Tab Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family of tabs"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TabHoverColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TabHoverColor__c"
+    label = "Tab Hover Color"
+    inlineHelpText = "Hover color of tabs"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TabSelectedColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TabSelectedColor__c"
+    label = "Tab Selected Color"
+    inlineHelpText = "Color of selected tabs"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableCellPaddingBottom__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableCellPaddingBottom__c"
+    label = "Table Cell Bottom Padding"
+    inlineHelpText = "Bottom padding of table cell"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableCellPaddingLeft__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableCellPaddingLeft__c"
+    label = "Table Cell Left Padding"
+    inlineHelpText = "Left padding of table cell"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableCellPaddingRight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableCellPaddingRight__c"
+    label = "Table Cell Right Padding"
+    inlineHelpText = "Right padding of table cell"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableCellPaddingTop__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableCellPaddingTop__c"
+    label = "Table Cell Top Padding"
+    inlineHelpText = "Top padding of table cell"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableGroupedRowBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableGroupedRowBackgroundColor__c"
+    label = "Grouped Row Color"
+    inlineHelpText = "Background color of collapsible rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableGroupedRowBorderBottomColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableGroupedRowBorderBottomColor__c"
+    label = "Grouped Row Border Bottom Color"
+    inlineHelpText = "Bottom border color of collapsible rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TableGroupedRowBorderBottomStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableGroupedRowBorderBottomStyle__c"
+    label = "Grouped Row Border Bottom Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Bottom border style of collapsible rows in a table (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TableGroupedRowBorderBottomWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableGroupedRowBorderBottomWidth__c"
+    label = "Grouped Row Border Bottom Width"
+    inlineHelpText = "Bottom border width of collapsible rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableGroupedRowLineHeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableGroupedRowLineHeight__c"
+    label = "Grouped Row Line Height"
+    inlineHelpText = "Line height of collapsible rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableGroupedRowPaddingBottom__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableGroupedRowPaddingBottom__c"
+    label = "Grouped Row Padding Bottom"
+    inlineHelpText = "Bottom padding of collapsible rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableGroupedRowPaddingTop__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableGroupedRowPaddingTop__c"
+    label = "Grouped Row Padding Top"
+    inlineHelpText = "Top padding of collapsible rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableHeaderBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderBackgroundColor__c"
+    label = "Table Header Color"
+    inlineHelpText = "Background color of table header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableHeaderBorderBottomColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderBorderBottomColor__c"
+    label = "Table Header Border Bottom Color"
+    inlineHelpText = "Bottom border color of table header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TableHeaderBorderBottomStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderBorderBottomStyle__c"
+    label = "Table Header Border Bottom Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Bottom border style of table header (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TableHeaderBorderBottomWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderBorderBottomWidth__c"
+    label = "Table Header Border Bottom Width"
+    inlineHelpText = "Bottom border width of table header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableHeaderCellHeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderCellHeight__c"
+    label = "Table Header Cell Height"
+    inlineHelpText = "Height of table header cell"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableHeaderFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderFontColor__c"
+    label = "Table Header Font Color"
+    inlineHelpText = "Font color of table header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TableHeaderFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderFontFamily__c"
+    label = "Table Header Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font family of table header"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TableHeaderFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderFontSize__c"
+    label = "Table Header Font Size"
+    inlineHelpText = "Font size of table header"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TableHeaderFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderFontStyle__c"
+    label = "Table Header Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of table header (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__TableHeaderFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderFontWeight__c"
+    label = "Table Header Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = true
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of table header"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__TableHeaderTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableHeaderTextDecoration__c"
+    label = "Table Header Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text in table header"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TableRowBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowBackgroundColor__c"
+    label = "Table Row Background Color"
+    inlineHelpText = "Background color of rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableRowBorderBottomColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowBorderBottomColor__c"
+    label = "Table Row Border Bottom Color"
+    inlineHelpText = "Bottom border color of rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TableRowBorderBottomStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowBorderBottomStyle__c"
+    label = "Table Row Border Bottom Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Bottom border style of rows in a table (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TableRowBorderBottomWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowBorderBottomWidth__c"
+    label = "Table Row Border Bottom Width"
+    inlineHelpText = "Bottom border width of rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableRowFontColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowFontColor__c"
+    label = "Table Row Font Color"
+    inlineHelpText = "Font color of rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TableRowFontFamily__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowFontFamily__c"
+    label = "Table Row Font Family"
+    valueSet = [
+      {
+        fullName = "Salesforce Sans"
+        default = true
+        label = "Salesforce Sans"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Myriad Pro"
+        default = false
+        label = "Myriad Pro"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Soto Sans TC"
+        default = false
+        label = "Soto Sans TC"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font familiy of rows in a table"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TableRowFontSize__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowFontSize__c"
+    label = "Table Row Font Size"
+    inlineHelpText = "Font size of rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TableRowFontStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowFontStyle__c"
+    label = "Table Row Font Style"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = true
+        label = "normal"
+      },
+      {
+        fullName = "italic"
+        default = false
+        label = "italic"
+      },
+      {
+        fullName = "oblique"
+        default = false
+        label = "oblique"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font style of rows in a table (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__TableRowFontWeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowFontWeight__c"
+    label = "Table Row Font Weight"
+    valueSet = [
+      {
+        fullName = "normal"
+        default = false
+        label = "normal"
+      },
+      {
+        fullName = "bold"
+        default = false
+        label = "bold"
+      },
+      {
+        fullName = "bolder"
+        default = false
+        label = "bolder"
+      },
+      {
+        fullName = "lighter"
+        default = false
+        label = "lighter"
+      },
+      {
+        fullName = "100"
+        default = false
+        label = "100"
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "200"
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "300"
+      },
+      {
+        fullName = "400"
+        default = true
+        label = "400"
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "500"
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "600"
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "700"
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "800"
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "900"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Font weight of rows in a table (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TableRowHoverColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowHoverColor__c"
+    label = "Table Row Hover Color"
+    inlineHelpText = "Hover color of rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableRowLineHeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowLineHeight__c"
+    label = "Table Row Line Height"
+    inlineHelpText = "Height of rows in a table (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableRowPaddingBottom__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowPaddingBottom__c"
+    label = "Table Row Padding Bottom"
+    inlineHelpText = "Bottom padding of rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TableRowPaddingTop__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowPaddingTop__c"
+    label = "Table Row Padding Top"
+    inlineHelpText = "Top padding of rows in a table"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TableRowTextDecoration__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TableRowTextDecoration__c"
+    label = "Table Row Text Decoration"
+    valueSet = [
+      {
+        fullName = "none"
+        default = true
+        label = "none"
+      },
+      {
+        fullName = "underline"
+        default = false
+        label = "underline"
+      },
+      {
+        fullName = "overline"
+        default = false
+        label = "overline"
+      },
+      {
+        fullName = "line-through"
+        default = false
+        label = "line-through"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Decoration added to text of rows in a table (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TextboxBackgroundColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxBackgroundColor__c"
+    label = "Textbox Background Color"
+    inlineHelpText = "Background color of textboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TextboxBorderColor__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxBorderColor__c"
+    label = "Textbox Border Color"
+    inlineHelpText = "Border color of textboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 23
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TextboxBorderRadius__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxBorderRadius__c"
+    label = "Textbox Border Radius"
+    inlineHelpText = "Border radius of textboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TextboxBorderStyle__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxBorderStyle__c"
+    label = "Textbox Border Style"
+    valueSet = [
+      {
+        fullName = "none"
+        default = false
+        label = "none"
+      },
+      {
+        fullName = "hidden"
+        default = false
+        label = "hidden"
+      },
+      {
+        fullName = "dotted"
+        default = false
+        label = "dotted"
+      },
+      {
+        fullName = "dashed"
+        default = false
+        label = "dashed"
+      },
+      {
+        fullName = "solid"
+        default = true
+        label = "solid"
+      },
+      {
+        fullName = "double"
+        default = false
+        label = "double"
+      },
+      {
+        fullName = "grove"
+        default = false
+        label = "grove"
+      },
+      {
+        fullName = "ridge"
+        default = false
+        label = "ridge"
+      },
+      {
+        fullName = "inset"
+        default = false
+        label = "inset"
+      },
+      {
+        fullName = "outset"
+        default = false
+        label = "outset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Border style of textboxes (Click the icon for additional information)"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__TextboxBorderWidth__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxBorderWidth__c"
+    label = "Textbox Border Width"
+    inlineHelpText = "Border width of textboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TextboxHeight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxHeight__c"
+    label = "Textbox Border Height"
+    inlineHelpText = "Height of textboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TextboxPaddingBottom__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxPaddingBottom__c"
+    label = "Textbox Bottom Padding"
+    inlineHelpText = "Bottom padding of textboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TextboxPaddingLeft__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxPaddingLeft__c"
+    label = "Textbox Left Padding"
+    inlineHelpText = "Left padding of textboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TextboxPaddingRight__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxPaddingRight__c"
+    label = "Textbox Right Padding"
+    inlineHelpText = "Right padding of textboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__TextboxPaddingTop__c {
+    apiName = "SBQQ__Theme__c.SBQQ__TextboxPaddingTop__c"
+    label = "Textbox Top Padding"
+    inlineHelpText = "Top padding of textboxes"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__UI2DocumentId__c {
+    apiName = "SBQQ__Theme__c.SBQQ__UI2DocumentId__c"
+    label = "Document ID"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+}

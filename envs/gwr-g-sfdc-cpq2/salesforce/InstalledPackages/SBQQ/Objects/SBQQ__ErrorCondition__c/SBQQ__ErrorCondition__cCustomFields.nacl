@@ -1,0 +1,376 @@
+type salesforce.SBQQ__ErrorCondition__c {
+  salesforce.MasterDetail SBQQ__Rule__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__Rule__c"
+    label = "Rule"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SBQQ__ProductRule__c,
+    ]
+    inlineHelpText = "Parent rule for this condition (that runs this condition)."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "ErrorConditions"
+    queryable = true
+    deprecated = false
+    description = "Parent rule for this condition."
+    externalId = false
+    relationshipLabel = "Error Conditions"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__FilterType__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__FilterType__c"
+    label = "Filter Type"
+    valueSet = [
+      {
+        fullName = "Variable"
+        default = false
+        label = "Variable"
+      },
+      {
+        fullName = "Value"
+        default = false
+        label = "Value"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Choose Variable to evaluate this rule against a Summary Variable; otherwise, choose Value."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Type of filtering used in this condition."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text SBQQ__FilterValue__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__FilterValue__c"
+    label = "Filter Value"
+    inlineHelpText = "Enter the value you want the tested variable to be evaluated against. Date value must use this format: YYYY-MM-DD 00:00:00"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The value you want the tested variable to be evaluated against."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__FilterVariable__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__FilterVariable__c"
+    label = "Filter Variable"
+    referenceTo = [
+      salesforce.SBQQ__SummaryVariable__c,
+    ]
+    inlineHelpText = "Choose the summary variable you want this rule to evaluate."
+    createable = true
+    updateable = true
+    relationshipName = "FilteredConditions"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The selected summary variable this rule evaluates."
+    externalId = false
+    relationshipLabel = "Error Conditions (Filter Variable)"
+    trackTrending = false
+  }
+  salesforce.Number SBQQ__Index__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__Index__c"
+    label = "Index"
+    precision = 6
+    scale = 0
+    inlineHelpText = "Assign an unique number to this Condition to reference it in the Product Rule's Advanced Condition."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Assign an unique number to this Condition to reference it in the Product Rule's Advanced Condition."
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__Operator__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__Operator__c"
+    label = "Operator"
+    valueSet = [
+      {
+        fullName = "equals"
+        default = false
+        label = "equals"
+      },
+      {
+        fullName = "not equals"
+        default = false
+        label = "not equals"
+      },
+      {
+        fullName = "less than"
+        default = false
+        label = "less than"
+      },
+      {
+        fullName = "less or equals"
+        default = false
+        label = "less or equals"
+      },
+      {
+        fullName = "greater than"
+        default = false
+        label = "greater than"
+      },
+      {
+        fullName = "greater or equals"
+        default = false
+        label = "greater or equals"
+      },
+      {
+        fullName = "starts with"
+        default = false
+        label = "starts with"
+      },
+      {
+        fullName = "ends with"
+        default = false
+        label = "ends with"
+      },
+      {
+        fullName = "contains"
+        default = false
+        label = "contains"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Choose the operator to use when evaluating your tested selection."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The operator used when evaluating the tested selection."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.FormulaCheckbox SBQQ__ParentRuleIsActive__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__ParentRuleIsActive__c"
+    label = "ParentRuleIsActive"
+    formula = "SBQQ__Rule__r.SBQQ__Active__c"
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaCheckbox SBQQ__RuleTargetsQuote__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__RuleTargetsQuote__c"
+    label = "RuleTargetsQuote"
+    formula = "ISPICKVAL(SBQQ__Rule__r.SBQQ__Scope__c, 'Quote')"
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Lookup SBQQ__TestedAttribute__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__TestedAttribute__c"
+    label = "Tested Attribute"
+    referenceTo = [
+      salesforce.SBQQ__ProductAttribute__c,
+    ]
+    inlineHelpText = "Used to identify the specific attribute if the Tested Field is a global Configuration Attribute field."
+    createable = true
+    updateable = true
+    relationshipName = "ErrorConditions"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Used to identify the specific attribute if the Tested Field is a global Configuration Attribute field."
+    externalId = false
+    lookupFilter = {
+      active = true
+      filterItems = [
+        {
+          field = "$Source.SBQQ__TestedField__c"
+          operation = "equals"
+          valueField = "SBQQ__ProductAttribute__c.SBQQ__Attribute__r.SBQQ__TargetField__c"
+        },
+      ]
+      isOptional = false
+    }
+    relationshipLabel = "Error Conditions"
+    trackTrending = false
+  }
+  salesforce.Picklist SBQQ__TestedField__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__TestedField__c"
+    label = "Tested Field"
+    valueSet = [
+      {
+        fullName = "Group Line Items"
+        default = false
+        label = "Group Line Items"
+      },
+      {
+        fullName = "Unit Price"
+        default = false
+        label = "Unit Price"
+      },
+      {
+        fullName = "SBQQ__ProductCode__c"
+        default = false
+        label = "SBQQ__ProductCode__c"
+      },
+      {
+        fullName = "SBQQ__Quantity__c"
+        default = false
+        label = "SBQQ__Quantity__c"
+      },
+      {
+        fullName = "SBQQ__Partner__c"
+        default = false
+        label = "SBQQ__Partner__c"
+      },
+      {
+        fullName = "AccountIndustry__c"
+        default = false
+        label = "AccountIndustry__c"
+      },
+      {
+        fullName = "OpportunityType__c"
+        default = false
+        label = "OpportunityType__c"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Field on the Quote object that should be used in testing this condition."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Field on the Quote object that should be used in testing this condition."
+    externalId = false
+    trackTrending = false
+    sorted = false
+    fieldDependency = {
+      controllingField = "SBQQ__TestedObject__c"
+      valueSettings = [
+        {
+          valueName = "Group Line Items"
+          controllingFieldValue = [
+            "Quote",
+          ]
+        },
+        {
+          valueName = "SBQQ__Partner__c"
+          controllingFieldValue = [
+            "Quote",
+          ]
+        },
+        {
+          valueName = "AccountIndustry__c"
+          controllingFieldValue = [
+            "Quote",
+          ]
+        },
+        {
+          valueName = "OpportunityType__c"
+          controllingFieldValue = [
+            "Quote",
+          ]
+        },
+        {
+          valueName = "SBQQ__ProductCode__c"
+          controllingFieldValue = [
+            "Quote Line",
+            "Product Option",
+          ]
+        },
+        {
+          valueName = "Unit Price"
+          controllingFieldValue = [
+            "Product Option",
+            "Configuration Attributes",
+          ]
+        },
+        {
+          valueName = "SBQQ__Quantity__c"
+          controllingFieldValue = [
+            "Product Option",
+          ]
+        },
+      ]
+    }
+  }
+  salesforce.Picklist SBQQ__TestedObject__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__TestedObject__c"
+    label = "Tested Object"
+    valueSet = [
+      {
+        fullName = "Quote"
+        default = false
+        label = "Quote"
+      },
+      {
+        fullName = "Quote Line"
+        default = false
+        label = "Quote Line"
+      },
+      {
+        fullName = "Quote Line Group"
+        default = false
+        label = "Quote Line Group"
+      },
+      {
+        fullName = "Product Option"
+        default = false
+        label = "Product Option"
+      },
+      {
+        fullName = "Configuration Attributes"
+        default = false
+        label = "Configuration Attributes"
+      },
+      {
+        fullName = "Upgraded Asset"
+        default = false
+        label = "Upgraded Asset"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Specify the object that contains the tested field."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Object that contains the field being tested by this condition."
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup SBQQ__TestedVariable__c {
+    apiName = "SBQQ__ErrorCondition__c.SBQQ__TestedVariable__c"
+    label = "Tested Variable"
+    referenceTo = [
+      salesforce.SBQQ__SummaryVariable__c,
+    ]
+    inlineHelpText = "Select the Summary Variable you want this rule to evaluate."
+    createable = true
+    updateable = true
+    relationshipName = "TestedConditions"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The Summary Variable in which this rule will be evaluated."
+    externalId = false
+    relationshipLabel = "Error Conditions (Tested Variable)"
+    trackTrending = false
+  }
+}

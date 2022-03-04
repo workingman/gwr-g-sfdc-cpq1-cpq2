@@ -1,0 +1,7 @@
+salesforce.StaticResource SBQQ__DesktopCSS {
+  cacheControl = "Private"
+  contentType = "text/css"
+  description = "Stylesheet for the Desktop"
+  fullName = "SBQQ__DesktopCSS"
+  content = file("salesforce/InstalledPackages/SBQQ/Records/StaticResource/SBQQ__DesktopCSS.css")
+}

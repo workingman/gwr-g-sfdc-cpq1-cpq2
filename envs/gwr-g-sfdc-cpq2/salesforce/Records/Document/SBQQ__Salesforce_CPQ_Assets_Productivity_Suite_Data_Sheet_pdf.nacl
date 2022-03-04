@@ -1,0 +1,7 @@
+salesforce.Document SBQQ__Salesforce_CPQ_Assets_Productivity_Suite_Data_Sheet_pdf@uuuuduuuv {
+  internalUseOnly = false
+  name = "Productivity Suite Data Sheet.pdf"
+  public = true
+  fullName = "SBQQ__Salesforce_CPQ_Assets/Productivity_Suite_Data_Sheet.pdf"
+  content = file("salesforce/Records/Document/SBQQ__Salesforce_CPQ_Assets/Productivity_Suite_Data_Sheet.pdf")
+}

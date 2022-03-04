@@ -1,0 +1,7 @@
+salesforce.ApexComponent SBQQ__signatureBlock {
+  apiVersion = 51
+  description = "Renders signature block on a quote document."
+  label = "Signature Block"
+  fullName = "SBQQ__signatureBlock"
+  content = "(hidden)"
+}

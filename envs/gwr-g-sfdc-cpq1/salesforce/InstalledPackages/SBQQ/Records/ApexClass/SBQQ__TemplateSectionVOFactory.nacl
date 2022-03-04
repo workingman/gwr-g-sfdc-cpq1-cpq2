@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__TemplateSectionVOFactory {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__TemplateSectionVOFactory"
+  content = "(hidden)"
+}

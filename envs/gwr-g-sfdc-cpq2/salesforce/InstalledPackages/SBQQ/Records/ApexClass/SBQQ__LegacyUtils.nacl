@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__LegacyUtils {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__LegacyUtils"
+  content = "(hidden)"
+}

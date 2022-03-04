@@ -1,0 +1,8 @@
+salesforce.CustomTab SBQQ__InstallProcessorLog__c {
+  fullName = "SBQQ__InstallProcessorLog__c"
+  customObject = true
+  motif = "Custom56: Bottle"
+  _parent = [
+    salesforce.SBQQ__InstallProcessorLog__c,
+  ]
+}

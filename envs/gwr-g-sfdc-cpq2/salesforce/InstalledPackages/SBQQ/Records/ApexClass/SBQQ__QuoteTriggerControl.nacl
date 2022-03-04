@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__QuoteTriggerControl {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__QuoteTriggerControl"
+  content = "(hidden)"
+}

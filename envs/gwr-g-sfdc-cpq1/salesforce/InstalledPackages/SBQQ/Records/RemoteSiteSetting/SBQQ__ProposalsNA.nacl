@@ -1,0 +1,6 @@
+salesforce.RemoteSiteSetting SBQQ__ProposalsNA {
+  fullName = "SBQQ__ProposalsNA"
+  disableProtocolSecurity = false
+  isActive = true
+  url = "https://proposals-na.steelbrick.com"
+}

@@ -1,0 +1,6 @@
+salesforce.ApexClass SBQQ__SelectOptionModel {
+  apiVersion = 51
+  status = "Active"
+  fullName = "SBQQ__SelectOptionModel"
+  content = "(hidden)"
+}

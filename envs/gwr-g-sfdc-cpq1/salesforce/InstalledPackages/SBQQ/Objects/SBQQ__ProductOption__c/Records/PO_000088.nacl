@@ -1,0 +1,18 @@
+salesforce.SBQQ__ProductOption__c PO_000088@b {
+  SBQQ__AppliedImmediately__c = false
+  SBQQ__Bundled__c = true
+  SBQQ__ConfiguredSKU__c = salesforce.Product2.instance.GWR_Service_10___GWRSVC10___Service@ssuuuuuu
+  SBQQ__DiscountedByPackage__c = false
+  SBQQ__Number__c = 1
+  SBQQ__OptionalSKU__c = salesforce.Product2.instance.GWR_Service_1___GWRSVC1___Service@ssuuuuuu
+  SBQQ__QuantityEditable__c = false
+  SBQQ__Required__c = false
+  SBQQ__Selected__c = false
+  SBQQ__System__c = false
+  SBQQ__Type__c = "Component"
+  SBQQ__UpliftedByPackage__c = false
+  _parent = [
+    salesforce.Product2.instance.GWR_Service_10___GWRSVC10___Service@ssuuuuuu,
+    salesforce.Product2.instance.GWR_Service_1___GWRSVC1___Service@ssuuuuuu,
+  ]
+}

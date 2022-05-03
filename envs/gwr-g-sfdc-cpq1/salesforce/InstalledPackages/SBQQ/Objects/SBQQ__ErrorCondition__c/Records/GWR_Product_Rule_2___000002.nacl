@@ -1,0 +1,12 @@
+salesforce.SBQQ__ErrorCondition__c GWR_Product_Rule_2___000002@sssuuu {
+  SBQQ__Rule__c = salesforce.SBQQ__ProductRule__c.instance.GWR_Product_Rule_2@s
+  SBQQ__FilterType__c = "Value"
+  SBQQ__FilterValue__c = "10000"
+  SBQQ__Index__c = 10
+  SBQQ__Operator__c = "less than"
+  SBQQ__TestedField__c = "Unit Price"
+  SBQQ__TestedObject__c = "Product Option"
+  _parent = [
+    salesforce.SBQQ__ProductRule__c.instance.GWR_Product_Rule_2@s,
+  ]
+}

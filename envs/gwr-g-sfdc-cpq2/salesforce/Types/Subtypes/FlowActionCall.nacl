@@ -232,12 +232,14 @@ type salesforce.FlowActionCall {
         "saveRecommendationDecision",
         "scaleCacheAsyncRefresh",
         "selectTemplateForSalesCadenceStepTracker",
+        "sendNotification",
         "sendSalesCadenceEvent",
         "sendSurveyInvitation",
         "setCheckoutDeliveryMethod",
         "sfdcOutputAction",
         "skillsBasedRouting",
         "slackArchiveChannel",
+        "slackCheckUsersAreConnectedToSlack",
         "slackCreateChannel",
         "slackGetConversationInfo",
         "slackGetDetailsForSalesChannel",
@@ -263,6 +265,7 @@ type salesforce.FlowActionCall {
         "updateAdvancedAccountForecastSetPartner",
         "updateCheckoutSessionStateAction",
         "updateProgressForCumulativePromotionUsage",
+        "uploadBlockchainData",
         "upsertCustomRebatePayout",
       ]
     }

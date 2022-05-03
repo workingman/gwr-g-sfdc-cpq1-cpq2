@@ -32,6 +32,14 @@ salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
               behavior = "Edit"
               field = salesforce.Account.field.Site
             },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.GWR_Assigned__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.gwr_Status__c
+            },
           ]
         },
         {

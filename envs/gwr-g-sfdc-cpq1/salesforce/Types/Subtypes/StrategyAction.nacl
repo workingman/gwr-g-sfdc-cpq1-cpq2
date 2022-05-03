@@ -215,12 +215,14 @@ type salesforce.StrategyAction {
         "saveRecommendationDecision",
         "scaleCacheAsyncRefresh",
         "selectTemplateForSalesCadenceStepTracker",
+        "sendNotification",
         "sendSalesCadenceEvent",
         "sendSurveyInvitation",
         "setCheckoutDeliveryMethod",
         "sfdcOutputAction",
         "skillsBasedRouting",
         "slackArchiveChannel",
+        "slackCheckUsersAreConnectedToSlack",
         "slackCreateChannel",
         "slackGetConversationInfo",
         "slackGetDetailsForSalesChannel",
@@ -246,6 +248,7 @@ type salesforce.StrategyAction {
         "updateAdvancedAccountForecastSetPartner",
         "updateCheckoutSessionStateAction",
         "updateProgressForCumulativePromotionUsage",
+        "uploadBlockchainData",
         "upsertCustomRebatePayout",
       ]
     }

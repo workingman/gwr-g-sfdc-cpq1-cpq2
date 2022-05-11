@@ -173,6 +173,7 @@ type salesforce.LightningPage {
         "runtime_sales_campaign__CmpgnMSts_rec_L",
         "runtime_sales_campaign__CmpgnMber_rec_L",
         "runtime_sales_campaign__Cmpgn_rec_simple",
+        "runtime_sales_easy__Easy_utility_bar",
         "runtime_sales_lead__Lead_rec_L",
         "runtime_sales_lead__Lead_rec_L_3col",
         "runtime_sales_lead__Lead_rec_simple",

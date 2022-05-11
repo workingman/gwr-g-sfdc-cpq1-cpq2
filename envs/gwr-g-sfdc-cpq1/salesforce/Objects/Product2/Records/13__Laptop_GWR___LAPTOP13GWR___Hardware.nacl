@@ -1,6 +1,6 @@
 salesforce.Product2 "13__Laptop_GWR___LAPTOP13GWR___Hardware@rssuuuuuu" {
-  Name = "13\" Laptop GWR"
-  ProductCode = "LAPTOP13GWR"
+  Name = "13\" Laptop"
+  ProductCode = "LAPTOP13"
   Description = "13\" Laptop"
   IsActive = true
   Family = "Hardware"

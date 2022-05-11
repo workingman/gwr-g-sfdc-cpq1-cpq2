@@ -47,9 +47,9 @@ type salesforce.Account {
         label = "Platinum"
       },
       {
-        fullName = "Bronze"
+        fullName = "Copper"
         default = false
-        label = "Bronze"
+        label = "Copper "
       },
     ]
     restricted = false
@@ -383,5 +383,28 @@ type salesforce.Account {
     externalId = false
     trackFeedHistory = true
     sorted = false
+  }
+  salesforce.Checkbox GWR_Assigned__c {
+    apiName = "Account.GWR_Assigned__c"
+    label = "GWR Assigned changed in ui"
+    defaultValue = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    description = "Added a description from the UI"
+  }
+  salesforce.Text gwr_Status__c {
+    apiName = "Account.gwr_Status__c"
+    label = "_gwr_Status"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
   }
 }

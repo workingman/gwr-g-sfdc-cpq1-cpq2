@@ -28,7 +28,7 @@ type salesforce.Queue {
       "QueueRoutingConfig",
     ]
   }
-  salesforce.QueueSobject queueSobject {
+  "List<salesforce.QueueSobject>" queueSobject {
   }
   string internalId {
     _hidden_value = true

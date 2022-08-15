@@ -1612,6 +1612,18 @@ type salesforce.MacroInstruction {
         isActive = true
       },
       {
+        fullName = "Tab.CreditMemoInvApplication"
+        default = false
+        label = "Active Credit Memo Invoice Application Tab"
+        isActive = true
+      },
+      {
+        fullName = "Tab.CreditMemoLine"
+        default = false
+        label = "Active Credit Memo Line Tab"
+        isActive = true
+      },
+      {
         fullName = "Tab.DataUsePurpose"
         default = false
         label = "Active Data Use Purpose Tab"
@@ -1648,6 +1660,18 @@ type salesforce.MacroInstruction {
         isActive = true
       },
       {
+        fullName = "Tab.FinanceBalanceSnapshot"
+        default = false
+        label = "Active Finance Balance Snapshot Tab"
+        isActive = true
+      },
+      {
+        fullName = "Tab.FinanceTransaction"
+        default = false
+        label = "Active Finance Transaction Tab"
+        isActive = true
+      },
+      {
         fullName = "Tab.Image"
         default = false
         label = "Active Image Tab"
@@ -1681,6 +1705,12 @@ type salesforce.MacroInstruction {
         fullName = "Tab.Invoice"
         default = false
         label = "Active Invoice Tab"
+        isActive = true
+      },
+      {
+        fullName = "Tab.InvoiceLine"
+        default = false
+        label = "Active Invoice Line Tab"
         isActive = true
       },
       {

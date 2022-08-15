@@ -143,4 +143,54 @@ type salesforce.PromptVersion {
   string videoLink {
   }
   metadataType = "PromptVersion"
+  string elementRelativePosition {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BottomCenter",
+        "BottomLeft",
+        "BottomRight",
+        "LeftBottom",
+        "LeftCenter",
+        "LeftTop",
+        "RightBottom",
+        "RightCenter",
+        "RightTop",
+        "TopCenter",
+        "TopLeft",
+        "TopRight",
+      ]
+    }
+  }
+  string image {
+    foreignKeyDomain = [
+      "ContentAsset",
+    ]
+  }
+  string imageAltText {
+  }
+  string imageLink {
+  }
+  string imageLocation {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bottom",
+        "Left",
+        "Right",
+        "Top",
+      ]
+    }
+  }
+  string referenceElementContext {
+  }
+  string targetPageKey3 {
+  }
+  string targetPageKey4 {
+  }
+  string targetRecordType {
+    foreignKeyDomain = [
+      salesforce.RecordType,
+    ]
+  }
 }

@@ -211,6 +211,30 @@ type salesforce.RecordAction {
         isActive = true
       },
       {
+        fullName = "runtime_industries_recurrence__Orch"
+        default = false
+        label = "runtime_industries_recurrence__Orch"
+        isActive = true
+      },
+      {
+        fullName = "runtime_industries_recurrence__Schdlr"
+        default = false
+        label = "runtime_industries_recurrence__Schdlr"
+        isActive = true
+      },
+      {
+        fullName = "runtime_service_incident_mgmt__CCOIO"
+        default = false
+        label = "runtime_service_incident_mgmt__CCOIO"
+        isActive = true
+      },
+      {
+        fullName = "runtime_service_incident_mgmt__CRRI"
+        default = false
+        label = "runtime_service_incident_mgmt__CRRI"
+        isActive = true
+      },
+      {
         fullName = "setup_service_experience__Create_Case"
         default = false
         label = "setup_service_experience__Create_Case"
@@ -570,6 +594,30 @@ type salesforce.RecordAction {
         fullName = "runtime_commerce_oms__Return_Item"
         default = false
         label = "runtime_commerce_oms__Return_Item"
+        isActive = true
+      },
+      {
+        fullName = "runtime_industries_recurrence__Orch"
+        default = false
+        label = "runtime_industries_recurrence__Orch"
+        isActive = true
+      },
+      {
+        fullName = "runtime_industries_recurrence__Schdlr"
+        default = false
+        label = "runtime_industries_recurrence__Schdlr"
+        isActive = true
+      },
+      {
+        fullName = "runtime_service_incident_mgmt__CCOIO"
+        default = false
+        label = "runtime_service_incident_mgmt__CCOIO"
+        isActive = true
+      },
+      {
+        fullName = "runtime_service_incident_mgmt__CRRI"
+        default = false
+        label = "runtime_service_incident_mgmt__CRRI"
         isActive = true
       },
       {

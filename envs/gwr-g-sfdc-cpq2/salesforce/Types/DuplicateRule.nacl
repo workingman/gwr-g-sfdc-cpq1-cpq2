@@ -63,4 +63,8 @@ type salesforce.DuplicateRule {
   suffix = "duplicateRule"
   dirName = "duplicateRules"
   metadataType = "DuplicateRule"
+  "List<string>" operationsOnInsert {
+  }
+  string operationsOnUpdate {
+  }
 }

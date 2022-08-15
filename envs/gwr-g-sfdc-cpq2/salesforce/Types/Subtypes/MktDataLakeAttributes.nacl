@@ -21,15 +21,14 @@ type salesforce.MktDataLakeAttributes {
         "Curated",
         "Custom",
         "Derived",
+        "Segment_Membership",
         "Standard",
         "System",
       ]
     }
   }
-  string dataSource {
-  }
-  string externalName {
-  }
+  
+  
   boolean isEnabled {
   }
   string objectCategory {

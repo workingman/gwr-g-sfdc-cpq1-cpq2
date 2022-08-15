@@ -34,4 +34,39 @@ settings salesforce.MyDomainSettings {
   suffix = "settings"
   dirName = "settings"
   metadataType = "MyDomainSettings"
+  string domainPartition {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "bt",
+        "demo",
+        "develop",
+        "free",
+        "none",
+        "patch",
+        "sandbox",
+        "scratch",
+        "sfdcdot",
+        "sfdctest",
+        "trailblaze",
+      ]
+    }
+  }
+  string myDomainName {
+  }
+  string myDomainSuffix {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CloudforceLimited",
+        "DatabaseLimited",
+        "MySalesforce",
+        "MySalesforceLimited",
+        "OrgLevelCertificateLimited",
+        "Restricted1",
+      ]
+    }
+  }
+  boolean useEdge {
+  }
 }

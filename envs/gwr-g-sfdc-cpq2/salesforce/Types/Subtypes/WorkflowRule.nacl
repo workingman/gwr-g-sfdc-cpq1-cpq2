@@ -45,4 +45,6 @@ type salesforce.WorkflowRule {
     localOnly = true
   }
   metadataType = "WorkflowRule"
+  string failedMigrationToolVersion {
+  }
 }

@@ -31,6 +31,10 @@ salesforce.Layout CreditMemoLine_Credit_Memo_Line_Layout@bsss {
             },
             {
               behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.ReferenceEntityItemId
+            },
+            {
+              behavior = "Edit"
               field = salesforce.CreditMemoLine.field.ReferenceEntityItemType
             },
           ]

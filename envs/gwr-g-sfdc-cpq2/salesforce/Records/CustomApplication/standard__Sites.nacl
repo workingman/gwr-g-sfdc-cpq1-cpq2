@@ -6,4 +6,5 @@ salesforce.CustomApplication standard__Sites {
   tabs = [
     "standard-Chatter",
   ]
+  isNavTabPersistenceDisabled = false
 }

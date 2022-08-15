@@ -4,5 +4,5 @@ salesforce.ProductSettings {
   enableMySettings = true
   enableQuantitySchedule = false
   enableRevenueSchedule = false
-  enableSecureGuestUserRecordAccess = false
+  
 }

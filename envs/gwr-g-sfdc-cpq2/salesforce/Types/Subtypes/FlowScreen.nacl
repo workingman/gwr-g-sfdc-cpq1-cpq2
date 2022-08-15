@@ -59,4 +59,10 @@ type salesforce.FlowScreen {
   boolean showHeader {
   }
   metadataType = "FlowScreen"
+  string backButtonLabel {
+  }
+  string nextOrFinishButtonLabel {
+  }
+  string pauseButtonLabel {
+  }
 }

@@ -201,4 +201,7 @@ type salesforce.Problem {
       "Priority",
     ]
   }
+  topicsForObjects = {
+    enableTopics = false
+  }
 }

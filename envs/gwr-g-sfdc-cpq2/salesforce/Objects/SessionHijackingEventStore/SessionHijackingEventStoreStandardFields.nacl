@@ -246,6 +246,24 @@ type salesforce.SessionHijackingEventStore {
         label = "FailedInvalidPassword"
         isActive = true
       },
+      {
+        fullName = "ExemptNoAction"
+        default = false
+        label = "ExemptNoAction"
+        isActive = true
+      },
+      {
+        fullName = "MeteringNoAction"
+        default = false
+        label = "MeteringNoAction"
+        isActive = true
+      },
+      {
+        fullName = "MeteringBlock"
+        default = false
+        label = "MeteringBlock"
+        isActive = true
+      },
     ]
     restricted = true
     createable = false

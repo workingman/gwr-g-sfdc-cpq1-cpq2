@@ -6,4 +6,12 @@ salesforce.MyDomainSettings {
   enableNativeBrowserForAuthOnIos = false
   useStabilizedMyDomainHostnames = true
   useStabilizedSandboxMyDomainHostnames = true
+  domainPartition = "none"
+  myDomainName = "salto30-dev-ed"
+  myDomainSuffix = "MySalesforceLimited"
+  redirectForceComSiteUrls = "true"
+  redirectPriorMyDomain = "true"
+  use3rdPartyCookieBlockingCompatibleHostnames = "true"
+  useEdge = false
+  useEnhancedDomainsInSandbox = "true"
 }

@@ -91,7 +91,22 @@ type salesforce.SessionSettings {
   }
   boolean requireHttps {
   }
-  boolean securityCentralKillSession {
-  }
+  
   metadataType = "SessionSettings"
+  boolean enableBuiltInAuthenticator {
+  }
+  boolean enableCoepHeader {
+  }
+  boolean enableCoopHeader {
+  }
+  boolean enableMFADirectUILoginOptIn {
+  }
+  boolean lockerServiceNext {
+  }
+  boolean lockerServiceNextControl {
+  }
+  boolean sidToken3rdPartyAuraApp {
+  }
+  boolean useLocalStorageForLogoutUrl {
+  }
 }

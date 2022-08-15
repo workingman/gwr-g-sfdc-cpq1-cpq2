@@ -80,6 +80,7 @@ type salesforce.EntityMilestone {
     label = " ID"
     _required = true
     referenceTo = [
+      salesforce.Incident,
       salesforce.WorkOrder,
     ]
     createable = false

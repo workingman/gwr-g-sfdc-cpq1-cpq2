@@ -40,4 +40,13 @@ type salesforce.PaymentGatewayProvider {
   suffix = "paymentGatewayProvider"
   dirName = "paymentGatewayProviders"
   metadataType = "PaymentGatewayProvider"
+  string gatewayType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Paypal",
+        "Stripe",
+      ]
+    }
+  }
 }

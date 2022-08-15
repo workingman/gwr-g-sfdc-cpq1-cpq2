@@ -15,4 +15,5 @@ salesforce.CustomApplication standard__Service {
     "standard-report",
     "standard-Dashboard",
   ]
+  isNavTabPersistenceDisabled = false
 }

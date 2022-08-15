@@ -19,4 +19,5 @@ salesforce.EmailAdministrationSettings {
   sendEmailsEvenWhenAutomationUpdatesSameRecord = true
   sendMassEmailNotification = true
   sendTextOnlySystemEmails = false
+  enableEmailTrackingIPBlocklist = "false"
 }

@@ -205,4 +205,5 @@ salesforce.CustomApplication standard__ServiceConsole {
       },
     ]
   }
+  isNavTabPersistenceDisabled = false
 }

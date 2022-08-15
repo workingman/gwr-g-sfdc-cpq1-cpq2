@@ -52,4 +52,17 @@ type salesforce.ExternalServiceRegistration {
   suffix = "externalServiceRegistration"
   dirName = "externalServiceRegistrations"
   metadataType = "ExternalServiceRegistration"
+  string registrationProviderType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Custom",
+        "MuleSoft",
+      ]
+    }
+  }
+  string serviceBinding {
+  }
+  number systemVersion {
+  }
 }

@@ -30,4 +30,5 @@ salesforce.CustomApplication standard__SalesforceCMS {
       },
     ]
   }
+  isNavTabPersistenceDisabled = false
 }

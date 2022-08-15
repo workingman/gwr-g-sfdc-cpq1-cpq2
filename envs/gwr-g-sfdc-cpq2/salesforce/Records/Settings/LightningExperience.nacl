@@ -32,4 +32,8 @@ salesforce.LightningExperienceSettings {
   isLEXExtensionDarkModeOff = false
   isLEXExtensionLinkGrabberOff = false
   isLEXExtensionOff = false
+  enableHideOpenInQuip = "false"
+  enableInAppLearning = "true"
+  enableLWCDynamicComponents = "false"
+  enableSidToken3rdPartyAuraApp = "false"
 }

@@ -387,6 +387,7 @@ type salesforce.ContentVersion {
       salesforce.ContractLineItem,
       salesforce.CredentialStuffingEventStore,
       salesforce.CreditMemo,
+      salesforce.CreditMemoInvApplication,
       salesforce.CreditMemoLine,
       "Dashboard",
       "DashboardComponent",

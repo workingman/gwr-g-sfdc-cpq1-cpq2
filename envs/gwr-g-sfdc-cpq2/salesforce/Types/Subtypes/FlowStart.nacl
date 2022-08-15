@@ -54,6 +54,7 @@ type salesforce.FlowStart {
         "Create",
         "CreateAndUpdate",
         "Delete",
+        "None",
         "Update",
       ]
     }
@@ -75,4 +76,8 @@ type salesforce.FlowStart {
     }
   }
   metadataType = "FlowStart"
+  string filterFormula {
+  }
+  salesforce.FlowScheduledPath scheduledPaths {
+  }
 }

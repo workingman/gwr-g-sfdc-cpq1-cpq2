@@ -16,4 +16,6 @@ type salesforce.DuplicateRuleFilter {
   string booleanFilter {
   }
   metadataType = "DuplicateRuleFilter"
+  salesforce.DuplicateRuleFilterItem duplicateRuleFilterItems {
+  }
 }

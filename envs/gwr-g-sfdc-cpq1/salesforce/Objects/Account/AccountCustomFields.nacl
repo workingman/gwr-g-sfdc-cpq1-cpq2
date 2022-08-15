@@ -42,14 +42,18 @@ type salesforce.Account {
         label = "Silver"
       },
       {
-        fullName = "Platinum"
+        fullName = "Electrum"
         default = false
-        label = "Platinum"
+        label = "Electrum"
       },
       {
-        fullName = "Bronze"
+        fullName ="Copper"
         default = false
-        label = "Bronze"
+<<<<<<< HEAD
+        label = "Copper "
+=======
+        label = "Copper"
+>>>>>>> 71384574 (Changes from workspace)
       },
     ]
     restricted = false

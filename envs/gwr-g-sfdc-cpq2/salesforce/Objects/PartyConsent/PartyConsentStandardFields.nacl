@@ -244,10 +244,15 @@ type salesforce.PartyConsent {
   salesforce.Lookup BusinessBrandId {
     apiName = "PartyConsent.BusinessBrandId"
     trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    queryable = true
+    updateable = true
+    createable = true
+    
+    label = "Business Brand ID"
+    referenceTo = [
+      salesforce.BusinessBrand,
+    ]
+    relationshipName = "BusinessBrand"
   }
   salesforce.Unknown DoubleConsentCaptureDate {
     apiName = "PartyConsent.DoubleConsentCaptureDate"
@@ -276,9 +281,15 @@ type salesforce.PartyConsent {
   salesforce.Lookup PartyRoleId {
     apiName = "PartyConsent.PartyRoleId"
     trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    queryable = true
+    updateable = true
+    createable = true
+    
+    label = "Party Role ID"
+    referenceTo = [
+      salesforce.Customer,
+      salesforce.Seller,
+    ]
+    relationshipName = "PartyRole"
   }
 }

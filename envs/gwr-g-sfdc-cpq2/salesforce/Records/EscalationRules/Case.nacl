@@ -27,8 +27,8 @@ salesforce.EscalationRules Case {
           assignedTo = "Main_queue"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "Queue"
-          notifyCaseOwner = "false"
-          minutesToEscalation = "120"
+          notifyCaseOwner = false
+          minutesToEscalation = 120
           
           
         }
@@ -57,8 +57,8 @@ salesforce.EscalationRules Case {
           assignedTo = "Main_queue"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "Queue"
-          notifyCaseOwner = "false"
-          minutesToEscalation = "360"
+          notifyCaseOwner = false
+          minutesToEscalation = 360
         }
         escalationStartTime = "CaseCreation"
       },
@@ -85,8 +85,8 @@ salesforce.EscalationRules Case {
           assignedTo = "Main_queue"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "Queue"
-          notifyCaseOwner = "false"
-          minutesToEscalation = "240"
+          notifyCaseOwner = false
+          minutesToEscalation = 240
         }
         escalationStartTime = "CaseCreation"
       },
@@ -113,8 +113,8 @@ salesforce.EscalationRules Case {
           assignedTo = "Main_queue"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "Queue"
-          notifyCaseOwner = "false"
-          minutesToEscalation = "480"
+          notifyCaseOwner = false
+          minutesToEscalation = 480
         }
         escalationStartTime = "CaseCreation"
       },
@@ -136,8 +136,8 @@ salesforce.EscalationRules Case {
           assignedTo = "Main_queue"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "Queue"
-          notifyCaseOwner = "false"
-          minutesToEscalation = "720"
+          notifyCaseOwner = false
+          minutesToEscalation = 720
         }
         escalationStartTime = "CaseCreation"
       },
@@ -159,8 +159,8 @@ salesforce.EscalationRules Case {
           assignedTo = "Main_queue"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "Queue"
-          notifyCaseOwner = "false"
-          minutesToEscalation = "1440"
+          notifyCaseOwner = false
+          minutesToEscalation = 1440
         }
         escalationStartTime = "CaseCreation"
       },
@@ -182,8 +182,8 @@ salesforce.EscalationRules Case {
           assignedTo = "Main_queue"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "Queue"
-          notifyCaseOwner = "false"
-          minutesToEscalation = "360"
+          notifyCaseOwner = false
+          minutesToEscalation = 360
         }
         escalationStartTime = "CaseCreation"
       },
@@ -205,8 +205,8 @@ salesforce.EscalationRules Case {
           assignedTo = "Main_queue"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "Queue"
-          notifyCaseOwner = "false"
-          minutesToEscalation = "1080"
+          notifyCaseOwner = false
+          minutesToEscalation = 1080
         }
         escalationStartTime = "CaseCreation"
       },

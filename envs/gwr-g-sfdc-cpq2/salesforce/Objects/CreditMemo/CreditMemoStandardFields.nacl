@@ -99,6 +99,19 @@ type salesforce.CreditMemo {
     queryable = true
     trackHistory = false
   }
+  salesforce.Lookup ReferenceEntityId {
+    apiName = "CreditMemo.ReferenceEntityId"
+    label = "ReferenceEntity ID"
+    referenceTo = [
+      salesforce.Invoice,
+      salesforce.Order,
+    ]
+    createable = false
+    updateable = true
+    relationshipName = "ReferenceEntity"
+    queryable = true
+    trackHistory = false
+  }
   salesforce.Text CreditMemoNumber {
     apiName = "CreditMemo.CreditMemoNumber"
     label = "Credit Memo Number"
@@ -173,12 +186,6 @@ type salesforce.CreditMemo {
     _required = true
     valueSet = [
       {
-        fullName = "Draft"
-        default = false
-        label = "Draft"
-        isActive = true
-      },
-      {
         fullName = "Pending"
         default = false
         label = "Pending"
@@ -194,6 +201,12 @@ type salesforce.CreditMemo {
         fullName = "Canceled"
         default = false
         label = "Canceled"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
         isActive = true
       },
     ]
@@ -264,36 +277,76 @@ type salesforce.CreditMemo {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown AppType {
-    apiName = "CreditMemo.AppType"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
-  }
-  salesforce.Unknown CreationMode {
+  salesforce.Picklist CreationMode {
     apiName = "CreditMemo.CreationMode"
-    trackHistory = false
-    queryable = false
-    updateable = false
+    label = "Creation Mode"
+    valueSet = [
+      {
+        fullName = "Salesforce"
+        default = false
+        label = "Salesforce"
+        isActive = true
+      },
+      {
+        fullName = "External"
+        default = false
+        label = "External"
+        isActive = true
+      },
+    ]
+    restricted = true
     createable = false
+    updateable = false
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown ExternalReference {
+  salesforce.Picklist AppType {
+    apiName = "CreditMemo.AppType"
+    label = "App Type (Deprecated)"
+    valueSet = [
+      {
+        fullName = "Revenue Cloud"
+        default = false
+        label = "Revenue Cloud"
+        isActive = true
+      },
+      {
+        fullName = "Commerce Cloud"
+        default = false
+        label = "Commerce Cloud"
+        isActive = true
+      },
+      {
+        fullName = "Subscription Management"
+        default = false
+        label = "Subscription Management"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ExternalReference {
     apiName = "CreditMemo.ExternalReference"
-    trackHistory = false
-    queryable = false
-    updateable = false
+    label = "External Reference"
     createable = false
-    _hidden_value = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
   }
-  salesforce.Unknown ExternalReferenceDataSource {
+  salesforce.Text ExternalReferenceDataSource {
     apiName = "CreditMemo.ExternalReferenceDataSource"
-    trackHistory = false
-    queryable = false
-    updateable = false
+    label = "External Reference Data Source"
     createable = false
-    _hidden_value = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
   }
 }

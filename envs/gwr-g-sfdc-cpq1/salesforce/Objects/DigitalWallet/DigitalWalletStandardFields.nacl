@@ -260,4 +260,11 @@ type salesforce.DigitalWallet {
     createable = false
     _hidden_value = true
   }
+  salesforce.Unknown IsAutoPayEnabled {
+    apiName = "DigitalWallet.IsAutoPayEnabled"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
 }

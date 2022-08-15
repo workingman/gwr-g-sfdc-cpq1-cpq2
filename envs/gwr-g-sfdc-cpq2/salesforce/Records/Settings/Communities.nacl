@@ -12,4 +12,5 @@ salesforce.CommunitiesSettings {
   enableOotbProfExtUserOpsEnable = false
   enablePRMAccRelPref = false
   enableRelaxPartnerAccountFieldPref = false
+  blockEmbeddedLoginUnknownURLRedirect = "false"
 }

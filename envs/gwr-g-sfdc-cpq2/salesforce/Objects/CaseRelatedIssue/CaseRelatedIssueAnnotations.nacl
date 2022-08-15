@@ -188,4 +188,5 @@ type salesforce.CaseRelatedIssue {
   ]
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  compactLayoutAssignment = "SYSTEM"
 }

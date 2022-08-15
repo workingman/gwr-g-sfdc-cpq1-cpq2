@@ -348,6 +348,18 @@ type salesforce.Macro {
         isActive = true
       },
       {
+        fullName = "CreditMemoInvApplication"
+        default = false
+        label = "Credit Memo Invoice Application"
+        isActive = true
+      },
+      {
+        fullName = "CreditMemoLine"
+        default = false
+        label = "Credit Memo Line"
+        isActive = true
+      },
+      {
         fullName = "SBQQ__CustomAction__c"
         default = false
         label = "Custom Action"
@@ -444,6 +456,18 @@ type salesforce.Macro {
         isActive = true
       },
       {
+        fullName = "FinanceBalanceSnapshot"
+        default = false
+        label = "Finance Balance Snapshot"
+        isActive = true
+      },
+      {
+        fullName = "FinanceTransaction"
+        default = false
+        label = "Finance Transaction"
+        isActive = true
+      },
+      {
         fullName = "CollaborationGroup"
         default = false
         label = "Group"
@@ -501,6 +525,12 @@ type salesforce.Macro {
         fullName = "Invoice"
         default = false
         label = "Invoice"
+        isActive = true
+      },
+      {
+        fullName = "InvoiceLine"
+        default = false
+        label = "Invoice Line"
         isActive = true
       },
       {

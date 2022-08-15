@@ -419,12 +419,14 @@ type salesforce.Asset {
     createable = false
     _hidden_value = true
   }
-  salesforce.Unknown TotalLifecycleAmount {
+  salesforce.Currency TotalLifecycleAmount {
     apiName = "Asset.TotalLifecycleAmount"
-    trackHistory = false
-    queryable = false
-    updateable = false
+    label = "Total Lifecycle Amount"
     createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
     _hidden_value = true
   }
   salesforce.Unknown Uuid {
@@ -434,6 +436,14 @@ type salesforce.Asset {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
+  }
+  salesforce.Address Address {
+    apiName = "Asset.Address"
+    label = "Address"
+    createable = false
+    updateable = false
+    queryable = true
     _hidden_value = true
   }
 }

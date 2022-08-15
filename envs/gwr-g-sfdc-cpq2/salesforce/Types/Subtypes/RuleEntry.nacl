@@ -49,4 +49,6 @@ type salesforce.RuleEntry {
     }
   }
   metadataType = "RuleEntry"
+  salesforce.EscalationAction escalationAction {
+  }
 }

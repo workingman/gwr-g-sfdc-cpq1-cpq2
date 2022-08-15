@@ -435,4 +435,23 @@ type salesforce.Opportunity {
     createable = false
     _hidden_value = true
   }
+  salesforce.Number PushCount {
+    apiName = "Opportunity.PushCount"
+    label = "Push Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastStageChangeDate {
+    apiName = "Opportunity.LastStageChangeDate"
+    label = "Last Stage Change Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
 }

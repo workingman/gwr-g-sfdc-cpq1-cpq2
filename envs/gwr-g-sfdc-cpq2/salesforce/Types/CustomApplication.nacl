@@ -93,4 +93,6 @@ type salesforce.CustomApplication {
   suffix = "app"
   dirName = "applications"
   metadataType = "CustomApplication"
+  boolean isNavTabPersistenceDisabled {
+  }
 }

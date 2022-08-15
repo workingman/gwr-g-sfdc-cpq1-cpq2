@@ -26,4 +26,8 @@ type salesforce.FlowElementReferenceOrValue {
   string stringValue {
   }
   metadataType = "FlowElementReferenceOrValue"
+  string apexValue {
+  }
+  string sobjectValue {
+  }
 }

@@ -11,7 +11,7 @@ salesforce.Layout ScorecardMetric_Scorecard_Metric_Layout@bss {
           layoutItems = [
             {
               behavior = "Required"
-              field = "Name"
+              field = salesforce.ScorecardMetric.field.Name
             },
             {
               behavior = "Required"
@@ -40,7 +40,7 @@ salesforce.Layout ScorecardMetric_Scorecard_Metric_Layout@bss {
           layoutItems = [
             {
               behavior = "Edit"
-              field = "Description"
+              field = salesforce.ScorecardMetric.field.Description
             },
           ]
         },

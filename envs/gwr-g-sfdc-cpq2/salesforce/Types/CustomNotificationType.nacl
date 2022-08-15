@@ -32,4 +32,6 @@ type salesforce.CustomNotificationType {
   suffix = "notiftype"
   dirName = "notificationtypes"
   metadataType = "CustomNotificationType"
+  boolean slack {
+  }
 }

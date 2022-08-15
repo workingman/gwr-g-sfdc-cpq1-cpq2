@@ -41,4 +41,22 @@ salesforce.AnalyticsSettings {
   maxHoursAppInProgress = 48
   replaceBlankMeasuresWithNulls = false
   turnOnTimeZones = false
+  enableNullDimension = false
+  autoInstallApps = "false"
+  canEnableBYOMZeroDayScoring = "false"
+  enableAzureDLGen2OutputConnector = "false"
+  enableCreateLegacyDataflows = "true"
+  enableOrgCanViewTableau = "false"
+  enableOrgHasMobileOfflineEnabled = "true"
+  enableReportHideXlsExportPref = "false"
+  enableReportInlineEditPref = "true"
+  enableSalesforceOutputConnector = "false"
+  enableTableauHyperOutputConnector = "false"
+  enableWaveIndexMVDimV2 = "false"
+  enableWaveLwcDashboards = "false"
+  enableWaveSqlCFIndexing = "false"
+  recipeDirectDataPref = "true"
+  recipeFiscalPref = "false"
+  recipePreCachingOptOut = "false"
+  recipeStagedDataPref = "false"
 }

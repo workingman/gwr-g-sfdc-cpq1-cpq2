@@ -11,7 +11,7 @@ salesforce.Layout BusinessBrand_Business_Brand_Layout@bss {
           layoutItems = [
             {
               behavior = "Required"
-              field = "Name"
+              field = salesforce.BusinessBrand.field.Name
             },
             {
               behavior = "Edit"
@@ -23,7 +23,7 @@ salesforce.Layout BusinessBrand_Business_Brand_Layout@bss {
           layoutItems = [
             {
               behavior = "Edit"
-              field = "OrgId"
+              field = salesforce.BusinessBrand.field.OrgId
             },
           ]
         },

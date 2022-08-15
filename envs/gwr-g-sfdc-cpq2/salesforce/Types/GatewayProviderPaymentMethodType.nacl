@@ -30,6 +30,7 @@ type salesforce.GatewayProviderPaymentMethodType {
     _restriction = {
       enforce_value = false
       values = [
+        "AlternativePaymentMethod",
         "CardPaymentMethod",
         "DigitalWallet",
       ]
@@ -42,4 +43,9 @@ type salesforce.GatewayProviderPaymentMethodType {
   suffix = "gatewayProviderPaymentMethodType"
   dirName = "gatewayProviderPaymentMethodTypes"
   metadataType = "GatewayProviderPaymentMethodType"
+  string recordType {
+    foreignKeyDomain = [
+      salesforce.RecordType,
+    ]
+  }
 }

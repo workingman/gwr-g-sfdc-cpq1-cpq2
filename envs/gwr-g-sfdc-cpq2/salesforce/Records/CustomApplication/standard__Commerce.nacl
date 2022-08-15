@@ -38,4 +38,5 @@ salesforce.CustomApplication standard__Commerce {
       },
     ]
   }
+  isNavTabPersistenceDisabled = false
 }

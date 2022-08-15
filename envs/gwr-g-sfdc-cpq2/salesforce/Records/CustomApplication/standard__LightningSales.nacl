@@ -29,4 +29,5 @@ salesforce.CustomApplication standard__LightningSales {
     "standard-Forecasting3",
   ]
   uiType = "Lightning"
+  isNavTabPersistenceDisabled = false
 }

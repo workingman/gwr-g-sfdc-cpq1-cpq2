@@ -696,50 +696,112 @@ type salesforce.FinanceBalanceSnapshot {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown FinanceSystemIntegrationMode {
+  salesforce.Text FinanceSystemIntegrationMode {
     apiName = "FinanceBalanceSnapshot.FinanceSystemIntegrationMode"
+    label = "Finance System Integration Mode"
     inlineHelpText = "The type of the external financial system used to recognize the finance transaction."
-    queryable = false
-    updateable = false
     createable = false
-    _hidden_value = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
   }
-  salesforce.Unknown FinanceSystemIntegrationStatus {
+  salesforce.Picklist FinanceSystemIntegrationStatus {
     apiName = "FinanceBalanceSnapshot.FinanceSystemIntegrationStatus"
-    queryable = false
-    updateable = false
+    label = "Finance System Integration Status"
+    valueSet = [
+      {
+        fullName = "Not Selected"
+        default = false
+        label = "Not Selected"
+        isActive = true
+      },
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+        isActive = true
+      },
+      {
+        fullName = "In Process"
+        default = false
+        label = "In Process"
+        isActive = true
+      },
+      {
+        fullName = "Retry In Process"
+        default = false
+        label = "Retry In Process"
+        isActive = true
+      },
+      {
+        fullName = "Success"
+        default = false
+        label = "Success"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+      {
+        fullName = "Failed"
+        default = false
+        label = "Failed"
+        isActive = true
+      },
+    ]
+    restricted = true
     createable = false
-    _hidden_value = true
+    updateable = true
+    queryable = true
   }
-  salesforce.Unknown FinanceSystemName {
+  salesforce.Text FinanceSystemName {
     apiName = "FinanceBalanceSnapshot.FinanceSystemName"
+    label = "Finance System Name"
     inlineHelpText = "The name of the external financial system used to recognize the finance transaction."
-    queryable = false
-    updateable = false
     createable = false
-    _hidden_value = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
   }
-  salesforce.Unknown FinanceSystemTransactionNumber {
+  salesforce.Text FinanceSystemTransactionNumber {
     apiName = "FinanceBalanceSnapshot.FinanceSystemTransactionNumber"
-    queryable = false
-    updateable = false
+    label = "Finance System Transaction Number"
     createable = false
-    _hidden_value = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
   }
-  salesforce.Unknown OriginalEventType {
+  salesforce.Text OriginalEventType {
     apiName = "FinanceBalanceSnapshot.OriginalEventType"
+    label = "Original Event Type"
     inlineHelpText = "The finance transaction's event type when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalReferenceEntityType {
+  salesforce.Text OriginalReferenceEntityType {
     apiName = "FinanceBalanceSnapshot.OriginalReferenceEntityType"
+    label = "Original Reference Entity Type"
     inlineHelpText = "The finance transaction's reference entity type when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
 }

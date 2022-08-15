@@ -1,5 +1,6 @@
 salesforce.BlockchainSettings {
   fullName = "Blockchain"
   enableBcp = "false"
-  enableBcpCoin = "false"
+  
+  enableEtpNft = "false"
 }

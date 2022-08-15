@@ -38,4 +38,6 @@ type salesforce.DocumentFolder {
   folderContentType = "Document"
   dirName = "documents"
   metadataType = "DocumentFolder"
+  salesforce.FolderShare folderShares {
+  }
 }

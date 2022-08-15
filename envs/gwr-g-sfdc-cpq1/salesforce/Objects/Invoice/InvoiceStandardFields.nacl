@@ -205,8 +205,9 @@ type salesforce.Invoice {
     ]
     restricted = true
     createable = false
-    updateable = true
+    updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Date InvoiceDate {
     apiName = "Invoice.InvoiceDate"

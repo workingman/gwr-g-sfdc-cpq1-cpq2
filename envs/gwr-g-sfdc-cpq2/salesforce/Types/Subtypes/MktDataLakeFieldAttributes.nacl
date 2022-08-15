@@ -23,6 +23,7 @@ type salesforce.MktDataLakeFieldAttributes {
         "Curated",
         "Custom",
         "Derived",
+        "Segment_Membership",
         "Standard",
         "System",
       ]
@@ -37,4 +38,19 @@ type salesforce.MktDataLakeFieldAttributes {
   number primaryIndexOrder {
   }
   metadataType = "MktDataLakeFieldAttributes"
+  boolean isRecordModified {
+  }
+  string keyQualifierName {
+  }
+  string mktDatalakeSrcKeyQualifier {
+  }
+  string usageTag {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "KEY_QUALIFIER",
+        "NONE",
+      ]
+    }
+  }
 }

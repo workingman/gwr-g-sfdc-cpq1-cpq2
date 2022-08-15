@@ -21,6 +21,7 @@ type salesforce.MktDataModelAttributes {
         "Curated",
         "Custom",
         "Derived",
+        "Segment_Membership",
         "Standard",
         "System",
       ]
@@ -41,4 +42,8 @@ type salesforce.MktDataModelAttributes {
   string referenceEntitySubjectArea {
   }
   metadataType = "MktDataModelAttributes"
+  string description {
+  }
+  boolean isUsedForMetrics {
+  }
 }

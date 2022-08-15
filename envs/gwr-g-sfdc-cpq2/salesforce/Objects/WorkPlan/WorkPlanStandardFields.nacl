@@ -121,7 +121,7 @@ type salesforce.WorkPlan {
   }
   salesforce.Lookup WorkOrderLineItemId {
     apiName = "WorkPlan.WorkOrderLineItemId"
-    label = "Line Item ID"
+    label = "Work Order Line Item ID"
     referenceTo = [
       salesforce.WorkOrderLineItem,
     ]
@@ -134,24 +134,41 @@ type salesforce.WorkPlan {
   salesforce.Lookup ParentRecordId {
     apiName = "WorkPlan.ParentRecordId"
     trackHistory = false
-    queryable = false
+    queryable = true
     updateable = false
-    createable = false
-    _hidden_value = true
+    createable = true
+    
+    label = "Parent Record ID"
+    _required = true
+    referenceTo = [
+      salesforce.ChangeRequest,
+      salesforce.WorkOrder,
+      salesforce.WorkOrderLineItem,
+    ]
+    relationshipName = "ParentRecord"
   }
-  salesforce.Unknown ParentRecordType {
+  salesforce.Text ParentRecordType {
     apiName = "WorkPlan.ParentRecordType"
-    queryable = false
-    updateable = false
+    label = "Parent Record Type"
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 50
+    queryable = true
     _hidden_value = true
   }
   salesforce.Lookup WorkPlanTemplateId {
     apiName = "WorkPlan.WorkPlanTemplateId"
     trackHistory = false
-    queryable = false
+    queryable = true
     updateable = false
     createable = false
     _hidden_value = true
+    label = "Work Plan Template ID"
+    referenceTo = [
+      salesforce.WorkPlanTemplate,
+    ]
+    relationshipName = "WorkPlanTemplate"
   }
 }

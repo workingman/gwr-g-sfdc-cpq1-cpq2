@@ -76,6 +76,7 @@ type salesforce.RecordAction {
       salesforce.Campaign,
       salesforce.CampaignMember,
       salesforce.Case,
+      salesforce.ChangeRequest,
       salesforce.CollaborationGroup,
       salesforce.Contact,
       salesforce.ContactRequest,
@@ -83,6 +84,7 @@ type salesforce.RecordAction {
       salesforce.ContractLineItem,
       "EnhancedLetterhead",
       salesforce.Entitlement,
+      salesforce.Incident,
       salesforce.IndustryPrice__c,
       salesforce.Lead,
       salesforce.Location,
@@ -91,6 +93,7 @@ type salesforce.RecordAction {
       salesforce.OutletLocale__c,
       salesforce.Pricebook2,
       salesforce.PricebookEntry,
+      salesforce.Problem,
       salesforce.Product2,
       salesforce.SBQQ__AttributeSet__c,
       salesforce.SBQQ__AttributeValue__c,
@@ -172,6 +175,7 @@ type salesforce.RecordAction {
       salesforce.SBQQ__UsageRate__c,
       salesforce.SBQQ__WebQuoteLine__c,
       salesforce.SBQQ__WebQuote__c,
+      salesforce.Scorecard,
       salesforce.ServiceContract,
       salesforce.User,
       salesforce.WorkOrder,
@@ -208,6 +212,30 @@ type salesforce.RecordAction {
         fullName = "runtime_commerce_oms__Return_Item"
         default = false
         label = "runtime_commerce_oms__Return_Item"
+        isActive = true
+      },
+      {
+        fullName = "runtime_industries_recurrence__Orch"
+        default = false
+        label = "runtime_industries_recurrence__Orch"
+        isActive = true
+      },
+      {
+        fullName = "runtime_industries_recurrence__Schdlr"
+        default = false
+        label = "runtime_industries_recurrence__Schdlr"
+        isActive = true
+      },
+      {
+        fullName = "runtime_service_incident_mgmt__CCOIO"
+        default = false
+        label = "runtime_service_incident_mgmt__CCOIO"
+        isActive = true
+      },
+      {
+        fullName = "runtime_service_incident_mgmt__CRRI"
+        default = false
+        label = "runtime_service_incident_mgmt__CRRI"
         isActive = true
       },
       {
@@ -369,6 +397,12 @@ type salesforce.RecordAction {
         isActive = true
       },
       {
+        fullName = "QuickActionDefinition.ChangeRequest._LightningUpdateChangeRequest"
+        default = false
+        label = "QuickActionDefinition.ChangeRequest._LightningUpdateChangeRequest"
+        isActive = true
+      },
+      {
         fullName = "QuickActionDefinition.CollaborationGroup.NewGroupMember"
         default = false
         label = "QuickActionDefinition.CollaborationGroup.NewGroupMember"
@@ -420,6 +454,12 @@ type salesforce.RecordAction {
         fullName = "QuickActionDefinition.FeedItem.TextPost"
         default = false
         label = "QuickActionDefinition.FeedItem.TextPost"
+        isActive = true
+      },
+      {
+        fullName = "QuickActionDefinition.Incident._LightningUpdateIncident"
+        default = false
+        label = "QuickActionDefinition.Incident._LightningUpdateIncident"
         isActive = true
       },
       {
@@ -492,6 +532,12 @@ type salesforce.RecordAction {
         fullName = "QuickActionDefinition.Opportunity.SBQQ__CreateOrderLightning"
         default = false
         label = "QuickActionDefinition.Opportunity.SBQQ__CreateOrderLightning"
+        isActive = true
+      },
+      {
+        fullName = "QuickActionDefinition.Problem._LightningUpdateProblem"
+        default = false
+        label = "QuickActionDefinition.Problem._LightningUpdateProblem"
         isActive = true
       },
       {
@@ -570,6 +616,30 @@ type salesforce.RecordAction {
         fullName = "runtime_commerce_oms__Return_Item"
         default = false
         label = "runtime_commerce_oms__Return_Item"
+        isActive = true
+      },
+      {
+        fullName = "runtime_industries_recurrence__Orch"
+        default = false
+        label = "runtime_industries_recurrence__Orch"
+        isActive = true
+      },
+      {
+        fullName = "runtime_industries_recurrence__Schdlr"
+        default = false
+        label = "runtime_industries_recurrence__Schdlr"
+        isActive = true
+      },
+      {
+        fullName = "runtime_service_incident_mgmt__CCOIO"
+        default = false
+        label = "runtime_service_incident_mgmt__CCOIO"
+        isActive = true
+      },
+      {
+        fullName = "runtime_service_incident_mgmt__CRRI"
+        default = false
+        label = "runtime_service_incident_mgmt__CRRI"
         isActive = true
       },
       {

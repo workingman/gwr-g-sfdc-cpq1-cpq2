@@ -1,13 +1,13 @@
 envs {
   envs = [
     {
-      name = "gwr-g-sfdc-cpq2"
+      name = "gwr-g-sfdc-cpq1"
       accountToServiceName = {
         salesforce = "salesforce"
       }
     },
     {
-      name = "gwr-g-sfdc-cpq1"
+      name = "gwr-g-sfdc-cpq2"
       accountToServiceName = {
         salesforce = "salesforce"
       }

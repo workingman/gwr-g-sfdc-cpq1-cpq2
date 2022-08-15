@@ -54,4 +54,29 @@ settings salesforce.FieldServiceSettings {
   suffix = "settings"
   dirName = "settings"
   metadataType = "FieldServiceSettings"
+  number apptAssistantExpiration {
+  }
+  string apptAssistantInfoUrl {
+  }
+  string apptAssistantRadiusUnitValue {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Kilometer",
+        "Meter",
+        "Mile",
+        "Yard",
+      ]
+    }
+  }
+  number apptAssistantRadiusValue {
+  }
+  string apptAssistantStatus {
+  }
+  string deepLinkPublicSecurityKey {
+  }
+  string mobileFeedbackEmails {
+  }
+  salesforce.ObjectMappingItem objectMappingItem {
+  }
 }

@@ -4732,9 +4732,21 @@ type salesforce.DandBCompany {
         isActive = true
       },
       {
+        fullName = "00767"
+        default = false
+        label = "Zimbabwe Business Registration Number"
+        isActive = true
+      },
+      {
         fullName = "00772"
         default = false
         label = "Philippines Tax Identification Number"
+        isActive = true
+      },
+      {
+        fullName = "00773"
+        default = false
+        label = "Philippines Company Incorporation Number"
         isActive = true
       },
       {
@@ -4750,6 +4762,18 @@ type salesforce.DandBCompany {
         isActive = true
       },
       {
+        fullName = "00832"
+        default = false
+        label = "Companies Commission of Malaysia Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00833"
+        default = false
+        label = "Office of Scottish Charity Regulator Charity Number "
+        isActive = true
+      },
+      {
         fullName = "00835"
         default = false
         label = "Charity Commission for England & Wales Charity Number"
@@ -4759,6 +4783,24 @@ type salesforce.DandBCompany {
         fullName = "00836"
         default = false
         label = "UK Financial Conduct Authority Reference Number"
+        isActive = true
+      },
+      {
+        fullName = "00838"
+        default = false
+        label = "Honduras National Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00845"
+        default = false
+        label = "Bermuda Business Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00848"
+        default = false
+        label = "Cayman Islands Business Registration Number"
         isActive = true
       },
     ]

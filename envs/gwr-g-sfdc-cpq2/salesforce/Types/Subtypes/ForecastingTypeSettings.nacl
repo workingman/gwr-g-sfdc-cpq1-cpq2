@@ -15,12 +15,10 @@ type salesforce.ForecastingTypeSettings {
   }
   boolean active {
   }
-  salesforce.AdjustmentsSettings adjustmentsSettings {
-  }
+  
   "List<string>" displayedCategoryApiNames {
   }
-  salesforce.ForecastRangeSettings forecastRangeSettings {
-  }
+  
   "List<string>" forecastedCategoryApiNames {
   }
   string forecastingDateType {
@@ -60,8 +58,7 @@ type salesforce.ForecastingTypeSettings {
   }
   string ownerAdjustableCategoryApiNames {
   }
-  salesforce.QuotasSettings quotasSettings {
-  }
+  
   string territory2ModelName {
   }
   metadataType = "ForecastingTypeSettings"

@@ -167,12 +167,6 @@ type salesforce.Invoice {
     _required = true
     valueSet = [
       {
-        fullName = "Draft"
-        default = false
-        label = "Draft"
-        isActive = true
-      },
-      {
         fullName = "Pending"
         default = false
         label = "Pending"
@@ -202,11 +196,24 @@ type salesforce.Invoice {
         label = "Error"
         isActive = true
       },
+      {
+        fullName = "Void In Progress"
+        default = false
+        label = "Void In Progress"
+        isActive = true
+      },
+      {
+        fullName = "Voided"
+        default = false
+        label = "Voided"
+        isActive = true
+      },
     ]
     restricted = true
     createable = false
-    updateable = true
+    updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Date InvoiceDate {
     apiName = "Invoice.InvoiceDate"

@@ -109,4 +109,6 @@ type salesforce.SamlSsoConfig {
   suffix = "samlssoconfig"
   dirName = "samlssoconfigs"
   metadataType = "SamlSsoConfig"
+  boolean useSameDigestAlgoForSigning {
+  }
 }

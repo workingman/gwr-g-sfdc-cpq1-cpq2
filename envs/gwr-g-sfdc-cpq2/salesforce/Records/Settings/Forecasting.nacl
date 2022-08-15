@@ -99,21 +99,14 @@ salesforce.ForecastingSettings {
   forecastingTypeSettings = [
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -357,27 +350,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -616,27 +600,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -880,27 +855,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -1139,27 +1105,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -1403,27 +1360,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -1662,27 +1610,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -1926,27 +1865,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -2185,27 +2115,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = true
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -2444,27 +2365,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -2703,27 +2615,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -2967,27 +2870,18 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
+      
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
+      
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -3226,9 +3120,19 @@ salesforce.ForecastingSettings {
           "Opportunity.TrackingNumber__c",
         ]
       }
-      quotasSettings = {
-        showQuotas = false
-      }
+      
     },
   ]
+  globalAdjustmentsSettings = {
+    enableAdjustments = false
+    enableOwnerAdjustments = false
+  }
+  globalForecastRangeSettings = {
+    beginning = 0
+    displaying = 6
+    periodType = "Month"
+  }
+  globalQuotasSettings = {
+    showQuotas = false
+  }
 }

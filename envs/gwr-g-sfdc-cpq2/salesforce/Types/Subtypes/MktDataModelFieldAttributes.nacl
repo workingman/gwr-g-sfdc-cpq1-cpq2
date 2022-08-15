@@ -21,6 +21,7 @@ type salesforce.MktDataModelFieldAttributes {
         "Curated",
         "Custom",
         "Derived",
+        "Segment_Membership",
         "Standard",
         "System",
       ]
@@ -43,4 +44,15 @@ type salesforce.MktDataModelFieldAttributes {
   string refAttrDeveloperName {
   }
   metadataType = "MktDataModelFieldAttributes"
+  string keyQualifierName {
+  }
+  string usageTag {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "KeyQualifier",
+        "None",
+      ]
+    }
+  }
 }

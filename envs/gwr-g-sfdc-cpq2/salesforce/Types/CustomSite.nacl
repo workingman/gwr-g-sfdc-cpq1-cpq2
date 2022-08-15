@@ -60,8 +60,7 @@ type salesforce.CustomSite {
   }
   boolean contentSniffingProtection {
   }
-  boolean cspUpgradeInsecureRequests {
-  }
+  
   salesforce.SiteWebAddress customWebAddresses {
   }
   string description {
@@ -103,8 +102,7 @@ type salesforce.CustomSite {
   }
   boolean referrerPolicyOriginWhenCrossOrigin {
   }
-  boolean requireHttps {
-  }
+  
   string robotsTxtPage {
   }
   string selfRegPage {
@@ -146,4 +144,8 @@ type salesforce.CustomSite {
   suffix = "site"
   dirName = "sites"
   metadataType = "CustomSite"
+  boolean cachePublicVisualforcePagesInProxyServers {
+  }
+  boolean redirectToCustomDomain {
+  }
 }

@@ -15,4 +15,5 @@ salesforce.CustomApplication standard__Marketing {
     "standard-report",
     "standard-Dashboard",
   ]
+  isNavTabPersistenceDisabled = false
 }

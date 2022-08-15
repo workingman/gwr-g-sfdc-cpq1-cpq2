@@ -9,4 +9,5 @@ salesforce.MobileSettings {
   enablePopulateNameManuallyInToday = false
   enableS1EncryptedStoragePref2 = true
   enableS1OfflinePref = true
+  enableNewSalesforceMobileAppForTabletWideScreen = "true"
 }

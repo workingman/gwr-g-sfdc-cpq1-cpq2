@@ -32,4 +32,5 @@ salesforce.CustomApplication SBQQ__QuoteQuickly {
     salesforce.CustomTab.instance.OutletLocale__c,
     salesforce.CustomTab.instance.IndustryPrice__c,
   ]
+  isNavTabPersistenceDisabled = false
 }

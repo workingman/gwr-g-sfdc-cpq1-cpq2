@@ -23,6 +23,7 @@ type salesforce.BriefcaseRuleFilter {
         "h",
         "l",
         "m",
+        "n",
         "s",
       ]
     }

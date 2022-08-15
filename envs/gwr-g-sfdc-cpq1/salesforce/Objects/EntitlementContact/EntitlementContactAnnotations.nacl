@@ -116,20 +116,6 @@ type salesforce.EntitlementContact {
       type = "Default"
     },
     {
-      actionName = "New"
-      type = "Default"
-    },
-    {
-      actionName = "New"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "New"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
       actionName = "SaveEdit"
       type = "Default"
     },
@@ -140,24 +126,11 @@ type salesforce.EntitlementContact {
     },
     {
       actionName = "SaveEdit"
-      formFactor = "Small"
-      type = "Default"
-    },
-    {
-      actionName = "View"
-      type = "Default"
-    },
-    {
-      actionName = "View"
-      formFactor = "Large"
-      type = "Default"
-    },
-    {
-      actionName = "View"
       formFactor = "Small"
       type = "Default"
     },
   ]
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  compactLayoutAssignment = "SYSTEM"
 }

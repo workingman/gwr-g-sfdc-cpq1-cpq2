@@ -185,6 +185,12 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "sm_US"
+        default = false
+        label = "Samoan (United States)"
+        isActive = true
+      },
+      {
         fullName = "en_UG"
         default = false
         label = "English (Uganda)"
@@ -209,9 +215,21 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "am_ET"
+        default = false
+        label = "Amharic (Ethiopia)"
+        isActive = true
+      },
+      {
         fullName = "ko_KR"
         default = false
         label = "Korean (South Korea)"
+        isActive = true
+      },
+      {
+        fullName = "fr_MA"
+        default = false
+        label = "French (Morocco)"
         isActive = true
       },
       {
@@ -293,6 +311,18 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "pa_IN"
+        default = false
+        label = "Punjabi (India)"
+        isActive = true
+      },
+      {
+        fullName = "sm_WS"
+        default = false
+        label = "Samoan (Samoa)"
+        isActive = true
+      },
+      {
         fullName = "fr_KM"
         default = false
         label = "French (Comoros)"
@@ -344,6 +374,12 @@ type salesforce.AuthorizationFormText {
         fullName = "fi_FI"
         default = false
         label = "Finnish (Finland)"
+        isActive = true
+      },
+      {
+        fullName = "ru_UA"
+        default = false
+        label = "Russian (Ukraine)"
         isActive = true
       },
       {
@@ -509,9 +545,21 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "en_NL"
+        default = false
+        label = "English (Netherlands)"
+        isActive = true
+      },
+      {
         fullName = "sr_CS"
         default = false
         label = "Serbian (Cyrillic) (Serbia)"
+        isActive = true
+      },
+      {
+        fullName = "haw_US"
+        default = false
+        label = "Hawaiian (United States)"
         isActive = true
       },
       {
@@ -536,6 +584,12 @@ type salesforce.AuthorizationFormText {
         fullName = "cy_GB"
         default = false
         label = "Welsh (United Kingdom)"
+        isActive = true
+      },
+      {
+        fullName = "ht_HT"
+        default = false
+        label = "Haitian Creole (Haiti)"
         isActive = true
       },
       {
@@ -602,6 +656,18 @@ type salesforce.AuthorizationFormText {
         fullName = "en_MU"
         default = false
         label = "English (Mauritius)"
+        isActive = true
+      },
+      {
+        fullName = "en_MT"
+        default = false
+        label = "English (Malta)"
+        isActive = true
+      },
+      {
+        fullName = "hmn_US"
+        default = false
+        label = "Hmong (United States)"
         isActive = true
       },
       {
@@ -755,6 +821,12 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "ru_BY"
+        default = false
+        label = "Russian (Belarus)"
+        isActive = true
+      },
+      {
         fullName = "en_IE"
         default = false
         label = "English (Ireland)"
@@ -791,6 +863,12 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "en_IL"
+        default = false
+        label = "English (Israel)"
+        isActive = true
+      },
+      {
         fullName = "ps_AF"
         default = false
         label = "Pashto (Afghanistan)"
@@ -812,6 +890,12 @@ type salesforce.AuthorizationFormText {
         fullName = "ar_LB"
         default = false
         label = "Arabic (Lebanon)"
+        isActive = true
+      },
+      {
+        fullName = "ru_AM"
+        default = false
+        label = "Russian (Armenia)"
         isActive = true
       },
       {
@@ -911,9 +995,21 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "en_CY"
+        default = false
+        label = "English (Cyprus)"
+        isActive = true
+      },
+      {
         fullName = "es_UY"
         default = false
         label = "Spanish (Uruguay)"
+        isActive = true
+      },
+      {
+        fullName = "en_DE"
+        default = false
+        label = "English (Germany)"
         isActive = true
       },
       {
@@ -956,6 +1052,12 @@ type salesforce.AuthorizationFormText {
         fullName = "en_BB"
         default = false
         label = "English (Barbados)"
+        isActive = true
+      },
+      {
+        fullName = "en_BE"
+        default = false
+        label = "English (Belgium)"
         isActive = true
       },
       {
@@ -1025,6 +1127,12 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "kl_GL"
+        default = false
+        label = "Kalaallisut (Greenland)"
+        isActive = true
+      },
+      {
         fullName = "ru_KZ"
         default = false
         label = "Russian (Kazakhstan)"
@@ -1034,6 +1142,12 @@ type salesforce.AuthorizationFormText {
         fullName = "ar_BH"
         default = false
         label = "Arabic (Bahrain)"
+        isActive = true
+      },
+      {
+        fullName = "ru_KG"
+        default = false
+        label = "Russian (Kyrgyzstan)"
         isActive = true
       },
       {
@@ -1052,6 +1166,18 @@ type salesforce.AuthorizationFormText {
         fullName = "zh_MO"
         default = false
         label = "Chinese (Macao SAR China)"
+        isActive = true
+      },
+      {
+        fullName = "en_AE"
+        default = false
+        label = "English (United Arab Emirates)"
+        isActive = true
+      },
+      {
+        fullName = "zh_MY"
+        default = false
+        label = "Chinese (Malaysia)"
         isActive = true
       },
       {
@@ -1076,6 +1202,12 @@ type salesforce.AuthorizationFormText {
         fullName = "nl_SR"
         default = false
         label = "Dutch (Suriname)"
+        isActive = true
+      },
+      {
+        fullName = "el_CY"
+        default = false
+        label = "Greek (Cyprus)"
         isActive = true
       },
       {
@@ -1136,6 +1268,12 @@ type salesforce.AuthorizationFormText {
         fullName = "es_PY"
         default = false
         label = "Spanish (Paraguay)"
+        isActive = true
+      },
+      {
+        fullName = "ru_PL"
+        default = false
+        label = "Russian (Poland)"
         isActive = true
       },
       {
@@ -1211,6 +1349,18 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "ht_US"
+        default = false
+        label = "Haitian Creole (United States)"
+        isActive = true
+      },
+      {
+        fullName = "ru_MD"
+        default = false
+        label = "Russian (Moldova)"
+        isActive = true
+      },
+      {
         fullName = "bs_BA"
         default = false
         label = "Bosnian (Bosnia & Herzegovina)"
@@ -1226,6 +1376,12 @@ type salesforce.AuthorizationFormText {
         fullName = "ga_IE"
         default = false
         label = "Irish (Ireland)"
+        isActive = true
+      },
+      {
+        fullName = "ru_LT"
+        default = false
+        label = "Russian (Lithuania)"
         isActive = true
       },
       {
@@ -1268,6 +1424,12 @@ type salesforce.AuthorizationFormText {
         fullName = "kn_IN"
         default = false
         label = "Kannada (India)"
+        isActive = true
+      },
+      {
+        fullName = "ji_US"
+        default = false
+        label = "Yiddish (United States)"
         isActive = true
       },
       {
@@ -1467,6 +1629,12 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "sm_US"
+        default = false
+        label = "Samoan (United States)"
+        isActive = true
+      },
+      {
         fullName = "en_UG"
         default = false
         label = "English (Uganda)"
@@ -1491,9 +1659,21 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "am_ET"
+        default = false
+        label = "Amharic (Ethiopia)"
+        isActive = true
+      },
+      {
         fullName = "ko_KR"
         default = false
         label = "Korean (South Korea)"
+        isActive = true
+      },
+      {
+        fullName = "fr_MA"
+        default = false
+        label = "French (Morocco)"
         isActive = true
       },
       {
@@ -1575,6 +1755,18 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "pa_IN"
+        default = false
+        label = "Punjabi (India)"
+        isActive = true
+      },
+      {
+        fullName = "sm_WS"
+        default = false
+        label = "Samoan (Samoa)"
+        isActive = true
+      },
+      {
         fullName = "fr_KM"
         default = false
         label = "French (Comoros)"
@@ -1626,6 +1818,12 @@ type salesforce.AuthorizationFormText {
         fullName = "fi_FI"
         default = false
         label = "Finnish (Finland)"
+        isActive = true
+      },
+      {
+        fullName = "ru_UA"
+        default = false
+        label = "Russian (Ukraine)"
         isActive = true
       },
       {
@@ -1791,9 +1989,21 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "en_NL"
+        default = false
+        label = "English (Netherlands)"
+        isActive = true
+      },
+      {
         fullName = "sr_CS"
         default = false
         label = "Serbian (Cyrillic) (Serbia)"
+        isActive = true
+      },
+      {
+        fullName = "haw_US"
+        default = false
+        label = "Hawaiian (United States)"
         isActive = true
       },
       {
@@ -1818,6 +2028,12 @@ type salesforce.AuthorizationFormText {
         fullName = "cy_GB"
         default = false
         label = "Welsh (United Kingdom)"
+        isActive = true
+      },
+      {
+        fullName = "ht_HT"
+        default = false
+        label = "Haitian Creole (Haiti)"
         isActive = true
       },
       {
@@ -1884,6 +2100,18 @@ type salesforce.AuthorizationFormText {
         fullName = "en_MU"
         default = false
         label = "English (Mauritius)"
+        isActive = true
+      },
+      {
+        fullName = "en_MT"
+        default = false
+        label = "English (Malta)"
+        isActive = true
+      },
+      {
+        fullName = "hmn_US"
+        default = false
+        label = "Hmong (United States)"
         isActive = true
       },
       {
@@ -2037,6 +2265,12 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "ru_BY"
+        default = false
+        label = "Russian (Belarus)"
+        isActive = true
+      },
+      {
         fullName = "en_IE"
         default = false
         label = "English (Ireland)"
@@ -2073,6 +2307,12 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "en_IL"
+        default = false
+        label = "English (Israel)"
+        isActive = true
+      },
+      {
         fullName = "ps_AF"
         default = false
         label = "Pashto (Afghanistan)"
@@ -2094,6 +2334,12 @@ type salesforce.AuthorizationFormText {
         fullName = "ar_LB"
         default = false
         label = "Arabic (Lebanon)"
+        isActive = true
+      },
+      {
+        fullName = "ru_AM"
+        default = false
+        label = "Russian (Armenia)"
         isActive = true
       },
       {
@@ -2193,9 +2439,21 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "en_CY"
+        default = false
+        label = "English (Cyprus)"
+        isActive = true
+      },
+      {
         fullName = "es_UY"
         default = false
         label = "Spanish (Uruguay)"
+        isActive = true
+      },
+      {
+        fullName = "en_DE"
+        default = false
+        label = "English (Germany)"
         isActive = true
       },
       {
@@ -2238,6 +2496,12 @@ type salesforce.AuthorizationFormText {
         fullName = "en_BB"
         default = false
         label = "English (Barbados)"
+        isActive = true
+      },
+      {
+        fullName = "en_BE"
+        default = false
+        label = "English (Belgium)"
         isActive = true
       },
       {
@@ -2307,6 +2571,12 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "kl_GL"
+        default = false
+        label = "Kalaallisut (Greenland)"
+        isActive = true
+      },
+      {
         fullName = "ru_KZ"
         default = false
         label = "Russian (Kazakhstan)"
@@ -2316,6 +2586,12 @@ type salesforce.AuthorizationFormText {
         fullName = "ar_BH"
         default = false
         label = "Arabic (Bahrain)"
+        isActive = true
+      },
+      {
+        fullName = "ru_KG"
+        default = false
+        label = "Russian (Kyrgyzstan)"
         isActive = true
       },
       {
@@ -2334,6 +2610,18 @@ type salesforce.AuthorizationFormText {
         fullName = "zh_MO"
         default = false
         label = "Chinese (Macao SAR China)"
+        isActive = true
+      },
+      {
+        fullName = "en_AE"
+        default = false
+        label = "English (United Arab Emirates)"
+        isActive = true
+      },
+      {
+        fullName = "zh_MY"
+        default = false
+        label = "Chinese (Malaysia)"
         isActive = true
       },
       {
@@ -2358,6 +2646,12 @@ type salesforce.AuthorizationFormText {
         fullName = "nl_SR"
         default = false
         label = "Dutch (Suriname)"
+        isActive = true
+      },
+      {
+        fullName = "el_CY"
+        default = false
+        label = "Greek (Cyprus)"
         isActive = true
       },
       {
@@ -2418,6 +2712,12 @@ type salesforce.AuthorizationFormText {
         fullName = "es_PY"
         default = false
         label = "Spanish (Paraguay)"
+        isActive = true
+      },
+      {
+        fullName = "ru_PL"
+        default = false
+        label = "Russian (Poland)"
         isActive = true
       },
       {
@@ -2493,6 +2793,18 @@ type salesforce.AuthorizationFormText {
         isActive = true
       },
       {
+        fullName = "ht_US"
+        default = false
+        label = "Haitian Creole (United States)"
+        isActive = true
+      },
+      {
+        fullName = "ru_MD"
+        default = false
+        label = "Russian (Moldova)"
+        isActive = true
+      },
+      {
         fullName = "bs_BA"
         default = false
         label = "Bosnian (Bosnia & Herzegovina)"
@@ -2508,6 +2820,12 @@ type salesforce.AuthorizationFormText {
         fullName = "ga_IE"
         default = false
         label = "Irish (Ireland)"
+        isActive = true
+      },
+      {
+        fullName = "ru_LT"
+        default = false
+        label = "Russian (Lithuania)"
         isActive = true
       },
       {
@@ -2550,6 +2868,12 @@ type salesforce.AuthorizationFormText {
         fullName = "kn_IN"
         default = false
         label = "Kannada (India)"
+        isActive = true
+      },
+      {
+        fullName = "ji_US"
+        default = false
+        label = "Yiddish (United States)"
         isActive = true
       },
       {

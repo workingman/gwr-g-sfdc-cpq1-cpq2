@@ -26,4 +26,6 @@ type salesforce.SynonymDictionary {
   suffix = "synonymDictionary"
   dirName = "synonymDictionaries"
   metadataType = "SynonymDictionary"
+  salesforce.SynonymGroup groups {
+  }
 }

@@ -20,4 +20,6 @@ type salesforce.ComponentInstance {
   salesforce.UiFormulaRule visibilityRule {
   }
   metadataType = "ComponentInstance"
+  string identifier {
+  }
 }

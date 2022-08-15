@@ -269,10 +269,15 @@ type salesforce.ContactPointTypeConsent {
   salesforce.Lookup BusinessBrandId {
     apiName = "ContactPointTypeConsent.BusinessBrandId"
     trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    queryable = true
+    updateable = true
+    createable = true
+    
+    label = "Business Brand ID"
+    referenceTo = [
+      salesforce.BusinessBrand,
+    ]
+    relationshipName = "BusinessBrand"
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "ContactPointTypeConsent.EngagementChannelTypeId"
@@ -285,9 +290,15 @@ type salesforce.ContactPointTypeConsent {
   salesforce.Lookup PartyRoleId {
     apiName = "ContactPointTypeConsent.PartyRoleId"
     trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    queryable = true
+    updateable = true
+    createable = true
+    
+    label = "Party Role ID"
+    referenceTo = [
+      salesforce.Customer,
+      salesforce.Seller,
+    ]
+    relationshipName = "PartyRole"
   }
 }

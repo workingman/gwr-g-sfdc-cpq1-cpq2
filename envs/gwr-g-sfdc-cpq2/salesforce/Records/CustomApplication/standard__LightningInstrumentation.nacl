@@ -11,4 +11,5 @@ salesforce.CustomApplication standard__LightningInstrumentation {
     "standard-LightningInstrumentation",
   ]
   uiType = "Lightning"
+  isNavTabPersistenceDisabled = false
 }

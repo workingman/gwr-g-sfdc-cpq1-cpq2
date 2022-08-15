@@ -47,4 +47,7 @@ type salesforce.AlternativePaymentMethod {
   string Status {
     _hidden_value = true
   }
+  string IsAutoPayEnabled {
+    _hidden_value = true
+  }
 }

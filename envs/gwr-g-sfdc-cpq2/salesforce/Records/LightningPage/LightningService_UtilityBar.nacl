@@ -7,11 +7,13 @@ salesforce.LightningPage LightningService_UtilityBar {
         {
           componentInstance = {
             componentName = "console:history"
+            identifier = "console_history"
           }
         },
         {
           componentInstance = {
             componentName = "notes:utilityBarNoteList"
+            identifier = "notes_utilityBarNoteList"
           }
         },
       ]

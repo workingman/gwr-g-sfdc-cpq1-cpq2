@@ -89,6 +89,19 @@ type salesforce.CreditMemoLine {
     trackHistory = false
     _hidden_value = true
   }
+  salesforce.Lookup ReferenceEntityItemId {
+    apiName = "CreditMemoLine.ReferenceEntityItemId"
+    label = "ReferenceEntityItem ID"
+    referenceTo = [
+      salesforce.InvoiceLine,
+      salesforce.OrderItem,
+    ]
+    createable = false
+    updateable = true
+    relationshipName = "ReferenceEntityItem"
+    queryable = true
+    trackHistory = false
+  }
   salesforce.Date StartDate {
     apiName = "CreditMemoLine.StartDate"
     label = "Start Date"
@@ -155,8 +168,8 @@ type salesforce.CreditMemoLine {
     label = "Tax Rate"
     createable = false
     updateable = true
-    scale = 0
-    precision = 3
+    scale = 2
+    precision = 5
     queryable = true
   }
   salesforce.Text Status {

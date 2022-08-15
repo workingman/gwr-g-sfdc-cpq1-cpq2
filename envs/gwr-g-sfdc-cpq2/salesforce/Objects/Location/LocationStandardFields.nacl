@@ -288,13 +288,13 @@ type salesforce.Location {
     createable = false
     _hidden_value = true
   }
-  salesforce.Unknown ShouldSyncWithOci {
+  salesforce.Checkbox ShouldSyncWithOci {
     apiName = "Location.ShouldSyncWithOci"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    label = "Sync with OCI"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Unknown TimeZone {
     apiName = "Location.TimeZone"

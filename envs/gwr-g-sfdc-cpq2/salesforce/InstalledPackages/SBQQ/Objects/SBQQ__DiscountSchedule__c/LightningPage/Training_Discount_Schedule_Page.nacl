@@ -16,6 +16,7 @@ salesforce.LightningPage Training_Discount_Schedule_Page {
               },
             ]
             componentName = "force:highlightsPanel"
+            identifier = "force_highlightsPanel"
           }
         },
       ]
@@ -27,6 +28,7 @@ salesforce.LightningPage Training_Discount_Schedule_Page {
         {
           componentInstance = {
             componentName = "force:detailPanel"
+            identifier = "force_detailPanel"
           }
         },
         {
@@ -38,6 +40,7 @@ salesforce.LightningPage Training_Discount_Schedule_Page {
               },
             ]
             componentName = "force:relatedListContainer"
+            identifier = "force_relatedListContainer"
           }
         },
       ]

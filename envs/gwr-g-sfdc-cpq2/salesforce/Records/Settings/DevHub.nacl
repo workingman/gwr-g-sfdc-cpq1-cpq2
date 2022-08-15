@@ -2,4 +2,6 @@ salesforce.DevHubSettings {
   fullName = "DevHub"
   enableScratchOrgManagementPref = false
   enableShapeExportPref = "false"
+  enableDevOpsCenter = "false"
+  devOpsCenterBetaMsa = "false"
 }

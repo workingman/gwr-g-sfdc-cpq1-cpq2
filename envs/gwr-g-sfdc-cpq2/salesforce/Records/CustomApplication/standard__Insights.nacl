@@ -6,4 +6,5 @@ salesforce.CustomApplication standard__Insights {
   ]
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
 }

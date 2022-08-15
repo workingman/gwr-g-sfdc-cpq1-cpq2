@@ -1,12 +1,12 @@
 envs {
   envsCloud = [
     {
-      uuid = "42338516-47ee-467d-96ac-03168151a6ac"
-      folderName = "gwr-g-sfdc-cpq2"
-    },
-    {
       uuid = "bf92adbf-0f62-47b8-92a8-ad564f34e156"
       folderName = "gwr-g-sfdc-cpq1"
+    },
+    {
+      uuid = "6d84d182-6b69-4043-80b2-116861fb1b40"
+      folderName = "gwr-g-sfdc-cpq2"
     },
   ]
 }

@@ -16,6 +16,7 @@ salesforce.LightningPage Opportunity_Record_Page {
               },
             ]
             componentName = "force:highlightsPanel"
+            identifier = "force_highlightsPanel"
           }
         },
       ]
@@ -42,6 +43,7 @@ salesforce.LightningPage Opportunity_Record_Page {
               },
             ]
             componentName = "flexipage:tab"
+            identifier = "detailTab"
           }
         },
         {
@@ -61,6 +63,7 @@ salesforce.LightningPage Opportunity_Record_Page {
               },
             ]
             componentName = "flexipage:tab"
+            identifier = "activityTab"
           }
         },
         {
@@ -76,6 +79,7 @@ salesforce.LightningPage Opportunity_Record_Page {
               },
             ]
             componentName = "flexipage:tab"
+            identifier = "collaborateTab"
           }
         },
       ]
@@ -94,6 +98,7 @@ salesforce.LightningPage Opportunity_Record_Page {
               },
             ]
             componentName = "flexipage:tabset"
+            identifier = "flexipage_tabset"
           }
         },
       ]
@@ -112,6 +117,7 @@ salesforce.LightningPage Opportunity_Record_Page {
               },
             ]
             componentName = "runtime_sales_pathassistant:pathAssistant"
+            identifier = "runtime_sales_pathassistant_pathAssistant"
           }
         },
       ]
@@ -124,6 +130,7 @@ salesforce.LightningPage Opportunity_Record_Page {
         {
           componentInstance = {
             componentName = "force:detailPanel"
+            identifier = "force_detailPanel"
           }
         },
       ]
@@ -135,6 +142,7 @@ salesforce.LightningPage Opportunity_Record_Page {
         {
           componentInstance = {
             componentName = "runtime_sales_activities:activityPanel"
+            identifier = "runtime_sales_activities_activityPanel"
           }
         },
       ]
@@ -147,6 +155,7 @@ salesforce.LightningPage Opportunity_Record_Page {
         {
           componentInstance = {
             componentName = "forceChatter:recordFeedContainer"
+            identifier = "forceChatter_recordFeedContainer"
           }
         },
       ]
@@ -159,6 +168,7 @@ salesforce.LightningPage Opportunity_Record_Page {
         {
           componentInstance = {
             componentName = "force:relatedListContainer"
+            identifier = "force_relatedListContainer"
           }
         },
       ]

@@ -6,6 +6,7 @@ salesforce.LightningPage Home_Page_Default {
         {
           componentInstance = {
             componentName = "home:heroChart"
+            identifier = "home_heroChart"
           }
         },
       ]
@@ -18,6 +19,7 @@ salesforce.LightningPage Home_Page_Default {
         {
           componentInstance = {
             componentName = "home:recentRecordContainer"
+            identifier = "home_recentRecordContainer"
           }
         },
       ]

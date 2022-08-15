@@ -150,4 +150,14 @@ type salesforce.Recommendation {
     length = 255
     queryable = true
   }
+  salesforce.Text RecommendationKey {
+    apiName = "Recommendation.RecommendationKey"
+    label = "RecommendationResponse Identifier"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
 }

@@ -52,6 +52,14 @@ salesforce.SecuritySettings {
     referrerPolicy = true
     requireHttpOnly = false
     sessionTimeout = "TwoHours"
+    enableBuiltInAuthenticator = false
+    enableCoepHeader = false
+    enableCoopHeader = false
+    enableMFADirectUILoginOptIn = false
+    lockerServiceNext = false
+    lockerServiceNextControl = false
+    sidToken3rdPartyAuraApp = false
+    useLocalStorageForLogoutUrl = false
   }
   singleSignOnSettings = {
     enableCaseInsensitiveFederationID = false
@@ -60,4 +68,6 @@ salesforce.SecuritySettings {
     enableSamlLogin = false
     isLoginWithSalesforceCredentialsDisabled = false
   }
+  enableCoepHeader = "false"
+  enableCoopHeader = "false"
 }

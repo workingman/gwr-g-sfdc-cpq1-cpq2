@@ -1,7 +1,7 @@
 type salesforce.WorkOrderLineItem {
   serviceid Id {
     apiName = "WorkOrderLineItem.Id"
-    label = "Line Item ID"
+    label = "Work Order Line Item ID"
     queryable = true
     _hidden_value = true
     updateable = false

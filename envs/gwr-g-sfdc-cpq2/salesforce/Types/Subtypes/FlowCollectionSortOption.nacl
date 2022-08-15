@@ -18,4 +18,6 @@ type salesforce.FlowCollectionSortOption {
   string sortField {
   }
   metadataType = "FlowCollectionSortOption"
+  boolean doesPutEmptyStringAndNullFirst {
+  }
 }

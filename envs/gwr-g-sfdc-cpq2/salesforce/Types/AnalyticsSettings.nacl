@@ -17,8 +17,7 @@ settings salesforce.AnalyticsSettings {
   }
   boolean enableWaveSharingInheritance {
   }
-  boolean enableWaveTemplate {
-  }
+  
   serviceid fullName {
   }
   number maxHoursAppInProgress {

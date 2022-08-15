@@ -558,11 +558,20 @@ type salesforce.CardPaymentMethod {
     updateable = true
     queryable = true
   }
-  salesforce.Unknown GatewayTokenEncrypted {
+  salesforce.EncryptedText GatewayTokenEncrypted {
     apiName = "CardPaymentMethod.GatewayTokenEncrypted"
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    label = "Gateway Token Encrypted"
+    createable = true
+    updateable = true
+    length = 255
+    queryable = true
+  }
+  salesforce.Checkbox IsAutoPayEnabled {
+    apiName = "CardPaymentMethod.IsAutoPayEnabled"
+    label = "Auto Pay"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

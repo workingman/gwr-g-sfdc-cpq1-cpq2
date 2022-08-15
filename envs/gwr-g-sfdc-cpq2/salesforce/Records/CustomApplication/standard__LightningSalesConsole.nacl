@@ -68,4 +68,5 @@ salesforce.CustomApplication standard__LightningSalesConsole {
       },
     ]
   }
+  isNavTabPersistenceDisabled = false
 }

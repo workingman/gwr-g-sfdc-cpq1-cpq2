@@ -12,11 +12,13 @@ salesforce.LightningPage Product_Record_Page {
               },
             ]
             componentName = "force:highlightsPanel"
+            identifier = "force_highlightsPanel"
           }
         },
         {
           componentInstance = {
             componentName = "force:relatedListQuickLinksContainer"
+            identifier = "force_relatedListQuickLinksContainer"
           }
         },
       ]
@@ -43,6 +45,7 @@ salesforce.LightningPage Product_Record_Page {
               },
             ]
             componentName = "flexipage:tab"
+            identifier = "detailTab"
           }
         },
         {
@@ -58,6 +61,7 @@ salesforce.LightningPage Product_Record_Page {
               },
             ]
             componentName = "flexipage:tab"
+            identifier = "relatedListsTab"
           }
         },
       ]
@@ -76,6 +80,7 @@ salesforce.LightningPage Product_Record_Page {
               },
             ]
             componentName = "flexipage:tabset"
+            identifier = "flexipage_tabset"
           }
         },
       ]
@@ -88,6 +93,7 @@ salesforce.LightningPage Product_Record_Page {
         {
           componentInstance = {
             componentName = "force:detailPanel"
+            identifier = "force_detailPanel"
           }
         },
       ]
@@ -99,6 +105,7 @@ salesforce.LightningPage Product_Record_Page {
         {
           componentInstance = {
             componentName = "force:relatedListContainer"
+            identifier = "force_relatedListContainer"
           }
         },
       ]

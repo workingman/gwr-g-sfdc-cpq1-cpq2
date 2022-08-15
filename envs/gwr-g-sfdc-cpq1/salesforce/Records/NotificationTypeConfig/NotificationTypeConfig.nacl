@@ -41,6 +41,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
+      notificationType = "easy_fts_syncx_notify"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
       notificationType = "einstein_agent_notify"
     },
     {
@@ -49,6 +56,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = false
       }
       notificationType = "event_reminder"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "followup_process_notification"
     },
     {
       notificationChannels = {
@@ -63,6 +77,20 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = true
       }
       notificationType = "group_post"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "learning_item_assignment"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "learning_item_completion"
     },
     {
       notificationChannels = {

@@ -23,6 +23,7 @@ type salesforce.MktDataLakeFieldAttributes {
         "Curated",
         "Custom",
         "Derived",
+        "Segment_Membership",
         "Standard",
         "System",
       ]

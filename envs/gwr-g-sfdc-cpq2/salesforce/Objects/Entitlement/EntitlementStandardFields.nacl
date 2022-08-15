@@ -241,13 +241,15 @@ type salesforce.Entitlement {
     queryable = true
     trackHistory = false
   }
-  salesforce.Unknown RemainingWorkOrders {
+  salesforce.Number RemainingWorkOrders {
     apiName = "Entitlement.RemainingWorkOrders"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    label = "Remaining Work Orders"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
   }
   salesforce.Unknown StatusIndicator {
     apiName = "Entitlement.StatusIndicator"
@@ -257,12 +259,14 @@ type salesforce.Entitlement {
     createable = false
     _hidden_value = true
   }
-  salesforce.Unknown WorkOrdersPerEntitlement {
+  salesforce.Number WorkOrdersPerEntitlement {
     apiName = "Entitlement.WorkOrdersPerEntitlement"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    label = "Work Orders Per Entitlement"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
   }
 }

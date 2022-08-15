@@ -36,4 +36,6 @@ settings salesforce.Territory2Settings {
   suffix = "settings"
   dirName = "settings"
   metadataType = "Territory2Settings"
+  boolean tm2BypassRealignAccInsert {
+  }
 }

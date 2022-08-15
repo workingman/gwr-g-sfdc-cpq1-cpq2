@@ -253,11 +253,20 @@ type salesforce.DigitalWallet {
     unique = false
     queryable = true
   }
-  salesforce.Unknown GatewayTokenEncrypted {
+  salesforce.EncryptedText GatewayTokenEncrypted {
     apiName = "DigitalWallet.GatewayTokenEncrypted"
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    label = "Gateway Token Encrypted"
+    createable = true
+    updateable = true
+    length = 255
+    queryable = true
+  }
+  salesforce.Checkbox IsAutoPayEnabled {
+    apiName = "DigitalWallet.IsAutoPayEnabled"
+    label = "Auto Pay"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

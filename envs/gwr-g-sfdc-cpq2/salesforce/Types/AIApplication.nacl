@@ -36,6 +36,7 @@ type salesforce.AIApplication {
       values = [
         "Assistant",
         "Bots",
+        "CallCaseWrapUp",
         "CaseClassification",
         "CaseWrapUp",
         "Discovery",
@@ -51,7 +52,9 @@ type salesforce.AIApplication {
         "PredictionBuilder",
         "RecommendationBuilder",
         "ReferralScoring",
+        "SalesAIForecastingPredictive",
         "SalesAILeadScoring",
+        "SalesAIOpportunityForecasting",
         "SalesAIOpportunityScoring",
         "ServiceCaseClassification",
         "ServiceCaseWrapUp",

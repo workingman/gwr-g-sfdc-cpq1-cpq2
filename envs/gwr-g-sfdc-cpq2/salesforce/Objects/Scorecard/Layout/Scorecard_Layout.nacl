@@ -11,7 +11,7 @@ salesforce.Layout Scorecard_Scorecard_Layout@bs {
           layoutItems = [
             {
               behavior = "Required"
-              field = "Name"
+              field = salesforce.Scorecard.field.Name
             },
           ]
         },
@@ -28,7 +28,7 @@ salesforce.Layout Scorecard_Scorecard_Layout@bs {
           layoutItems = [
             {
               behavior = "Edit"
-              field = "Description"
+              field = salesforce.Scorecard.field.Description
             },
           ]
         },

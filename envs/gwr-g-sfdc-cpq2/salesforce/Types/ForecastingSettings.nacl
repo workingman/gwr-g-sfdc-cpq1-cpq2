@@ -32,4 +32,10 @@ settings salesforce.ForecastingSettings {
   suffix = "settings"
   dirName = "settings"
   metadataType = "ForecastingSettings"
+  salesforce.AdjustmentsSettings globalAdjustmentsSettings {
+  }
+  salesforce.ForecastRangeSettings globalForecastRangeSettings {
+  }
+  salesforce.QuotasSettings globalQuotasSettings {
+  }
 }

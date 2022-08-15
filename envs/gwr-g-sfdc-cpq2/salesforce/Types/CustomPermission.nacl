@@ -33,4 +33,6 @@ type salesforce.CustomPermission {
   suffix = "customPermission"
   dirName = "customPermissions"
   metadataType = "CustomPermission"
+  salesforce.CustomPermissionDependencyRequired requiredPermission {
+  }
 }

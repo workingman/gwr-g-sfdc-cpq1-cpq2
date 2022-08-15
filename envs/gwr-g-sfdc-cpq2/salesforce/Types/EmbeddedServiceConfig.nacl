@@ -56,4 +56,32 @@ type salesforce.EmbeddedServiceConfig {
   suffix = "EmbeddedServiceConfig"
   dirName = "EmbeddedServiceConfig"
   metadataType = "EmbeddedServiceConfig"
+  string branding {
+    foreignKeyDomain = [
+      salesforce.BrandingSet,
+    ]
+  }
+  string deploymentFeature {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "EmbeddedMessaging",
+        "FieldService",
+        "Flows",
+        "LiveAgent",
+        "None",
+      ]
+    }
+  }
+  string deploymentType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Mobile",
+        "Web",
+      ]
+    }
+  }
+  boolean isEnabled {
+  }
 }

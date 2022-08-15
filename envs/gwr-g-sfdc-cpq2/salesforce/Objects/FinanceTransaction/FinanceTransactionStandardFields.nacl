@@ -1264,146 +1264,256 @@ type salesforce.FinanceTransaction {
     relationshipName = "ParentReferenceEntity"
     queryable = true
   }
-  salesforce.Unknown FinanceSystemIntegrationMode {
+  salesforce.Text FinanceSystemIntegrationMode {
     apiName = "FinanceTransaction.FinanceSystemIntegrationMode"
+    label = "Finance System Integration Mode"
     inlineHelpText = "The type of the external financial system used to recognize the finance transaction."
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
   }
-  salesforce.Unknown FinanceSystemIntegrationStatus {
+  salesforce.Picklist FinanceSystemIntegrationStatus {
     apiName = "FinanceTransaction.FinanceSystemIntegrationStatus"
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    label = "Finance System Integration Status"
+    valueSet = [
+      {
+        fullName = "Not Selected"
+        default = false
+        label = "Not Selected"
+        isActive = true
+      },
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+        isActive = true
+      },
+      {
+        fullName = "In Process"
+        default = false
+        label = "In Process"
+        isActive = true
+      },
+      {
+        fullName = "Retry In Process"
+        default = false
+        label = "Retry In Process"
+        isActive = true
+      },
+      {
+        fullName = "Success"
+        default = false
+        label = "Success"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+      {
+        fullName = "Failed"
+        default = false
+        label = "Failed"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
   }
-  salesforce.Unknown FinanceSystemName {
+  salesforce.Text FinanceSystemName {
     apiName = "FinanceTransaction.FinanceSystemName"
+    label = "Finance System Name"
     inlineHelpText = "The name of the external financial system used to recognize the finance transaction."
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
   }
-  salesforce.Unknown FinanceSystemTransactionNumber {
+  salesforce.Text FinanceSystemTransactionNumber {
     apiName = "FinanceTransaction.FinanceSystemTransactionNumber"
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    label = "Finance System Transaction Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
   }
-  salesforce.Unknown OriginalCreditGlAccountName {
+  salesforce.Text OriginalCreditGlAccountName {
     apiName = "FinanceTransaction.OriginalCreditGlAccountName"
+    label = "Original Credit GL Account Name"
     inlineHelpText = "The finance transaction's credit GL account name when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalCreditGlAccountNumber {
+  salesforce.Text OriginalCreditGlAccountNumber {
     apiName = "FinanceTransaction.OriginalCreditGlAccountNumber"
+    label = "Original Credit GL Account Number"
     inlineHelpText = "The finance transaction's credit GL account number when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalDebitGlAccountName {
+  salesforce.Text OriginalDebitGlAccountName {
     apiName = "FinanceTransaction.OriginalDebitGlAccountName"
+    label = "Original Debit GL Account Name"
     inlineHelpText = "The finance transaction's debit GL account name when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalDebitGlAccountNumber {
+  salesforce.Text OriginalDebitGlAccountNumber {
     apiName = "FinanceTransaction.OriginalDebitGlAccountNumber"
+    label = "Original Debit GL Account Number"
     inlineHelpText = "The finance transaction's debit GL account number when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalEventAction {
+  salesforce.Text OriginalEventAction {
     apiName = "FinanceTransaction.OriginalEventAction"
+    label = "Original Event Action"
     inlineHelpText = "The finance transaction's event action when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalEventType {
+  salesforce.Text OriginalEventType {
     apiName = "FinanceTransaction.OriginalEventType"
+    label = "Original Event Type"
     inlineHelpText = "The finance transaction's event type when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalFinanceBookName {
+  salesforce.Text OriginalFinanceBookName {
     apiName = "FinanceTransaction.OriginalFinanceBookName"
+    label = "Original Finance Book Name"
     inlineHelpText = "The finance transaction's finance book name when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalFinancePeriodEndDate {
+  salesforce.Text OriginalFinancePeriodEndDate {
     apiName = "FinanceTransaction.OriginalFinancePeriodEndDate"
+    label = "Original Finance Period End Date"
     inlineHelpText = "The finance transaction's finance period end date when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalFinancePeriodName {
+  salesforce.Text OriginalFinancePeriodName {
     apiName = "FinanceTransaction.OriginalFinancePeriodName"
+    label = "Original Finance Period Name"
     inlineHelpText = "The finance transaction's finance period name when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalFinancePeriodStartDate {
+  salesforce.Text OriginalFinancePeriodStartDate {
     apiName = "FinanceTransaction.OriginalFinancePeriodStartDate"
+    label = "Original Finance Period Start Date"
     inlineHelpText = "The finance transaction's finance period start date when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalFinancePeriodStatus {
+  salesforce.Text OriginalFinancePeriodStatus {
     apiName = "FinanceTransaction.OriginalFinancePeriodStatus"
+    label = "Original Finance Period Status"
     inlineHelpText = "The finance transaction's finance period status when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalGlRuleName {
+  salesforce.Text OriginalGlRuleName {
     apiName = "FinanceTransaction.OriginalGlRuleName"
+    label = "Original GL Rule Name"
     inlineHelpText = "The finance transaction's GL rule name when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalGlTreatmentName {
+  salesforce.Text OriginalGlTreatmentName {
     apiName = "FinanceTransaction.OriginalGlTreatmentName"
+    label = "Original GL Treatment Name"
     inlineHelpText = "The finance transaction's GL treatment name when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown OriginalReferenceEntityType {
+  salesforce.Text OriginalReferenceEntityType {
     apiName = "FinanceTransaction.OriginalReferenceEntityType"
+    label = "Original Reference Entity Type"
     inlineHelpText = "The finance transaction's reference entity type when the finance transaction was created."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
     _hidden_value = true
   }
 }

@@ -15,15 +15,15 @@ salesforce.Layout Seller_Seller_Layout@bs {
             },
             {
               behavior = "Edit"
-              field = "SellerType"
+              field = salesforce.Seller.field.SellerType
             },
             {
               behavior = "Edit"
-              field = "SalesAmount"
+              field = salesforce.Seller.field.SalesAmount
             },
             {
               behavior = "Edit"
-              field = "ActiveFromDate"
+              field = salesforce.Seller.field.ActiveFromDate
             },
           ]
         },
@@ -31,15 +31,15 @@ salesforce.Layout Seller_Seller_Layout@bs {
           layoutItems = [
             {
               behavior = "Required"
-              field = "Name"
+              field = salesforce.Seller.field.Name
             },
             {
               behavior = "Edit"
-              field = "SellerTier"
+              field = salesforce.Seller.field.SellerTier
             },
             {
               behavior = "Edit"
-              field = "ActiveToDate"
+              field = salesforce.Seller.field.ActiveToDate
             },
           ]
         },

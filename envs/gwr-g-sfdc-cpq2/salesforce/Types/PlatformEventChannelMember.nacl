@@ -35,7 +35,9 @@ type salesforce.PlatformEventChannelMember {
         "FTestStandardChannel",
         "FTestStandardInternalChannel",
         "GlobalIdentityStandard",
+        "HighVolumePriming",
         "IsotopeStandardChangeEvents",
+        "LearningItemProgress",
         "PardotSyncStdChannel",
         "SlackAlertsEventChannel",
         "VideoCall",
@@ -58,4 +60,8 @@ type salesforce.PlatformEventChannelMember {
   suffix = "platformEventChannelMember"
   dirName = "platformEventChannelMembers"
   metadataType = "PlatformEventChannelMember"
+  salesforce.EnrichedField enrichedFields {
+  }
+  string filterExpression {
+  }
 }

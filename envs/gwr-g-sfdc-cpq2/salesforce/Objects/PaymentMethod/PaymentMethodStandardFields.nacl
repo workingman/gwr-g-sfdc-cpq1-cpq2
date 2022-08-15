@@ -168,4 +168,12 @@ type salesforce.PaymentMethod {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Checkbox IsAutoPayEnabled {
+    apiName = "PaymentMethod.IsAutoPayEnabled"
+    label = "Auto Pay"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
 }

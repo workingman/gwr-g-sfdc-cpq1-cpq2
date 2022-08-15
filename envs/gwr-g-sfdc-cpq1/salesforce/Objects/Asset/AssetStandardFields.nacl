@@ -436,4 +436,12 @@ type salesforce.Asset {
     createable = false
     _hidden_value = true
   }
+  salesforce.Unknown Address {
+    apiName = "Asset.Address"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
 }

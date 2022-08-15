@@ -103,7 +103,7 @@ type salesforce.WorkStep {
   }
   salesforce.Lookup WorkOrderLineItemId {
     apiName = "WorkStep.WorkOrderLineItemId"
-    label = "Line Item ID"
+    label = "Work Order Line Item ID"
     referenceTo = [
       salesforce.WorkOrderLineItem,
     ]
@@ -420,16 +420,28 @@ type salesforce.WorkStep {
   salesforce.Lookup ParentRecordId {
     apiName = "WorkStep.ParentRecordId"
     trackHistory = false
-    queryable = false
+    queryable = true
     updateable = false
     createable = false
     _hidden_value = true
+    label = "Parent Record ID"
+    _required = true
+    referenceTo = [
+      salesforce.ChangeRequest,
+      salesforce.WorkOrder,
+      salesforce.WorkOrderLineItem,
+    ]
+    relationshipName = "ParentRecord"
   }
-  salesforce.Unknown ParentRecordType {
+  salesforce.Text ParentRecordType {
     apiName = "WorkStep.ParentRecordType"
-    queryable = false
-    updateable = false
+    label = "Parent Record Type"
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 50
+    queryable = true
     _hidden_value = true
   }
 }

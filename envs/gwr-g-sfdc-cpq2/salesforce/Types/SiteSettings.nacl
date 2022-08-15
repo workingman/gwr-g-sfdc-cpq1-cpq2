@@ -13,8 +13,7 @@ settings salesforce.SiteSettings {
     string dirName {
     }
   }
-  boolean enableVisualforceApiAccessAllowed {
-  }
+  
   serviceid fullName {
   }
   boolean enableProxyLoginICHeader {

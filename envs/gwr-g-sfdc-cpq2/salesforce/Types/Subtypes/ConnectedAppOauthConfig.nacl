@@ -34,4 +34,6 @@ type salesforce.ConnectedAppOauthConfig {
   string singleLogoutUrl {
   }
   metadataType = "ConnectedAppOauthConfig"
+  boolean isSecretRequiredForRefreshToken {
+  }
 }

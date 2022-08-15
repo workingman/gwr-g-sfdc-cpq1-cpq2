@@ -98,14 +98,7 @@ type salesforce.Site {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Checkbox OptionsRequireHttps {
-    apiName = "Site.OptionsRequireHttps"
-    label = "Require Secure Connections (HTTPS)"
-    createable = false
-    updateable = false
-    queryable = true
-    _hidden_value = true
-  }
+  
   salesforce.Checkbox OptionsAllowGuestPaymentsApi {
     apiName = "Site.OptionsAllowGuestPaymentsApi"
     label = "Guest Access to the Payments API"
@@ -178,14 +171,7 @@ type salesforce.Site {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Checkbox OptionsCspUpgradeInsecureRequests {
-    apiName = "Site.OptionsCspUpgradeInsecureRequests"
-    label = "Upgrade all requests to HTTPS"
-    createable = false
-    updateable = false
-    queryable = true
-    _hidden_value = true
-  }
+  
   salesforce.Checkbox OptionsContentSniffingProtection {
     apiName = "Site.OptionsContentSniffingProtection"
     label = "Enable Content Sniffing Protection"
@@ -414,6 +400,30 @@ type salesforce.Site {
     createable = false
     updateable = false
     relationshipName = "GuestRecordDefaultOwner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsRedirectToCustomDomain {
+    apiName = "Site.OptionsRedirectToCustomDomain"
+    label = "Redirect to custom domain"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsCookieConsent {
+    apiName = "Site.OptionsCookieConsent"
+    label = "Enforce Cookie Consent"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsCachePublicVfPagesInProxies {
+    apiName = "Site.OptionsCachePublicVfPagesInProxies"
+    label = "Cache public Visualforce pages"
+    createable = false
+    updateable = false
     queryable = true
     _hidden_value = true
   }

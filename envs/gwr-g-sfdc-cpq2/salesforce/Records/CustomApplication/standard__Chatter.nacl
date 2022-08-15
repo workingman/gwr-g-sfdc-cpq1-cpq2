@@ -13,4 +13,5 @@ salesforce.CustomApplication standard__Chatter {
     "standard-CollaborationGroup",
     "standard-File",
   ]
+  isNavTabPersistenceDisabled = false
 }

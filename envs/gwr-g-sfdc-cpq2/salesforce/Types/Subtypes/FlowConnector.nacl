@@ -18,4 +18,6 @@ type salesforce.FlowConnector {
   string targetReference {
   }
   metadataType = "FlowConnector"
+  boolean isGoTo {
+  }
 }

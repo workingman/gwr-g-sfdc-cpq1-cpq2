@@ -30,4 +30,30 @@ type salesforce.MutingPermissionSet {
   suffix = "mutingpermissionset"
   dirName = "mutingpermissionsets"
   metadataType = "MutingPermissionSet"
+  salesforce.PermissionSetApplicationVisibility applicationVisibilities {
+  }
+  salesforce.PermissionSetApexClassAccess classAccesses {
+  }
+  salesforce.PermissionSetCustomMetadataTypeAccess customMetadataTypeAccesses {
+  }
+  salesforce.PermissionSetCustomPermissions customPermissions {
+  }
+  salesforce.PermissionSetCustomSettingAccess customSettingAccesses {
+  }
+  salesforce.PermissionSetExternalDataSourceAccess externalDataSourceAccesses {
+  }
+  salesforce.PermissionSetFieldPermissions fieldPermissions {
+  }
+  salesforce.PermissionSetFlowAccess flowAccesses {
+  }
+  salesforce.PermissionSetObjectPermissions objectPermissions {
+  }
+  salesforce.PermissionSetApexPageAccess pageAccesses {
+  }
+  salesforce.PermissionSetRecordTypeVisibility recordTypeVisibilities {
+  }
+  salesforce.PermissionSetTabSetting tabSettings {
+  }
+  salesforce.PermissionSetUserPermission userPermissions {
+  }
 }

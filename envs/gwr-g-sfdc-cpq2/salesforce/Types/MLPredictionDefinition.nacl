@@ -21,6 +21,8 @@ type salesforce.MLPredictionDefinition {
   }
   string developerName {
   }
+  string masterLabel {
+  }
   salesforce.MLFilter negativeExpression {
     foreignKeyDomain = [
       salesforce.MLFilter,
@@ -32,6 +34,8 @@ type salesforce.MLPredictionDefinition {
     ]
   }
   string predictionField {
+  }
+  number priority {
   }
   string pushbackField {
   }

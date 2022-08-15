@@ -11,7 +11,7 @@ salesforce.Layout PaymentAuthAdjustment_Payment_Authorization_Adjustment_Layout@
           layoutItems = [
             {
               behavior = "Readonly"
-              field = "PaymentAuthAdjustmentNumber"
+              field = salesforce.PaymentAuthAdjustment.field.PaymentAuthAdjustmentNumber
             },
             {
               behavior = "Edit"
@@ -19,19 +19,19 @@ salesforce.Layout PaymentAuthAdjustment_Payment_Authorization_Adjustment_Layout@
             },
             {
               behavior = "Required"
-              field = "Amount"
+              field = salesforce.PaymentAuthAdjustment.field.Amount
             },
             {
               behavior = "Required"
-              field = "Type"
+              field = salesforce.PaymentAuthAdjustment.field.Type
             },
             {
               behavior = "Edit"
-              field = "EffectiveDate"
+              field = salesforce.PaymentAuthAdjustment.field.EffectiveDate
             },
             {
               behavior = "Edit"
-              field = "Comments"
+              field = salesforce.PaymentAuthAdjustment.field.Comments
             },
           ]
         },
@@ -39,7 +39,7 @@ salesforce.Layout PaymentAuthAdjustment_Payment_Authorization_Adjustment_Layout@
           layoutItems = [
             {
               behavior = "Required"
-              field = "Status"
+              field = salesforce.PaymentAuthAdjustment.field.Status
             },
             {
               behavior = "Required"
@@ -47,11 +47,11 @@ salesforce.Layout PaymentAuthAdjustment_Payment_Authorization_Adjustment_Layout@
             },
             {
               behavior = "Required"
-              field = "ProcessingMode"
+              field = salesforce.PaymentAuthAdjustment.field.ProcessingMode
             },
             {
               behavior = "Edit"
-              field = "Date"
+              field = salesforce.PaymentAuthAdjustment.field.Date
             },
           ]
         },
@@ -68,7 +68,7 @@ salesforce.Layout PaymentAuthAdjustment_Payment_Authorization_Adjustment_Layout@
           layoutItems = [
             {
               behavior = "Readonly"
-              field = "SfResultCode"
+              field = salesforce.PaymentAuthAdjustment.field.SfResultCode
             },
           ]
         },
@@ -85,15 +85,15 @@ salesforce.Layout PaymentAuthAdjustment_Payment_Authorization_Adjustment_Layout@
           layoutItems = [
             {
               behavior = "Edit"
-              field = "GatewayDate"
+              field = salesforce.PaymentAuthAdjustment.field.GatewayDate
             },
             {
               behavior = "Edit"
-              field = "GatewayResultCode"
+              field = salesforce.PaymentAuthAdjustment.field.GatewayResultCode
             },
             {
               behavior = "Edit"
-              field = "GatewayRefNumber"
+              field = salesforce.PaymentAuthAdjustment.field.GatewayRefNumber
             },
           ]
         },
@@ -101,11 +101,11 @@ salesforce.Layout PaymentAuthAdjustment_Payment_Authorization_Adjustment_Layout@
           layoutItems = [
             {
               behavior = "Edit"
-              field = "GatewayResultCodeDescription"
+              field = salesforce.PaymentAuthAdjustment.field.GatewayResultCodeDescription
             },
             {
               behavior = "Edit"
-              field = "GatewayRefDetails"
+              field = salesforce.PaymentAuthAdjustment.field.GatewayRefDetails
             },
           ]
         },
@@ -122,19 +122,19 @@ salesforce.Layout PaymentAuthAdjustment_Payment_Authorization_Adjustment_Layout@
           layoutItems = [
             {
               behavior = "Readonly"
-              field = "CreatedById"
+              field = salesforce.PaymentAuthAdjustment.field.CreatedById
             },
             {
               behavior = "Readonly"
-              field = "CreatedDate"
+              field = salesforce.PaymentAuthAdjustment.field.CreatedDate
             },
             {
               behavior = "Edit"
-              field = "MacAddress"
+              field = salesforce.PaymentAuthAdjustment.field.MacAddress
             },
             {
               behavior = "Edit"
-              field = "Phone"
+              field = salesforce.PaymentAuthAdjustment.field.Phone
             },
           ]
         },
@@ -142,19 +142,19 @@ salesforce.Layout PaymentAuthAdjustment_Payment_Authorization_Adjustment_Layout@
           layoutItems = [
             {
               behavior = "Readonly"
-              field = "LastModifiedById"
+              field = salesforce.PaymentAuthAdjustment.field.LastModifiedById
             },
             {
               behavior = "Readonly"
-              field = "LastModifiedDate"
+              field = salesforce.PaymentAuthAdjustment.field.LastModifiedDate
             },
             {
               behavior = "Edit"
-              field = "IpAddress"
+              field = salesforce.PaymentAuthAdjustment.field.IpAddress
             },
             {
               behavior = "Edit"
-              field = "Email"
+              field = salesforce.PaymentAuthAdjustment.field.Email
             },
           ]
         },

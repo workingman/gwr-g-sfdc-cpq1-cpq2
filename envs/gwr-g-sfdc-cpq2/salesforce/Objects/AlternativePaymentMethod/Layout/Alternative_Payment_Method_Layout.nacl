@@ -11,7 +11,7 @@ salesforce.Layout AlternativePaymentMethod_Alternative_Payment_Method_Layout@bss
           layoutItems = [
             {
               behavior = "Edit"
-              field = "NickName"
+              field = salesforce.AlternativePaymentMethod.field.NickName
             },
             {
               behavior = "Edit"
@@ -19,7 +19,7 @@ salesforce.Layout AlternativePaymentMethod_Alternative_Payment_Method_Layout@bss
             },
             {
               behavior = "Required"
-              field = "ProcessingMode"
+              field = salesforce.AlternativePaymentMethod.field.ProcessingMode
             },
           ]
         },
@@ -27,11 +27,11 @@ salesforce.Layout AlternativePaymentMethod_Alternative_Payment_Method_Layout@bss
           layoutItems = [
             {
               behavior = "Edit"
-              field = "Email"
+              field = salesforce.AlternativePaymentMethod.field.Email
             },
             {
               behavior = "Required"
-              field = "Status"
+              field = salesforce.AlternativePaymentMethod.field.Status
             },
           ]
         },
@@ -52,7 +52,7 @@ salesforce.Layout AlternativePaymentMethod_Alternative_Payment_Method_Layout@bss
             },
             {
               behavior = "Edit"
-              field = "GatewayTokenDetails"
+              field = salesforce.AlternativePaymentMethod.field.GatewayTokenDetails
             },
           ]
         },
@@ -60,7 +60,7 @@ salesforce.Layout AlternativePaymentMethod_Alternative_Payment_Method_Layout@bss
           layoutItems = [
             {
               behavior = "Edit"
-              field = "GatewayToken"
+              field = salesforce.AlternativePaymentMethod.field.GatewayToken
             },
           ]
         },
@@ -77,11 +77,11 @@ salesforce.Layout AlternativePaymentMethod_Alternative_Payment_Method_Layout@bss
           layoutItems = [
             {
               behavior = "Edit"
-              field = "CompanyName"
+              field = salesforce.AlternativePaymentMethod.field.CompanyName
             },
             {
               behavior = "Edit"
-              field = "Comments"
+              field = salesforce.AlternativePaymentMethod.field.Comments
             },
           ]
         },
@@ -89,7 +89,7 @@ salesforce.Layout AlternativePaymentMethod_Alternative_Payment_Method_Layout@bss
           layoutItems = [
             {
               behavior = "Edit"
-              field = "PaymentMethodAddress"
+              field = salesforce.AlternativePaymentMethod.field.PaymentMethodAddress
             },
           ]
         },
@@ -106,19 +106,19 @@ salesforce.Layout AlternativePaymentMethod_Alternative_Payment_Method_Layout@bss
           layoutItems = [
             {
               behavior = "Readonly"
-              field = "CreatedById"
+              field = salesforce.AlternativePaymentMethod.field.CreatedById
             },
             {
               behavior = "Readonly"
-              field = "CreatedDate"
+              field = salesforce.AlternativePaymentMethod.field.CreatedDate
             },
             {
               behavior = "Edit"
-              field = "MacAddress"
+              field = salesforce.AlternativePaymentMethod.field.MacAddress
             },
             {
               behavior = "Edit"
-              field = "Phone"
+              field = salesforce.AlternativePaymentMethod.field.Phone
             },
           ]
         },
@@ -126,19 +126,19 @@ salesforce.Layout AlternativePaymentMethod_Alternative_Payment_Method_Layout@bss
           layoutItems = [
             {
               behavior = "Readonly"
-              field = "LastModifiedById"
+              field = salesforce.AlternativePaymentMethod.field.LastModifiedById
             },
             {
               behavior = "Readonly"
-              field = "LastModifiedDate"
+              field = salesforce.AlternativePaymentMethod.field.LastModifiedDate
             },
             {
               behavior = "Edit"
-              field = "IpAddress"
+              field = salesforce.AlternativePaymentMethod.field.IpAddress
             },
             {
               behavior = "Edit"
-              field = "AuditEmail"
+              field = salesforce.AlternativePaymentMethod.field.AuditEmail
             },
           ]
         },

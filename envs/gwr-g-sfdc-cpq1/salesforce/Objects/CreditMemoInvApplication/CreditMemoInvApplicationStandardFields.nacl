@@ -84,6 +84,7 @@ type salesforce.CreditMemoInvApplication {
     relationshipName = "Invoice"
     queryable = true
     _hidden_value = true
+    trackHistory = false
   }
   salesforce.Lookup CreditMemoId {
     apiName = "CreditMemoInvApplication.CreditMemoId"
@@ -97,6 +98,7 @@ type salesforce.CreditMemoInvApplication {
     relationshipName = "CreditMemo"
     queryable = true
     _hidden_value = true
+    trackHistory = false
   }
   salesforce.Currency Amount {
     apiName = "CreditMemoInvApplication.Amount"

@@ -87,4 +87,6 @@ type salesforce.TransactionSecurityPolicy {
   suffix = "transactionSecurityPolicy"
   dirName = "transactionSecurityPolicies"
   metadataType = "TransactionSecurityPolicy"
+  string customEmailContent {
+  }
 }

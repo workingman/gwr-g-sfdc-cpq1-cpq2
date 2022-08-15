@@ -6,4 +6,5 @@ salesforce.Territory2Settings {
   defaultOpportunityAccessLevel = "Edit"
   enableTerritoryManagement2 = false
   t2ForecastAccessLevel = "Read"
+  tm2BypassRealignAccInsert = false
 }

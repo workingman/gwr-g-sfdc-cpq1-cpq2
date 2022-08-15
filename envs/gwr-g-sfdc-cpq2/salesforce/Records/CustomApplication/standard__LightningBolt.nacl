@@ -11,4 +11,5 @@ salesforce.CustomApplication standard__LightningBolt {
     "standard-LightningBoltHome",
   ]
   uiType = "Lightning"
+  isNavTabPersistenceDisabled = false
 }

@@ -20,4 +20,6 @@ type salesforce.FieldInstance {
   salesforce.UiFormulaRule visibilityRule {
   }
   metadataType = "FieldInstance"
+  string identifier {
+  }
 }

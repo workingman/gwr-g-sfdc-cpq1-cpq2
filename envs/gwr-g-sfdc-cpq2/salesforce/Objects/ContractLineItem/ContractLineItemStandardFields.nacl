@@ -261,10 +261,15 @@ type salesforce.ContractLineItem {
   salesforce.Lookup LocationId {
     apiName = "ContractLineItem.LocationId"
     trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    queryable = true
+    updateable = true
+    createable = true
+    
+    label = "Location ID"
+    referenceTo = [
+      salesforce.Location,
+    ]
+    relationshipName = "Location"
   }
   salesforce.Unknown StatusIndicator {
     apiName = "ContractLineItem.StatusIndicator"

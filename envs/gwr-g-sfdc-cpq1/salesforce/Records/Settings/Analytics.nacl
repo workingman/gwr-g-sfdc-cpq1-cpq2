@@ -41,4 +41,5 @@ salesforce.AnalyticsSettings {
   maxHoursAppInProgress = 48
   replaceBlankMeasuresWithNulls = false
   turnOnTimeZones = false
+  enableNullDimension = false
 }

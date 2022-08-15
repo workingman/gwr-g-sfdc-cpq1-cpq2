@@ -53,4 +53,5 @@ salesforce.CustomApplication standard__LightningService {
       },
     ]
   }
+  isNavTabPersistenceDisabled = false
 }

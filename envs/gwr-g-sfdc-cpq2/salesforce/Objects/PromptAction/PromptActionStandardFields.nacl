@@ -228,4 +228,21 @@ type salesforce.PromptAction {
     unique = false
     queryable = true
   }
+  salesforce.DateTime SnoozeUntil {
+    apiName = "PromptAction.SnoozeUntil"
+    label = "Snooze Until"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number TimesSnoozed {
+    apiName = "PromptAction.TimesSnoozed"
+    label = "Times Snoozed"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
 }

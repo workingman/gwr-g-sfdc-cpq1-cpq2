@@ -155,8 +155,8 @@ type salesforce.CreditMemoLine {
     label = "Tax Rate"
     createable = false
     updateable = true
-    scale = 0
-    precision = 3
+    scale = 2
+    precision = 5
     queryable = true
   }
   salesforce.Text Status {

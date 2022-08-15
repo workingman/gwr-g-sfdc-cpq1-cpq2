@@ -85,5 +85,41 @@ salesforce.AppMenu AppSwitcher {
       name = salesforce.CustomApplication.instance.standard__Commerce
       type = "CustomApplication"
     },
+    {
+      name = "Dataloader_Bulk"
+      type = "ConnectedApp"
+    },
+    {
+      name = "Dataloader_Partner"
+      type = "ConnectedApp"
+    },
+    {
+      name = "Forcecom_IDE"
+      type = "ConnectedApp"
+    },
+    {
+      name = "Forcecom_Migration_Tool"
+      type = "ConnectedApp"
+    },
+    {
+      name = "Salesforce_Mobile_Dashboards"
+      type = "ConnectedApp"
+    },
+    {
+      name = "Salesforce_Touch"
+      type = "ConnectedApp"
+    },
+    {
+      name = "Salesforce_for_Outlook"
+      type = "ConnectedApp"
+    },
+    {
+      name = "Workbench"
+      type = "ConnectedApp"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__DataManager
+      type = "CustomApplication"
+    },
   ]
 }

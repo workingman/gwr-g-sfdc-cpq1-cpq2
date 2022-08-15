@@ -58,7 +58,7 @@ type salesforce.PaymentMethod {
   apiName = "PaymentMethod"
   metadataType = "CustomObject"
   label = "Payment Method"
-  compactLayoutAssignment = "SYSTEM"
+  
   enableFeeds = false
   externalSharingModel = "ReadWrite"
 }

@@ -54,6 +54,7 @@ type salesforce.FlowStart {
         "Create",
         "CreateAndUpdate",
         "Delete",
+        "None",
         "Update",
       ]
     }

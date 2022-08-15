@@ -36,4 +36,8 @@ type salesforce.CallCenter {
   suffix = "callCenter"
   dirName = "callCenters"
   metadataType = "CallCenter"
+  salesforce.ContactCenterChannel contactCenterChannels {
+  }
+  salesforce.VendorCallCenterStatusMap vendorCallCenterStatusMaps {
+  }
 }

@@ -121,7 +121,7 @@ type salesforce.WorkPlan {
   }
   salesforce.Lookup WorkOrderLineItemId {
     apiName = "WorkPlan.WorkOrderLineItemId"
-    label = "Line Item ID"
+    label = "Work Order Line Item ID"
     referenceTo = [
       salesforce.WorkOrderLineItem,
     ]

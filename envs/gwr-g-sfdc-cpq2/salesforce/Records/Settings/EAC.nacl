@@ -5,4 +5,7 @@ salesforce.EACSettings {
   enableInsightsInTimeline = true
   enableInsightsInTimelineEacStd = false
   provisionProductivityFeatures = false
+  autoPopulateGoogleMeetLinks = "false"
+  enableActivityAnalyticsPref = "false"
+  syncInternalEvents = "true"
 }

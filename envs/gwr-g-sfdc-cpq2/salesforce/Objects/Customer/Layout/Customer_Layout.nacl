@@ -15,7 +15,7 @@ salesforce.Layout Customer_Customer_Layout@bs {
             },
             {
               behavior = "Edit"
-              field = "CustomerStatusType"
+              field = salesforce.Customer.field.CustomerStatusType
             },
           ]
         },
@@ -23,11 +23,11 @@ salesforce.Layout Customer_Customer_Layout@bs {
           layoutItems = [
             {
               behavior = "Required"
-              field = "Name"
+              field = salesforce.Customer.field.Name
             },
             {
               behavior = "Edit"
-              field = "TotalLifeTimeValue"
+              field = salesforce.Customer.field.TotalLifeTimeValue
             },
           ]
         },

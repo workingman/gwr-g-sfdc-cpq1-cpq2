@@ -70,4 +70,6 @@ settings salesforce.ActivitiesSettings {
   suffix = "settings"
   dirName = "settings"
   metadataType = "ActivitiesSettings"
+  boolean enableFlowTaskNotifsViaApex {
+  }
 }

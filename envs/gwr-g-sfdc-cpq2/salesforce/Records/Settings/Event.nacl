@@ -6,4 +6,5 @@ salesforce.EventSettings {
   enableStreamingApi = true
   enableTerminateOldestSession = false
   enableTransactionSecurityPolicies = false
+  bypassMeteringBlock = "false"
 }

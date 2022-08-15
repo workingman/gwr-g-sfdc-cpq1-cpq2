@@ -83,6 +83,7 @@ type salesforce.CreditMemoInvApplication {
     updateable = false
     relationshipName = "Invoice"
     queryable = true
+    trackHistory = false
     _hidden_value = true
   }
   salesforce.Lookup CreditMemoId {
@@ -96,6 +97,7 @@ type salesforce.CreditMemoInvApplication {
     updateable = false
     relationshipName = "CreditMemo"
     queryable = true
+    trackHistory = false
     _hidden_value = true
   }
   salesforce.Currency Amount {
@@ -175,12 +177,13 @@ type salesforce.CreditMemoInvApplication {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown ImpactAmount {
+  salesforce.Summary ImpactAmount {
     apiName = "CreditMemoInvApplication.ImpactAmount"
+    label = "Impact Amount"
     inlineHelpText = "Impact on the balance of the credit memo and invoice. Unapplied-type applications have a negative impact, while Applied-type applications have a positive impact."
-    queryable = false
-    updateable = false
     createable = false
+    updateable = false
+    queryable = true
     _hidden_value = true
   }
 }
